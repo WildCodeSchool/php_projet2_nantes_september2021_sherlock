@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,14 +10,26 @@
 
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
-    <link rel="icon" type="favicon/x-icon" href="../public/assets/images/icon.png">
+    <link rel="icon" type="favicon/x-icon" href="/public/assets/images/icon.png">
     <script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    {% block header %}
+
+    
+    <!-- header -->
+
+    <nav class="banner">
+        <img src="/public/assets/images/banner.png" alt="">
+    </nav>
+
+    {% endblock %}
+
+
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
+    {% block footer %}{% endblock %}
 </body>
+
 </html>
-
-
