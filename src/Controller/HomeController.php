@@ -23,4 +23,12 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/home.html.twig');
     }
+
+
+public function scenario()
+    {
+       return $this->twig->render('sherlock/escenario.html.twig');
+       
+       
+   }
 }

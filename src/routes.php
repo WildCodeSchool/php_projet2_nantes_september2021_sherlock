@@ -9,7 +9,7 @@
 return [
     '' => ['HomeController', 'index',],
     'items' => ['ItemController', 'index',],
-    'items/edit' => ['ItemController', 'edit', ['id']],
+    'sherlock/escenario' => ['Homecontroller', 'scenario'],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],

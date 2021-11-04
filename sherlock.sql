@@ -44,7 +44,7 @@ create table utilisateur (
 )
 
 INSERT into enigme(resume,description) values("Le bibliothécaire Sean McNulty a été assassiné !
-C’est la chercheuse Rose-Mary Baken qui a  retrouvé son corps dans son bureau ! Heuresement, watson se trouvait à la bibliothèque et le secteur  a rapidement été bouclé.
-Sherlock Holmes a réussi à identifier 3 suspects, mais il n’arrive pas à identifier le coupable, il t’as donc appelé à la rescousse pour que  tu identifie toi même le vrai coupable ! ", "lorem ipsum")
+C’est la chercheuse Rose-Mary Baken qui a retrouvé son corps dans son bureau ! Heuresement,watson se trouvait à la bibliothèque et le secteur a rapidement été bouclé.
+Sherlock Holmes a réussi à identifier 3 suspects,mais il n’arrive pas à identifier le coupable,il t’as donc appelé à la rescousse pour que tu identifie toi même le vrai coupable !", "lorem ipsum")
 
 INSERT INTO 
