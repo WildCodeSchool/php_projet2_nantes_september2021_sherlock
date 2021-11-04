@@ -31,4 +31,20 @@ public function scenario()
        
        
    }
+
+public function game()
+{
+    return $this->twig->render('sherlock/game.html.twig');
+}
+
+public function police()
+{
+    return $this->twig->render('sherlock/police.html.twig');
+}
+
+public function win()
+{
+    return $this->twig->render('sherlock/win.html.twig');
+}
+
 }
