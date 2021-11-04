@@ -28,9 +28,7 @@ class HomeController extends AbstractController
 public function scenario()
     {
        return $this->twig->render('sherlock/escenario.html.twig');
-       
-       
-   }
+     }
 
 public function game()
 {
