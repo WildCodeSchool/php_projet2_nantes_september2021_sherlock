@@ -1,0 +1,13 @@
+body {
+    background-image:url("../images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.histoire {
+    font-size: 15px;
+    
+    
+  
+}
