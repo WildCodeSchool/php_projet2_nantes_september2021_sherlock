@@ -19,6 +19,8 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
+
     public function index()
     {
         return $this->twig->render('sherlock/home.html.twig');
@@ -44,5 +46,6 @@ public function win()
 {
     return $this->twig->render('sherlock/win.html.twig');
 }
+
 
 }
