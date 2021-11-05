@@ -27,25 +27,23 @@ class HomeController extends AbstractController
     }
 
 
-public function scenario()
+    public function scenario()
     {
-       return $this->twig->render('sherlock/escenario.html.twig');
-     }
+        return $this->twig->render('sherlock/escenario.html.twig');
+    }
 
-public function game()
-{
-    return $this->twig->render('sherlock/game.html.twig');
-}
+    public function game()
+    {
+        return $this->twig->render('sherlock/game.html.twig');
+    }
 
-public function police()
-{
-    return $this->twig->render('sherlock/police.html.twig');
-}
+    public function police()
+    {
+        return $this->twig->render('sherlock/police.html.twig');
+    }
 
-public function win()
-{
-    return $this->twig->render('sherlock/win.html.twig');
-}
-
-
+    public function win()
+    {
+        return $this->twig->render('sherlock/win.html.twig');
+    }
 }

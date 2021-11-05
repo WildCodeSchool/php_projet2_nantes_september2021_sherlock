@@ -2,15 +2,15 @@
 create table enigme (
     id int PRIMARY key AUTO_INCREMENT,
     titre varchar(30),
-    resume varchar(300),
-    histoire varchar(400)
+    resume Text,
+    histoire Text
 )
 
 create table personne (
     id int primary key AUTO_INCREMENT,
     firstname varchar(50),
     lastname varchar(50),
-    description varchar(400),
+    description Text,
     lien_photo varchar(100)
 )
 
@@ -43,8 +43,7 @@ create table utilisateur (
     mail varchar(50)
 )
 
-INSERT into enigme(resume,description) values("Le bibliothécaire Sean McNulty a été assassiné !
+INSERT into enigme(titre, resume,description) values("Le meurtre de Rose-Marie Mayer ", Le bibliothécaire Sean McNulty a été assassiné !
 C’est la chercheuse Rose-Mary Baken qui a retrouvé son corps dans son bureau ! Heuresement,watson se trouvait à la bibliothèque et le secteur a rapidement été bouclé.
 Sherlock Holmes a réussi à identifier 3 suspects,mais il n’arrive pas à identifier le coupable,il t’as donc appelé à la rescousse pour que tu identifie toi même le vrai coupable !", "lorem ipsum")
 
-INSERT INTO 
