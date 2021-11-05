@@ -19,8 +19,33 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+
+
     public function index()
     {
         return $this->twig->render('sherlock/home.html.twig');
     }
+
+
+public function scenario()
+    {
+       return $this->twig->render('sherlock/escenario.html.twig');
+     }
+
+public function game()
+{
+    return $this->twig->render('sherlock/game.html.twig');
+}
+
+public function police()
+{
+    return $this->twig->render('sherlock/police.html.twig');
+}
+
+public function win()
+{
+    return $this->twig->render('sherlock/win.html.twig');
+}
+
+
 }
