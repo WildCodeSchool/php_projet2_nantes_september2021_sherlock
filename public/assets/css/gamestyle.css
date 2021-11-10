@@ -80,39 +80,106 @@ h2 {
     margin-bottom: 2%;   
 }
 
+
 .moriartycard {
+    background-image: url("../images/parchemin.jpg");
     padding: 3%;
-    
+    width: 150px;
+    height: 240px;  
+    position: relative;
+    border-radius: 2%;
 }
 
-.moriartyimg {
+.moriartyimg img {
+    margin-left: 20%;
+    margin-top: 5%;
+    height:55%;
+    max-width: 100%;
+    border-radius: 2%;
+    display: block;
+    box-sizing: border-box;
+    position : absolute;
 }
 
-.textemoriarty {
-    
+.titremoriartycard img {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.textemoriartycard {
+    position: relative;
+    top: 62%;
+    left: 14%;  
 }
 
 .bakercard {
     padding: 3%;
+    background-image: url("../images/parchemin2.jpg");
+    overflow: hidden;
+    padding: 3%;
+    width: 150px;
+    height: 240px;
+    position : relative;
+    border-radius: 2%;
 }
 
-.bakerimg {
+.bakerimg img {
+    margin-left: 20%;
+    margin-top: 5%;
+    height:55%;
+    max-width: 100%;
+    border-radius: 2%;
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
     
 }
 
-.textebaker {
+.titrebakercard img {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.textebakercard {
+    position: relative;
+    top:62%;
+    left: 14%;   
 }
 
 .jamescard {
     padding:3%;
+    background-image: url("../images/parchemin3.jpg");
+    overflow: hidden;
+    padding: 3%;
+    width: 150px;
+    height: 240px;
+    position : relative;
+    border-radius: 2%; 
 }
 
-.jamesimg {
-    
+.jamesimg img {
+    margin-left: 20%;
+    margin-top: 5%;
+    height:55%;
+    max-width: 100%;
+    border-radius: 2%;
+    display: block;
+    box-sizing: border-box; 
+    position: absolute;
 }
 
-.textejames {
-    
+.titrejamescard img {
+    position: relative;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.textejamescard {
+    position: relative;
+    top:62%;
+    left: 14%;  
 }
 
 .button a:hover{
