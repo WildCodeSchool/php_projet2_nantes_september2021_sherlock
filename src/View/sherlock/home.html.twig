@@ -1,12 +1,21 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/homestyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+{% endblock %}
+
+
+
 {% block header %}
 
 <nav class="banner">
-
-    <img src="/assets/images/icon.png" alt="">
-    <img src="/assets/images/logo.png" alt="">
+      
    
+    <img src="/assets/images/logohome.png" alt="">
+    
+  
 
 </nav>
 
@@ -22,6 +31,7 @@
 <!-- buton play -->
 
 <div class="buton">
+    <div class="play"></div>
     <a href="/sherlock/escenario">Play</a>
 </div>
 
