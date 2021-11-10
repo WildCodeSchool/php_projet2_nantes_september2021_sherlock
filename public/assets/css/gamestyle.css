@@ -18,6 +18,19 @@ body {
     margin-left:2%;
 }
 
+.indicecarte {
+    position:relative;
+}
+
+.indicecarte img.loupe {
+    position:absolute;
+    width: 274.4px;
+    height: 483.98px;
+    left: 40%;
+    top: 2%;
+    transform: rotate(-23deg);
+}
+
 
 .aside-left h2 {
     color: rgb(226, 219, 209);
@@ -59,6 +72,16 @@ body {
     margin-right:7%;
     margin-left:10%;
     border-radius: 2%;
+    position: relative;
+}
+
+.histoire img.pen {
+    position: absolute;
+    width: 166.66px;
+    height: 350px;
+    left: 95%;
+    top: 25%;
+    transform: rotate(-7deg);
 }
 
 h2 {
