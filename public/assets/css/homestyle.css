@@ -1,0 +1,77 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: charmonman, bold;
+    color: white;
+}
+
+
+
+body {
+    background-image:url("../images/backgroundhome.png");
+    background-repeat:repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    
+}
+
+
+.buton{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 326px;
+    height: 148px;
+    left: -142px;
+    top: -7px;
+    border: 6px solid #FFFFFF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 60px; 
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+.play{
+    width: 0; 
+    height: 0; 
+    border-left: 60px solid white;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.buton a{
+    line-height: 133px;
+    text-decoration: none;
+    font-size: 70px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.regles{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.regles h1{
+    font-size: 100px;
+    line-height: 285px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 60px;
+}
+
+.regles p{
+    text-align: left;
+    width: 35%;
+    font-size: 30px;
+    line-height: 43px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+}
