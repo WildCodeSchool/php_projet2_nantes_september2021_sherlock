@@ -13,6 +13,6 @@ return [
     'sherlock/police' => ['Homecontroller', 'police'],
     'sherlock/win' => ['Homecontroller', 'win'],
     'sherlock/home' => ['Homecontroller', 'index'],
-    'items/add' => ['ItemController', 'add',],
-    'items/delete' => ['ItemController', 'delete',],
+    'sherlock/aboutus' => ['Homecontroller', 'aboutus',],
+    'sherlock/thanks' => ['Homecontroller', 'thanks',],
 ];
