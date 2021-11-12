@@ -1,3 +1,4 @@
+
 {% extends 'layout.html.twig' %}
 
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/gamestyle.css">
@@ -5,7 +6,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
 {% endblock %}
-
 
 
 {% block content %}
@@ -16,22 +16,20 @@
     <div class="bodypage">
         <!-- barre lateral gauche -->
         <div class="aside-left">
+            <div class="indicecarte">
+            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
                 <div class="indices">
-                    <img src="/assets/images/paper.jpg" alt="papier">
-                    <div class="texteindice"><h2>Les indices</h2></div>
+                    <div class="texteindice"><h3>Les indices</h3></div>
                 </div>
 
                 <h2>Je veux parler à l’inspecteur</h2>
         <!-- buton go -->
 
                 <div class="button">
-                <a href="/sherlock/police">Valider</a>
-                </div>  
-        </div>      
-
-        <h2>Je veux parler à l’inspecteur</h2>
-
-
+                <a href="/sherlock/police"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
+                </div>
+            </div>  
+        </div>    
 
         <!-- body pag 3 -->
 
@@ -41,7 +39,6 @@
 
             <!-- histoire -->
             <div class="histoire">
-                <img src="/assets/images/parchemin.jpg" alt="parchemin">
                     <center>
                         <div class="textehistoire">
                             <h2>Le meurtre de Rose-marie Mayer</h2>
@@ -75,6 +72,7 @@
                                 </p>
                             </div>
                     </center>
+                <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
             </div>
 
         </div>
@@ -84,32 +82,29 @@
         <!-- barre lateral droit -->
 
         <div class="aside-right">
-            <aside>
                 <h2>Les suspects</h2>
 
         <!-- cards -->
-                <div class="cards">
+                <div class="cartes">
                     <div class="moriartycard">
-                        <img src="/assets/images/parchemin.jpg" alt="parchemin">
-                            <div class="moriartyimg"><img src="/assets/images/moriarty.jpg" alt="moriarty"></div>
-                            <div class="textemoriarty">Moriarty</div>                        
+                            <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty"></div>
+                            <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
+                            <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty"></div>                        
                     </div>
 
                     <div class="bakercard">
-                        <img src="/assets/images/parchemin.jpg" alt="parchemin">
-                            <div class="bakerimg"><img src="/assets/images/baker.jpg" alt="baker">
-                            <div class="textebaker">W.Baker</div>
+                            <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
+                            <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
+                            <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
                     </div>
 
                     <div class="jamescard">
-                        <img src="/assets/images/parchemin.jpg" alt="parchemin">
-                            <div class="jamesimg"><img src="/assets/images/james.jpg" alt="james">
-                            <div class="textejames">Pr. James</div>
+                            <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
+                            <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
+                            <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
                     </div>
                 </div>
-            </aside>
         </div>
 
-        </div>
     </div>
 {% endblock %}
