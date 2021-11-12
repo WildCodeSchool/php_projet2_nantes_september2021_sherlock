@@ -35,12 +35,12 @@
 
     <!-- enigme -->
     <div class="enigme">
-        <h2>Les énigmes :</h2>
-        <p>Le bibliothécaire Sean McNulty a été assassiné !
-            C’est la chercheuse Rose-Mary Baken qui a retrouvé son corps dans son bureau ! Heuresement,watson se
-            trouvait à la bibliothèque et le secteur a rapidement été bouclé.
-            Sherlock Holmes a réussi à identifier 3 suspects,mais il n’arrive pas à identifier le coupable,il t’as donc
-            appelé à la rescousse pour que tu identifie toi même le vrai coupable !</p>
+        <h2>Choississez votre énigme :</h2>
+        <li>
+        {% for scenario in enigmes %}
+            {{scenario.titre}}
+        {% endfor %}
+        </li>
     </div>
 
 </div>
