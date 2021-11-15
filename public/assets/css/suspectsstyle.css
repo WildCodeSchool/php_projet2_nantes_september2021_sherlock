@@ -1,26 +1,29 @@
 body {
-    background-image:url("../images/background.jpeg");
+    background-image:url("../images/background_paper.png");
     background-size: cover;
-    font-family: charmonman, bold;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);  
+    font-family: charmonman, bold; 
+    max-width: auto;
 }
 
 .bodypage {
     display: flex;
-    box-sizing: border-box;
-}
+    flex-direction: row;
+    justify-content: space-between;
+} 
 
 
 .aside-left {
     position: relative;
-    max-width: auto;
-    max-height: auto;
-    box-sizing: border-box;
+    display: flex;
     margin-left:2%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    width: 30%;
 }
 
 .indicecarte {
     position:relative;
+    width: 100%;
 }
 
 .indicecarte img.loupe {
@@ -32,12 +35,6 @@ body {
     transform: rotate(-23deg);
 }
 
-
-.aside-left h2 {
-    color: rgb(226, 219, 209);
-    text-align: center;
-    margin-left: 1%;
-}
 
 .aside-left h3 {
     text-align: center;
@@ -60,62 +57,41 @@ body {
     box-sizing: border-box;
 }
 
-.button {
-    margin-left: 13%;
-}
-
-
-.histoire {
-    max-width: auto;
-    box-sizing: border-box;
-    background-image: url("../images/parchemin.jpg");
-    background-size:cover;
-    margin-right:7%;
-    margin-left:10%;
-    border-radius: 2%;
-    position: relative;
-}
-
-.histoire img.pen {
-    position: absolute;
-    width: 166.66px;
-    height: 350px;
-    left: 95%;
-    top: 25%;
-    transform: rotate(-7deg);
-}
-
-h2 {
-    text-align: center;
-}
-.textehistoire {
+.assassinh1 {
+    color:  rgb(226, 219, 209);
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding:1%;
-    top:1%;
-    font-size: 12px;
     text-align: center;
-    box-sizing: border-box;
+    font-size: 25px;
 }
 
-.aside-right {
-    box-sizing: border-box;
+.center {
     display: flex;
-    flex-direction: column;
-    color:  rgb(226, 219, 209)
-    max-width:20%;
-    margin-bottom: 2%; 
-    margin-left: 13%;
-    color: white;  
+    box-sizing: border-box;
+    flex-direction:column;
+    flex:1;
+    align-items: center;
 }
+
+.policeEtBadge {
+    display:flex;
+    flex-direction: row;
+}
+
+
+.cartes {
+    display:flex;
+    gap: 10px;
+    flex-direction:row;
+    width: 100%;
+}
+
 
 .moriartycard {
     background-image: url("../images/parchemin.jpg");
     background-size:cover;
-    padding: 20%;
+    padding: 5%; 
     width: 150px;
-    height: 240px;  
+    height: 270px;  
     position: relative;
     border-radius: 2%;
     margin-bottom:30%;
@@ -144,9 +120,9 @@ h2 {
     padding: 3%;
     background-image: url("../images/parchemin2.jpg");
     background-size:cover;
-    padding: 20%;
+    padding: 5%;
     width: 150px;
-    height: 240px;  
+    height: 270px;  
     position: relative;
     border-radius: 2%;
     margin-bottom:30%;
@@ -176,9 +152,9 @@ h2 {
     background-image: url("../images/parchemin3.jpg");
     background-size:cover;
     overflow: hidden;
-    padding: 20%;
+    padding: 5%;
     width: 150px;
-    height: 240px;
+    height: 270px;
     position : relative;
     border-radius: 2%; 
 }
@@ -202,3 +178,6 @@ h2 {
     top: 55%;  
 }
 
+.button {
+    text-align: center;
+}
