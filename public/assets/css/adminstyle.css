@@ -1,0 +1,92 @@
+body {
+    background-color:rgba(13, 13, 13, 0.85);
+    font-family: charmonman, bold;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.logo {
+    width: 200px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.itemconnexion {
+    width: 400px;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+input[type=submit] {
+    background-color:rgba(13, 13, 13, 0.70);
+    font-family: charmonman, bold;
+    color: #FFFFFF;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+input[type=submit]:focus {
+    background-color: 7EB5F6;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    }
+   
+
+ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        color: #FFFFFF;
+        box-sizing: border-box;
+    }
+    
+a {
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: 60px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+nav a:hover {
+        text-decoration: underline;
+        color: 7EB5F6;
+    }
+
+.form {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ .form-right form {
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+ }
+
+.form-left form {
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+} 
+
+.retourPageAccueil {
+    display : flex;
+    justify-content: center;
+}
+
+span {
+
+  
+}

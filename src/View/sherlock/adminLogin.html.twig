@@ -1,0 +1,39 @@
+
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script> 
+{% endblock %}
+
+{% block content %}
+<center>
+    <img class="logo" src="/assets/images/icon.png" alt="logo">
+    <br/>
+    <img class="itemconnexion" src="/assets/images/connexion_admin.png" alt="connexionlogin">
+</center>
+
+<div class="form">
+    <form action="AdminAccueil" method="post">
+        <div class="name">
+            <label for="name"> Name : </label>
+            <br/>
+            <input type="text" id="name" name="user_name" placeholder="Sherlock" required>
+        </div>
+
+        <div class="password">
+            <label for="password"> Password : </label>
+            <br/>
+            <input type="text" name="password" id="password" placeholder="123Pqz?" required>
+            <br/>
+        </div>
+    
+       <div class="connexion">
+            <a href="/sherlock/adminQuestions">
+                <input type="submit" value="Se connecter">
+            </a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

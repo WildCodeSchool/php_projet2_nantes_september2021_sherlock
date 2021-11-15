@@ -15,4 +15,10 @@ return [
     'sherlock/home' => ['Homecontroller', 'index'],
     'sherlock/aboutus' => ['Homecontroller', 'aboutus',],
     'sherlock/thanks' => ['Homecontroller', 'thanks',],
+    'sherlock/adminLogin' => ['Admincontroller', 'adminLogin'],
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
+    'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
+    'sherlock/adminPreuves' => ['Admincontroller', 'adminPreuves'],
+    'sherlock/adminTemoignages' => ['Admincontroller', 'adminTemoignages'],
+    'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
 ];
