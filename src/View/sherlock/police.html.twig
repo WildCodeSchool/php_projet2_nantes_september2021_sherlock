@@ -1,47 +1,72 @@
+
 {% extends 'layout.html.twig' %}
+
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/suspectsstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+{% endblock %}
 
 {% block content %}
     
    <!-- banner -->
 
 
+<div class="bodypage">
+    <div class="aside-left">
+            <div class="indicecarte">
+            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+                <div class="indices">
+                    <div class="texteindice"><h3>Les indices</h3></div>
+                </div>
+            </div>  
+    </div>    
 
-<!-- barre lateral gauche -->
-<div class="aside-left">
-    <aside>
-        <h2>Les indices</h2>
 
+    <div class="center">
+        <div class="policeEtBadge">
        
+        <!-- card chef police -->
+            <div class="cardpolice">
+                <img class="carte_police" src="/assets/images/police_carte.png" alt="inspecteur de police">
+            </div>
 
-<!-- body pag 4 -->
+             <!-- plaque police -->
+            <img class="badge" src="/assets/images/badge_police.png" alt="plaque de police">
+        </div>
 
+        <div class="assassinh1">
+            <h1>Qui est l’assassin ? </h1>
+        </div>
 
-<div class="center">
-<!-- plaque police -->
+        
+    <!-- cards suspects-->
+        <div class="cartes">
+            <div class="moriartycard">
+                <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty"></div>
+                <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
+                <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty"></div>                        
+            </div>
 
+            <div class="bakercard">
+                <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
+                <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
+                <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
+            </div>
 
-<!-- card chef police -->
-    <div class="cards">
+            <div class="jamescard">
+                <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
+                <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
+                <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
+            </div>
+        </div>
 
+        <div class="button">
+                <a href="/sherlock/win"><img class="button_valider" src="/assets/images/bouton.valider.png" alt="boutton valider" width="180px"></a>
+        </div>
+
+        
     </div>
-
-    <h1>Qui est l’assassin ? </h1>
-
-    
-<!-- cards suspects-->
-    <div class="cards">
-
-    </div>
-
-    <div class="buton">
-        <a href="/sherlock/win">Valider mon choix </a>
-      </div>
-
-    
 </div>
-
-
-
-
 
 {% endblock %}

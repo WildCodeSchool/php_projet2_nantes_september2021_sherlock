@@ -47,13 +47,13 @@
             <!-- enigme -->
             <div class="enigme">
                 <h2>Choississez votre énigme :</h2>
-                <li>
+                
                     
                         {% for scenario in enigmes %}
-                        {{scenario.titre}}
-                        {% endfor %}
-                    
-                </li>
+                        <li>
+                          {{scenario.titre}}
+                        </li>
+                        {% endfor %} 
             </div>
 
             <div class="histoire">
