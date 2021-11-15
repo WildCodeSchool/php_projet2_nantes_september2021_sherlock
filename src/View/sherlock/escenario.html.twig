@@ -32,7 +32,6 @@
             </aside>
         </div>
 
-    </div>
     <!-- body pag 2 -->
 
 
@@ -45,13 +44,15 @@
             <!-- enigme -->
             <div class="enigme">
                 <h2>Choississez votre énigme :</h2>
-                <li>
+                
                     
                         {% for scenario in enigmes %}
-                        {{scenario.titre}}
+                        <li>
+                          {{scenario.titre}}
+                        </li>
                         {% endfor %}
                     
-                </li>
+                
             </div>
 
             <div class="histoire">
