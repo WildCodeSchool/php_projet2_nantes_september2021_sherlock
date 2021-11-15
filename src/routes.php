@@ -20,9 +20,6 @@ return [
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
     'sherlock/adminPreuves' => ['Admincontroller', 'adminPreuves'],
     'sherlock/adminTemoignages' => ['Admincontroller', 'adminTemoignages'],
-<<<<<<< HEAD
     'sherlock/lose' => ['Homecontroller', 'lose'], 
-=======
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
->>>>>>> d4e4f27a865aa47b50054bee68e1ff0b3fbec886
 ];
