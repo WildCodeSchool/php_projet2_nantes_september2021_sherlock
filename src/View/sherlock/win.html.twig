@@ -1,13 +1,22 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/winstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+{% endblock %}
+
+
 {% block content %}
-<h1>You win!</h1>
 
-<div class="card">
 
-</div>
+    <div class="card">
+        <img src="/assets/images/win.png" alt="">
+    </div>
 
-<div class="buton">
-    <a href="/sherlock/home">Replay</a>
-</div>
+    <div class="buton">
+        <a href="/sherlock/home">Replay</a>
+    </div>
+
 {% endblock %}

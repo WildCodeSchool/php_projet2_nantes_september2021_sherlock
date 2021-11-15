@@ -1,8 +1,8 @@
 body {
     background-image:url("../images/background.jpeg");
-    background-size: cover;
+    background-size:cover;
     font-family: charmonman, bold;
-    color: white; 
+    color: black; 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -111,7 +111,9 @@ h2 {
     flex-direction: column;
     max-width:20%;
     margin-bottom: 2%; 
-    margin-left: 13%;  
+    margin-left: 13%; 
+    color: white;
+
 }
 
 .moriartycard {
@@ -205,4 +207,3 @@ h2 {
     position: relative;
     top: 55%;  
 }
-
