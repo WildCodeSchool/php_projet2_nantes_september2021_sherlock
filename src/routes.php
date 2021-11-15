@@ -8,9 +8,17 @@
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
 return [
     '' => ['HomeController', 'index',],
-    'items' => ['ItemController', 'index',],
-    'items/edit' => ['ItemController', 'edit', ['id']],
-    'items/show' => ['ItemController', 'show', ['id']],
-    'items/add' => ['ItemController', 'add',],
-    'items/delete' => ['ItemController', 'delete',],
+    'sherlock/escenario' => ['Homecontroller', 'scenario'],
+    'sherlock/game' => ['Homecontroller', 'game'],
+    'sherlock/police' => ['Homecontroller', 'police'],
+    'sherlock/win' => ['Homecontroller', 'win'],
+    'sherlock/home' => ['Homecontroller', 'index'],
+    'sherlock/aboutus' => ['Homecontroller', 'aboutus',],
+    'sherlock/thanks' => ['Homecontroller', 'thanks',],
+    'sherlock/adminLogin' => ['Admincontroller', 'adminLogin'],
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
+    'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
+    'sherlock/adminPreuves' => ['Admincontroller', 'adminPreuves'],
+    'sherlock/adminTemoignages' => ['Admincontroller', 'adminTemoignages'],
+    'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
 ];

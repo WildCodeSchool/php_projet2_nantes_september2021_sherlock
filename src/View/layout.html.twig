@@ -1,21 +1,39 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Sherlock the card game{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="icon" type="favicon/x-icon" href="/public/assets/images/icon.png">
+    <script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 
 <body>
+    {% block header %}
+
+    
+    <!-- header -->
+
+    <nav class="banner">
+
+    <a href="/sherlock/home"><img src="/assets/images/header.png" alt=""></a>
+
+    </nav> 
+
+    {% endblock %}
+
+
     {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
+    {% block javascript %}<script src="src/index.js"></script>{% endblock %}
+    {% block footer %}{% endblock %}
 </body>
+
+
 </html>
-
-
