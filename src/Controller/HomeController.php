@@ -64,5 +64,9 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/thanks.html.twig');
     }
+    public function lose()
+    {
+        return $this->twig->render('sherlock/lose.html.twig');
+    }
     
 }

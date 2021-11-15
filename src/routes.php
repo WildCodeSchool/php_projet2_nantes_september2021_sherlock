@@ -19,5 +19,6 @@ return [
     'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
     'sherlock/adminPreuves' => ['Admincontroller', 'adminPreuves'],
-    'sherlock/adminTemoignages' => ['Admincontroller', 'adminTemoignages'], 
+    'sherlock/adminTemoignages' => ['Admincontroller', 'adminTemoignages'],
+    'sherlock/lose' => ['Homecontroller', 'lose'], 
 ];
