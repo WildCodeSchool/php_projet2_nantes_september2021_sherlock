@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeModel;
+
 class HomeController extends AbstractController
 {
     /**
@@ -20,16 +22,24 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\SyntaxError
      */
 
+    private $model;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->model = new HomeModel();
+    }
 
     public function index()
-    {
+    {    
         return $this->twig->render('sherlock/home.html.twig');
     }
 
 
     public function scenario()
     {
-        return $this->twig->render('sherlock/escenario.html.twig');
+        $scenarios = $this->model->selectAll();
+        return $this->twig->render('sherlock/escenario.html.twig', ["enigmes"=>$scenarios]);
     }
 
     public function game()
