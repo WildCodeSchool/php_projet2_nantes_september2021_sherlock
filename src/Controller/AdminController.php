@@ -42,6 +42,7 @@ class AdminController extends AbstractController
     {
         return $this->twig->render('sherlock/adminEnigmes.html.twig');
     }
+
 }
     
 //     /** Vérifie la méthode d'accès de la page */
