@@ -1,109 +1,95 @@
-
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/gamestyle.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/gamestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
 
 
 {% block content %}
 
-    <!-- banner -->
+<!-- banner -->
 
 
-    <div class="bodypage">
-        <!-- barre lateral gauche -->
-        <div class="aside-left">
-            <div class="indicecarte">
+<div class="bodypage">
+    <!-- barre lateral gauche -->
+    <div class="aside-left">
+        <div class="indicecarte">
             <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
-                <div class="indices">
-                    <div class="texteindice"><h3>Les indices</h3></div>
+            <div class="indices">
+                <div class="texteindice">
+                    <h3>Les indices</h3>
                 </div>
-
-                <h2>Je veux parler à l’inspecteur</h2>
-        <!-- buton go -->
-
-                <div class="button">
-                <a href="/sherlock/police"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
-                </div>
-            </div>  
-        </div>    
-
-        <!-- body pag 3 -->
-
-
-        <div class="center">
-
-
-            <!-- histoire -->
-            <div class="histoire">
-                    <center>
-                        <div class="textehistoire">
-                            <h2>{{scenario.titre}}</h2>
-                                <p>
-                                    {{scenario.histoire}}
-                                </p>
-                            </div>
-                    </center>
-                <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
             </div>
 
+            <h2>Je veux parler à l’inspecteur</h2>
+            <!-- buton go -->
+
+            <div class="button">
+                <a href="/sherlock/police"><img class="button_valider" src="/assets/images/button_valider.png"
+                        alt="boutton valider" width="180px"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- body pag 3 -->
+
+
+    <div class="center">
+
+
+        <!-- histoire -->
+        <div class="histoire">
+            <center>
+                <div class="textehistoire">
+                    <h2>{{scenario.titre}}</h2>
+                    <p>
+                        {{scenario.histoire}}
+                    </p>
+                </div>
+            </center>
+            <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
         </div>
 
+    </div>
 
 
-        <!-- barre lateral droit -->
 
-        <div class="aside-right">
-                <h2>Les suspects</h2>
+    <!-- barre lateral droit -->
+
+    <div class="aside-right">
+        <h2>Les suspects</h2>
 
         <!-- cards -->
-                <div class="cartes">
-<<<<<<< HEAD
-                    <div class="moriartycard">
-                            <img src="/assets/images/moriarty_carte.png" alt="moriarty">                        
-                    </div>
+        <div class="cartes">
+           
+            <div class="moriartycard">
+                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
+            </div>
 
-                    <div class="bakercard">
-                            <img src="/assets/images/baker_carte.png" alt="baker">  
-                    </div>
+            <div class="bakercard">
+                <img src="/assets/images/baker_carte.png" alt="baker">
+            </div>
 
-                    <div class="jamescard">
-                           <img src="/assets/images/james_carte.png" alt="james">
-                    </div>        
-                    
-=======
-                    <div class="moriartycard" >
-                            <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty" id="moriartycard"></div>
-                            <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
-                            <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty"></div>                        
-                    </div>
+            <div class="jamescard">
+                <img src="/assets/images/james_carte.png" alt="james">
+            </div>
 
-                    <div class="bakercard" id="bakercard">
-                            <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
-                            <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
-                            <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
-                    </div>
 
-                    <div class="jamescard" id="jamescard">
-                            <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
-                            <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
-                            <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
-                    </div>
->>>>>>> 6bde3204127f4033c345dc90d369f040045dbaab
-                </div>
+
         </div>
-
     </div>
+    
+</div>
 
-    <div class="questions">
-        <div>
+<div class="questions">
+    <div>
         <h2>test</h2>
-            {%for question in questions %}
-                <li>{{question.intitule}}
+        {%for question in questions %}
+        <li>{{question.intitule}}
             {% endfor %}
-        </div>
     </div>
+</div>
 {% endblock %}
