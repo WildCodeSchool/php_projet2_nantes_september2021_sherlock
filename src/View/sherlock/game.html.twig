@@ -22,63 +22,93 @@
                     <div class="texteindice"><h3>Les indices</h3></div>
                 </div>
 
-                <h2>Je veux parler à l’inspecteur</h2>
-        <!-- buton go -->
+                    <h2>Je veux parler à l’inspecteur</h2>
+            <!-- buton go -->
 
-                <div class="button">
-                <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
+                    <div class="button">
+                    <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
+                    </div>
+                </div>  
+            </div>    
+
+            <!-- body pag 3 -->
+
+
+            <div class="center">
+
+
+                <!-- histoire -->
+                <div class="histoire">
+                        <center>
+                            <div class="textehistoire"> 
+                                <h2>{{scenario.titre}} {{dump(scenario)}}</h2>
+                                    <p> 
+                                        {{scenario.histoire}}
+                                    </p>
+                                </div>
+                        </center>
+                    <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
                 </div>
-            </div>  
-        </div>    
-
-        <!-- body pag 3 -->
 
 
-        <div class="center">
+            <!-- barre lateral droit -->
 
+            <div class="aside-right">
+                    <h2>Les suspects</h2>
 
-            <!-- histoire -->
-            <div class="histoire">
-                    <center>
-                        <div class="textehistoire"> 
-                            <h2>{{scenario.titre}}</h2>
-                                <p> 
-                                    {{scenario.histoire}}
-                                </p>
-                            </div>
-                    </center>
-                <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
+            <!-- cards -->
+                    <div class="cartes">
+
+                        <div class="moriartycard">
+                                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
+                                <button id="btnPopup 1" class="btnPopup">J'interroge le suspect</button>
+                                <div id="overlay 1" class="overlay">
+                                    <div id="popup" class="popup">
+                                                <h2>Les questions
+                                                <span id="btnClose 1" class="btnClose">&times;</span>
+                                                </h2>
+                                                {% for question in questions %}
+                                                    <li>{{question.intitule}}</li>
+                                                {% endfor %}
+                                    </div>
+                                </div>      
+                        </div>
+
+                        <div class="bakercard">
+                                <img src="/assets/images/baker_carte.png" alt="baker">
+                                <button id="btnPopup 2" class="btnPopup">J'interroge le suspect</button>
+                                <div id="overlay 2" class="overlay">
+                                    <div id="popup" class="popup">
+                                                <h2>Les questions
+                                                <span id="btnClose 2" class="btnClose">&times;</span>
+                                                </h2>
+                                                {% for question in questions %}
+                                                    <li>{{question.intitule}}</li>
+                                                {% endfor %}
+                                    </div>
+                                </div>     
+                        </div>
+
+                        <div class="jamescard">
+                            <img src="/assets/images/james_carte.png" alt="james">
+                            <button id="btnPopup 3" class="btnPopup">J'interroge le suspect</button>
+                                <div id="overlay 3" class="overlay">
+                                    <div id="popup" class="popup">
+                                                <h2>Les questions
+                                                <span id="btnClose 3" class="btnClose">&times;</span>
+                                                </h2>
+                                                {% for question in questions %}
+                                                    <li>{{question.intitule}}</li>
+                                                {% endfor %}
+                                    </div>
+                                </div>   
+                        </div>  
+
+                    </div>
             </div>
 
         </div>
 
-
-
-        <!-- barre lateral droit -->
-
-        <div class="aside-right">
-                <h2 class="test">Les suspects</h2>
-
-        <!-- cards -->
-                <div class="cartes">
-
-                    <div id="moriartycard">
-                            <img src="/assets/images/moriarty_carte.png" id="moriartycard" alt="moriarty">
-                                                    
-                    </div>
-
-                    <div class="bakercard">
-                            <img src="/assets/images/baker_carte.png" alt="baker">  
-                    </div>
-
-                    <div class="jamescard">
-                           <img src="/assets/images/james_carte.png" alt="james">
-                    </div>        
-        
-                    </div>
-
-                </div>
-        </div>
 
     </div>
 
@@ -90,4 +120,7 @@
             {% endfor %}
         </div>
     </div>
+
+{% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
+
 {% endblock %}

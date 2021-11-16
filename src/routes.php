@@ -24,5 +24,5 @@ return [
     'sherlock/adminQuestions' => ['Admincontroller', 'adminListeQuestions'],
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminListeEnigmes'],
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
-
+    'sherlock/questions' => ['Homecontroller', 'questions'],
 ];

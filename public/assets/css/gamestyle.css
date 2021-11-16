@@ -145,3 +145,45 @@ h2 {
 .listeQuestions {
     display: none;
 } 
+
+.btnPopup{
+    background-color: rgba(13, 13, 13, 0.70);
+    padding: 1% 2%; 
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    }
+
+.btnPopup:hover{
+    background-color: rgb(226, 219, 209);
+    color:black;
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top:0px;
+    background-color: rgba(0,0 ,0 , 0.5);
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    display:none;
+    }
+
+.popup{
+margin: 10% auto;
+width : 90%;
+background-color: rgba(13, 13, 13, 0.70);
+color:rgb(226, 219, 209);
+padding: 1em;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+}
+
+.btnClose {
+    float: right;
+    font-size:16pt;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+    }
