@@ -1,5 +1,5 @@
 body {
-    background-image:url("../images/background.jpeg");
+    background-image: url("../images/background.jpeg");
     background-size: cover;
     font-family: charmonman, bold;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -10,28 +10,26 @@ body {
     box-sizing: border-box;
 }
 
-
 .aside-left {
     position: relative;
     max-width: auto;
     max-height: auto;
     box-sizing: border-box;
-    margin-left:2%;
+    margin-left: 2%;
 }
 
 .indicecarte {
-    position:relative;
+    position: relative;
 }
 
 .indicecarte img.loupe {
-    position:absolute;
+    position: absolute;
     width: 274.4px;
     height: 483.98px;
     left: 40%;
     top: 2%;
     transform: rotate(-23deg);
 }
-
 
 .aside-left h2 {
     color: rgb(226, 219, 209);
@@ -64,14 +62,13 @@ body {
     margin-left: 13%;
 }
 
-
 .histoire {
     max-width: auto;
     box-sizing: border-box;
     background-image: url("../images/parchemin.jpg");
-    background-size:cover;
-    margin-right:7%;
-    margin-left:10%;
+    background-size: cover;
+    margin-right: 7%;
+    margin-left: 10%;
     border-radius: 2%;
     position: relative;
 }
@@ -88,6 +85,7 @@ body {
 h2 {
     text-align: center;
 }
+
 .textehistoire {
     display: flex;
     flex-direction: column;
@@ -102,48 +100,42 @@ h2 {
 .aside-right {
     display: flex;
     flex-direction: column;
-    color:  rgb(226, 219, 209)
-    max-width : 15%;
-    margin-left : 5%;
-    color : white;  
+    color: rgb(226, 219, 209) max-width: 15%;
+    margin-left: 5%;
+    color: white;
 }
 
 .cartes img {
     display: flex;
-    flex-direction:column;
-    width:100%;
+    flex-direction: column;
+    width: 100%;
 }
 
 .moriartycard {
     width: 150px;
-    height: 270px; 
+    height: 270px;
 }
 
 .moriartycard img {
     border-radius: 2%;
 }
 
-
 .bakercard {
     width: 150px;
-    height: 270px;  
+    height: 270px;
     border-radius: 2%;
 }
 
 .bakercard img {
-    border-radius: 2%;  
+    border-radius: 2%;
 }
-
 
 .jamescard {
     width: 150px;
     height: 270px;
-    border-radius: 2%; 
+    border-radius: 2%;
 }
 
 .jamescard img {
     border-radius: 2%;
 }
-
-
-
