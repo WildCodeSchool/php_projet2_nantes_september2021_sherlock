@@ -13,7 +13,7 @@
     <!-- banner -->
 
 
-    <div class="bodypage">
+    <div class="bodypage" id="bodypage">
         <!-- barre lateral gauche -->
         <div class="aside-left">
             <div class="indicecarte">
@@ -40,9 +40,9 @@
             <!-- histoire -->
             <div class="histoire">
                     <center>
-                        <div class="textehistoire">
-                            <h2>{{scenario.titre}}{{dump(scenario)}}</h2>
-                                <p>
+                        <div class="textehistoire"> 
+                            <h2>{{scenario.titre}}</h2>
+                                <p> 
                                     {{scenario.histoire}}
                                 </p>
                             </div>
@@ -61,23 +61,21 @@
 
         <!-- cards -->
                 <div class="cartes">
-                    <div class="moriartycard" >
-                            <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty" id="moriartycard"></div>
-                            <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
-                            <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty"></div>                        
+
+                    <div class="moriartycard">
+                            <img src="/assets/images/moriarty_carte.png" id="moriartycard" alt="moriarty">                        
                     </div>
 
-                    <div class="bakercard" id="bakercard">
-                            <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
-                            <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
-                            <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
+                    <div class="bakercard">
+                            <img src="/assets/images/baker_carte.png" alt="baker">  
                     </div>
 
-                    <div class="jamescard" id="jamescard">
-                            <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
-                            <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
-                            <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
+                    <div class="jamescard">
+                           <img src="/assets/images/james_carte.png" alt="james">
+                    </div>        
+        
                     </div>
+
                 </div>
         </div>
 

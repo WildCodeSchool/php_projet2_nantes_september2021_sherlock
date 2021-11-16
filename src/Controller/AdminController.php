@@ -55,33 +55,5 @@ class AdminController extends AbstractController
     }
 
 }
-    
-//     /** Vérifie la méthode d'accès de la page */
-//     if($_SERVER['REQUEST_METHOD'] === "POST"){
-    
-//     /** Nettoyage des données */
-//     $name = trim($_POST['Name']);
-//     $password = trim($_POST['Password']);
-//     }
-
-//     /** Validation des données */
-//     if($name == ""){
-//         $errors['Name'] = "Ce champ est obligatoire.";
-//     }
-
-//     if($password == ""){
-//         $errors['Password'] = "Ce champ est obligatoire.";
-//     }
-
-// /** S'il n'y a pas d'erreurs, redirection vers la page adminQuestions.html.twig */
-//     if(empty($errors)){
-//         $statement->bindValue(':Name', $name, \PDO::PARAM_STR);
-//         $statement->bindValue(':Password', $password, \PDO::PARAM_STR);
-
-//         $statement->execute();
-
-//         header("Location: /adminQuestions.html.twig");
-//     }
-
 
 ?>

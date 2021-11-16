@@ -18,11 +18,11 @@ abstract class AbstractController
         $loader = new FilesystemLoader(APP_VIEW_PATH);
         $this->twig = new Environment(
             $loader,
-            [
-                'cache' => false,
-                'debug' => (ENV === 'dev'),
-            ]
-        );
+        [
+            'cache' => false,
+            'debug' => (ENV === 'dev'),
+        ]
+            );
         $this->twig->addExtension(new DebugExtension());
     }
 }

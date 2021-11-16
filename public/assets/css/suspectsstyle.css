@@ -1,39 +1,38 @@
 body {
-    background-image:url("../images/background_paper.png");
+    background-image: url("../images/background_paper.png");
     background-size: cover;
-    font-family: charmonman, bold; 
+    font-family: charmonman, bold;
     max-width: auto;
 }
 
 .bodypage {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-} 
-
+    justify-content: space-between;
+}
 
 .aside-left {
     position: relative;
     display: flex;
-    margin-left:2%;
+    margin-left: 2%;
     margin-right: 2%;
     box-sizing: border-box;
-    
+    width: 18%;
 }
 
 .indicecarte {
-    position:relative;
+    position: relative;
+    width: 100%;
 }
 
 .indicecarte img.loupe {
-    position:absolute;
+    position: absolute;
     width: 274.4px;
     height: 483.98px;
     left: 40%;
     top: 2%;
     transform: rotate(-23deg);
 }
-
 
 .aside-left h3 {
     text-align: center;
@@ -57,121 +56,78 @@ body {
 }
 
 .assassinh1 {
-    color:  rgb(226, 219, 209);
-    display: flex;
-    text-align: center;
+    color: rgb(226, 219, 209);
+    margin-right: 15%;
     font-size: 25px;
 }
 
 .center {
     display: flex;
-    flex-direction:column;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
 }
 
 .policeEtBadge {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    gap: 50%;
 }
 
+.badge {
+    width: 200px;
+    height: 200px;
+}
+
+.carte_police {
+    border-radius: 2%;
+}
 
 .cartes {
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5%;
 }
-
 
 .moriartycard {
-    background-image: url("../images/parchemin.jpg");
-    background-size:cover;
-    padding: 5%; 
-    width: 150px;
-    height: 270px;  
-    position: relative;
-    border-radius: 2%;
-    margin-bottom:30%;
-}
-
-.moriartyimg img {
-    height:40%;
-    max-width: 75%;
-    border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;
-}
-
-.titremoriartycard img {
-    position: relative;
-     margin-top: none;
-}
-
-.textemoriartycard {
-    position: relative;
-    top: 55%;
-}
-
-.bakercard {
-    padding: 3%;
-    background-image: url("../images/parchemin2.jpg");
-    background-size:cover;
-    padding: 5%;
-    width: 150px;
-    height: 270px;  
-    position: relative;
-    border-radius: 2%;
-    margin-bottom:30%;
-}
-
-.bakerimg img {
-    height:40%;
-    max-width: 75%;
-    border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;   
-}
-
-.titrebakercard img {
-    position: relative;
-    margin-top: none;
-}
-
-.textebakercard {
-    position: relative;
-    top: 55%; 
-}
-
-.jamescard {
-    padding:3%;
-    background-image: url("../images/parchemin3.jpg");
-    background-size:cover;
-    overflow: hidden;
     padding: 5%;
     width: 150px;
     height: 270px;
-    position : relative;
-    border-radius: 2%; 
 }
 
-.jamesimg img {
-    height:40%;
-    max-width: 75%;
+.moriartycard img {
     border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;
 }
 
-.titrejamescard img {
-    position: relative;
-    margin-top: none;
+.bakercard {
+    padding: 5%;
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
 }
 
-.textejamescard {
-    position: relative;
-    top: 55%;  
+.bakercard img {
+    border-radius: 2%;
+}
+
+.jamescard {
+    padding: 5%;
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.jamescard img {
+    border-radius: 2%;
+}
+
+.button img {
+    width: 300px;
 }
 
 .button {
-    text-align: center;
+    margin-right: 15%;
 }

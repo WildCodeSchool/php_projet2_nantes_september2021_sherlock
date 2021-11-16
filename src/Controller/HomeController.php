@@ -35,7 +35,6 @@ class HomeController extends AbstractController
         return $this->twig->render('sherlock/home.html.twig');
     }
 
-
     public function scenario()
     {
         $scenarios = $this->model->selectAll();
@@ -44,8 +43,8 @@ class HomeController extends AbstractController
 
     public function game(int $id): string
     {      
-        $scenario = $this->model->selectOneById($id);
-        return $this->twig->render('sherlock/game.html.twig', $scenario);
+        $scenarios = $this->model->selectOneById($id);
+        return $this->twig->render('sherlock/game.html.twig', ["scenarios"=>$scenarios]);
     }
 
     public function listeQuestions(): string
@@ -72,6 +71,10 @@ class HomeController extends AbstractController
     public function thanks()
     {
         return $this->twig->render('sherlock/thanks.html.twig');
+    }
+    public function lose()
+    {
+        return $this->twig->render('sherlock/lose.html.twig');
     }
     
     

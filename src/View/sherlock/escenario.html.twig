@@ -29,44 +29,43 @@
                 <a href="/sherlock/game?id=1"><img class="button_valider" src="/assets/images/play.png" alt="boutton valider"
                         width="180px"></a>
             </div>
-            </aside>
+
+
         </div>
+    </div>
 
-
-    <!-- enigme -->
-  
     <!-- body pag 2 -->
 
 
     <div class="center">
 
-
         <center>
-
-
             <!-- enigme -->
             <div class="enigme">
                 <h2>Choississez votre énigme :</h2>
-                
-                    
-                        {% for scenario in enigmes %}
-                        <li>
-                          {{scenario.titre}}
-                        </li>
-                        {% endfor %} 
+
+                {% for scenario in enigmes %}
+                <li>
+                    {{scenario.titre}}
+                </li>
+                {% endfor %}
+
             </div>
 
             <div class="histoire">
                 <div class="textehistoire">
                     <h2>Le meurtre de Rose-marie Mayer</h2>
                     <p>Nous sommes le mardi 13 Novembre 1883. <br />
-                        Vous incarnez le personnage du Dr Watson, célèbre assistant du plus grand enquêteur du XIXème
+                        Vous incarnez le personnage du Dr Watson, célèbre assistant du plus grand enquêteur du
+                        XIXème
                         siècle,
                         Sherlock Holmes. <br />
-                        Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack Stapleton
+                        Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack
+                        Stapleton
                         :
                         <br />
-                        "Nous avons retrouvé le corps d'une jeune femme à 6h ce matin. Madame Rose-Marie Mayer. <br />
+                        "Nous avons retrouvé le corps d'une jeune femme à 6h ce matin. Madame Rose-Marie Mayer.
+                        <br />
                         Elle a été retrouvée morte dans son salon, à l'angle de la 13ème de BakerStreet à Londres.
                         <br />
                         D'après l'estimation de notre légiste,
@@ -84,24 +83,17 @@
         <!-- cards -->
         <div class="cartes">
             <div class="moriartycard">
-                <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty">
-                </div>
-                <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
-                <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty">
-                </div>
+                    <img src="/assets/images/moriarty_carte.png" alt="moriarty">                        
             </div>
 
             <div class="bakercard">
-                <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
-                <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
-                <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
+                    <img src="/assets/images/baker_carte.png" alt="baker">  
             </div>
 
             <div class="jamescard">
-                <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
-                <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
-                <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
-            </div>
+                   <img src="/assets/images/james_carte.png" alt="james">
+            </div>        
+            
         </div>
     </div>
 

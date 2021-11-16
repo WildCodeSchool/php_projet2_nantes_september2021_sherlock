@@ -1,7 +1,8 @@
 body {
-    background-image:url("../images/background.jpeg");
+    background-image: url("../images/background.jpeg");
     background-size: cover;
-    font-family: charmonman, bold;  
+    font-family: charmonman, bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .bodypage {
@@ -9,28 +10,26 @@ body {
     box-sizing: border-box;
 }
 
-
 .aside-left {
     position: relative;
     max-width: auto;
     max-height: auto;
     box-sizing: border-box;
-    margin-left:2%;
+    margin-left: 2%;
 }
 
 .indicecarte {
-    position:relative;
+    position: relative;
 }
 
 .indicecarte img.loupe {
-    position:absolute;
+    position: absolute;
     width: 274.4px;
     height: 483.98px;
     left: 40%;
     top: 2%;
     transform: rotate(-23deg);
 }
-
 
 .aside-left h2 {
     color: rgb(226, 219, 209);
@@ -63,14 +62,13 @@ body {
     margin-left: 13%;
 }
 
-
 .histoire {
     max-width: auto;
     box-sizing: border-box;
     background-image: url("../images/parchemin.jpg");
-    background-size:cover;
-    margin-right:7%;
-    margin-left:10%;
+    background-size: cover;
+    margin-right: 7%;
+    margin-left: 10%;
     border-radius: 2%;
     position: relative;
 }
@@ -87,116 +85,63 @@ body {
 h2 {
     text-align: center;
 }
+
 .textehistoire {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding:1%;
     top:1%;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     box-sizing: border-box;
 }
 
 .aside-right {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    color:  rgb(226, 219, 209);
-    max-width:20%;
-    margin-bottom: 2%; 
-    margin-left: 13%;  
+    color: rgb(226, 219, 209);
+    max-width: 15%;
+    margin-left: 5%;
+    color: white;
+}
+
+.cartes img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .moriartycard {
-    background-image: url("../images/parchemin.jpg");
-    background-size:cover;
-    padding: 20%;
     width: 150px;
-    height: 240px;  
-    position: relative;
+    height: 270px;
+}
+
+.moriartycard img {
     border-radius: 2%;
-    margin-bottom:30%;
-}
-
-.moriartyimg img {
-    height:40%;
-    max-width: 75%;
-    border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;
-}
-
-.titremoriartycard img {
-    position: relative;
-     margin-top: none;
-}
-
-.textemoriartycard {
-    position: relative;
-    top: 55%;
 }
 
 .bakercard {
-    padding: 3%;
-    background-image: url("../images/parchemin2.jpg");
-    background-size:cover;
-    padding: 20%;
     width: 150px;
-    height: 240px;  
-    position: relative;
+    height: 270px;
     border-radius: 2%;
-    margin-bottom:30%;
 }
 
-.bakerimg img {
-    height:40%;
-    max-width: 75%;
+.bakercard img {
     border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;   
-}
-
-.titrebakercard img {
-    position: relative;
-    margin-top: none;
-}
-
-.textebakercard {
-    position: relative;
-    top: 55%; 
 }
 
 .jamescard {
-    padding:3%;
-    background-image: url("../images/parchemin3.jpg");
-    background-size:cover;
-    overflow: hidden;
-    padding: 20%;
     width: 150px;
-    height: 240px;
-    position : relative;
-    border-radius: 2%; 
-}
-
-.jamesimg img {
-    height:40%;
-    max-width: 75%;
+    height: 270px;
     border-radius: 2%;
-    display: block;
-    box-sizing: border-box;
-    position : absolute;
 }
 
-.titrejamescard img {
-    position: relative;
-    margin-top: none;
+.jamescard img {
+    border-radius: 2%;
 }
 
-.textejamescard {
-    position: relative;
-    top: 55%;  
-}
 
+.listeQuestions {
+    display: none;
+} 
