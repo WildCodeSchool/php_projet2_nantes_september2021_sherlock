@@ -16,16 +16,8 @@ create table personne (
     firstname varchar(50),
     lastname varchar(50),
     description Text,
-    lien_photo varchar(100)
-);
-
-CREATE TABLE enigme_personne (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    personne_id INT,
-    enigme_id INT,
     role varchar(10),
-    FOREIGN KEY (personne_id) REFERENCES personne(id),
-    FOREIGN KEY(enigme_id) REFERENCES enigme(id)
+    lien_photo varchar(100)
 );
 
 create table question (
