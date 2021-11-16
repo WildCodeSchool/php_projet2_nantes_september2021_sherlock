@@ -38,4 +38,14 @@ class HomeModel extends AbstractManager
         return $statement->execute();
     }
 
+    public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
+    {
+        $query = "SELECT * FROM question";
+        if ($orderBy) {
+            $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
+        }
+
+        return $this->pdo->query($query)->fetchAll();
+    }
+
 }
