@@ -42,13 +42,21 @@ class HomeController extends AbstractController
         return $this->twig->render('sherlock/escenario.html.twig', ["enigmes"=>$scenarios]);
     }
 
-    public function game()
-    {
-        return $this->twig->render('sherlock/game.html.twig');
+    public function game(int $id): string
+    {      
+        $scenario = $this->model->selectOneById($id);
+        return $this->twig->render('sherlock/game.html.twig', ["enigme"=>$scenario]);
     }
 
-    public function police()
+    public function listeQuestions(): string
     {
+        $questions = $this->model->selectAll();
+        return $this->twig->render('sherlock/game.html.twig', ["interrogations"=>$questions]);
+    }
+
+    public function police(int $id): string
+    {
+        $scenario = $this->model->selectOneById($id);
         return $this->twig->render('sherlock/police.html.twig');
     }
 
@@ -69,5 +77,6 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/lose.html.twig');
     }
+    
     
 }

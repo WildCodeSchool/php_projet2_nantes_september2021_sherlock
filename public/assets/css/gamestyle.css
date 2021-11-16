@@ -100,7 +100,8 @@ h2 {
 .aside-right {
     display: flex;
     flex-direction: column;
-    color: rgb(226, 219, 209) max-width: 15%;
+    color: rgb(226, 219, 209);
+    max-width: 15%;
     margin-left: 5%;
     color: white;
 }
@@ -138,4 +139,8 @@ h2 {
 
 .jamescard img {
     border-radius: 2%;
+}
+
+.questions {
+    display: none;
 }
