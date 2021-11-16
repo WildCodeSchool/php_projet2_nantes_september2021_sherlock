@@ -136,6 +136,11 @@ h2 {
     border-radius: 2%;
 }
 
+<<<<<<< HEAD
 .jamescard img {
     border-radius: 2%;
+=======
+.questions {
+    display: none;
+>>>>>>> 6bde3204127f4033c345dc90d369f040045dbaab
 }

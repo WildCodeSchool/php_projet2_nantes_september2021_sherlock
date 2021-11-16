@@ -1,0 +1,150 @@
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+<center>
+    <img class="logo" src="/assets/images/icon.png" alt="logo">
+    <br/>
+
+<nav>
+    <ul>
+    <li><a href="/sherlock/adminQuestions">Questions</a></li>
+    <li><a href="/sherlock/adminPreuves">Preuves</a></li>
+    <li><a href="/sherlock/adminIndices">Indices</a></li>
+    <li><a href="/sherlock/adminTemoignages">Témoignages</a></li>
+    <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
+    </ul>
+</nav>
+
+{% set i=1 %}
+{% for question in questions %}
+    <form action="adminQuestions" method="post">
+        <div class="question1">
+            <label for="question1"> Question 1 : </label>
+            <br/>
+            <input type="text" id="question1" name="question1" value="{{question.intitule}}">
+            <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+            <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+            <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span> 
+        </div>
+    </form>
+    {% set i = i+1 %}
+{% endfor %}
+
+<form action="adminQuestions" method="post">
+        <div class="question1">
+            <label for="question1"> Ajouter une question : </label>
+            <br/>
+            <input type="text" id="question1" name="question1">
+        </div>
+    </form>
+
+{# <div class="form">
+    <div class="form-left">
+        <form action="adminQuestions" method="post">
+            <div class="question1">
+                <label for="question1"> Question 1 : </label>
+                <br/>
+                <input type="text" id="question1" name="question1">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span> 
+            </div>
+            
+            <div class="question2">
+                <label for="question2"> Question 2 : </label>
+                <br/>
+                <input type="text" id="question2" name="question2" >
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+                
+            </div>
+            
+            <div class="question3">
+                <label for="question3"> Question 3 : </label>
+                <br/>
+                <input type="text" id="question3" name="question3">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question4">
+                <label for="question4"> Question 4 : </label>
+                <br/>
+                <input type="text" id="question4" name="question4">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question5">
+                <label for="question5"> Question 5 : </label>
+                <br/>
+                <input type="text" id="question5" name="question5">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-right">
+        <form action="adminquestions" method="post">
+            <div class="question6">
+                <label for="question6"> Question 6 : </label>
+                <br/>
+                <input type="text" id="question6" name="question6">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question7">
+                <label for="question7"> Question 7 : </label>
+                <br/>
+                <input type="text" id="question7" name="question7">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question8">
+                <label for="question8"> Question 8 : </label>
+                <br/>
+                <input type="text" id="question8" name="question8">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question9">
+                <label for="question9"> Question 9 : </label>
+                <br/>
+                <input type="text" id="question9" name="question9">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+            
+            <div class="question10">
+                <label for="question10"> Question 10 : </label>
+                <br/>
+                <input type="text" id="question10" name="question10">
+                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
+            </div>
+        </form>
+    </div>
+</div> #}
+
+<div class="retourPageAccueil">
+            <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>
+</div>
+{% endblock %}

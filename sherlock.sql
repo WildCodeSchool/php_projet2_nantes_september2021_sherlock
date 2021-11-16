@@ -45,6 +45,7 @@ create table reponse_question (
 create table utilisateur (
     id INT PRIMARY KEY AUTO_INCREMENT,
     pseudo varchar(30),
+    password varchar(30),
     mail varchar(50)
 );
 
