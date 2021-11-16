@@ -77,11 +77,5 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/lose.html.twig');
     }
-
-    public function questions()
-    {
-        return $this->twig->render('sherlock/questions.html.twig');
-    }
-    
-    
+       
 }
