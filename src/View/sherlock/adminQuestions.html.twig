@@ -20,7 +20,30 @@
     </ul>
 </nav>
 
-<div class="form">
+{% set i=1 %}
+{% for question in questions %}
+    <form action="adminQuestions" method="post">
+        <div class="question1">
+            <label for="question1"> Question 1 : </label>
+            <br/>
+            <input type="text" id="question1" name="question1" value="{{question.intitule}}">
+            <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
+            <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+            <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span> 
+        </div>
+    </form>
+    {% set i = i+1 %}
+{% endfor %}
+
+<form action="adminQuestions" method="post">
+        <div class="question1">
+            <label for="question1"> Ajouter une question : </label>
+            <br/>
+            <input type="text" id="question1" name="question1">
+        </div>
+    </form>
+
+{# <div class="form">
     <div class="form-left">
         <form action="adminQuestions" method="post">
             <div class="question1">
@@ -119,7 +142,7 @@
             </div>
         </form>
     </div>
-</div>
+</div> #}
 
 <div class="retourPageAccueil">
             <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>

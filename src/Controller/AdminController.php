@@ -11,16 +11,26 @@ namespace App\Controller;
      * @throws \Twig\Error\SyntaxError
      */
 
+use App\Model\HomeModel;
 
 class AdminController extends AbstractController
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->model = new HomeModel();
+    }
+
     public function adminLogin()
     {
         return $this->twig->render('sherlock/adminLogin.html.twig');
     }
-    public function adminQuestions()
+    
+    public function adminListeQuestions()
     {
-        return $this->twig->render('sherlock/adminQuestions.html.twig');
+        $questions = $this->model->selectAll();
+        return $this->twig->render('sherlock/adminQuestions.html.twig', ["questions"=>$questions]);
     }
 
     public function adminIndices()
@@ -38,9 +48,10 @@ class AdminController extends AbstractController
         return $this->twig->render('sherlock/adminTemoignages.html.twig');
     }
 
-    public function adminEnigmes()
+    public function adminListeEnigmes()
     {
-        return $this->twig->render('sherlock/adminEnigmes.html.twig');
+        $scenarios = $this->model->selectAll();
+        return $this->twig->render('sherlock/adminEnigmes.html.twig', ["enigmes"=>$scenarios]);
     }
 
 }

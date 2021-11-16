@@ -41,34 +41,9 @@
             <div class="histoire">
                     <center>
                         <div class="textehistoire">
-                            <h2>Le meurtre de Rose-marie Mayer</h2>
-                                <p>Nous sommes le mardi 13 Novembre 1883. <br/>
-                                    Vous incarnez le personnage du Dr Watson, célèbre assistant du plus grand enquêteur du XIXème siècle, Sherlock Holmes. <br/>
-                                    Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack Stapleton  : <br/>
-                                    "Nous avons retrouvé le corps d'une jeune femme à 6h ce matin. Madame Rose-Marie Mayer. <br/>
-                                    Elle a été retrouvée morte dans son salon, à l'angle de la 13ème de BakerStreet à Londres. <br/>
-                                    D'après l'estimation de notre légiste, son meurtre a été commis aux alentours de minuit. <br/>
-                                    Nous n'avons pas trouvé de traces de coups et de blessures sur le corps. <br/>
-                                    La fouille de la maison n'a révélé que très peu d'indices. <br/>
-                                    Cependant une étrange odeur embaumait la maison, une odeur d'amande amère. <br/>
-                                    J'ai besoin de vous, Sherlock Holmes, pour résoudre cette enquête. <br/>
-                                    Je sais que vous êtes déjà sur une autre enquête, sur la disparition du chimiste, le professeur Clay Millington. <br/>
-                                    Mais peut-être que votre coéquipier, le dr Watson peut vous aider à résoudre cette enquête ?<br/>
-                                    J'attends votre réponse dans les plus brefs délais. Signé l'inspecteur Jack Stapleton." <br/>
-                                    Sherlock Holmes s'est déjà penché sur l'enquête. Il a identifié trois suspects. <br/>
-                                    Il vous demande à vous, Dr Watson de les interroger. <br/> D'après une liste de 6 questions que vous a préparé Sherlock Holmes, vous devez n'en choisir que trois à poser pour chaque suspect. <br/>
-                                    Mais sont-elle toutes pertinentes ? <br/>
-                                    Les réponses des suspects se présenteront sous forme de carte de trois types : des indices, des preuves ou des témoignages. <br/>
-                                    Attention, les suspects peuvent vous emmener vers de fausses pistes ! <br/>
-                                    A vous de choisir les bonnes questions.. <br/>
-                                    A vous de jouer ! <br/>
-                                    Les suspects ont été interpellés et arrêtés dès le lendemain du meurtre. <br/>
-                                    La liste de preuves relevés sur la scène de crime : <br/>
-                                        <ul>
-                                            <li> des cendres provenant d'un cigare composé de tabac indien </li>
-                                            <li> quelques graviers retrouvés sur le paillasson d'entrée de madame Rose-marie Mayer </li>
-                                            <li>Les scientifiques sont en pleine recherche sur l'odeur d'amande dans la maison, une odeur volatile, mais d'où peut-elle venir ?</li>
-                                        </ul>
+                            <h2>{{scenario.titre}}</h2>
+                                <p>
+                                    {{scenario.histoire}}
                                 </p>
                             </div>
                     </center>
@@ -86,19 +61,19 @@
 
         <!-- cards -->
                 <div class="cartes">
-                    <div class="moriartycard">
-                            <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty"></div>
+                    <div class="moriartycard" >
+                            <div class="titremoriartycard"><img src="/assets/images/titre_carte_moriarty.png" alt="titremoriarty" id="moriartycard"></div>
                             <div class="moriartyimg"><img src="/assets/images/img_moriarty.png" alt="moriarty"></div>
                             <div class="textemoriartycard"><img src="/assets/images/texte_carte_moriarty.png" alt="textemoriarty"></div>                        
                     </div>
 
-                    <div class="bakercard">
+                    <div class="bakercard" id="bakercard">
                             <div class="titrebakercard"><img src="/assets/images/titre_carte_baker.png" alt="titrebaker"></div>
                             <div class="bakerimg"><img src="/assets/images/img_baker.png" alt="baker"></div>
                             <div class="textebakercard"><img src="/assets/images/texte_baker_carte.png" alt="textebaker"></div>
                     </div>
 
-                    <div class="jamescard">
+                    <div class="jamescard" id="jamescard">
                             <div class="titrejamescard"><img src="/assets/images/titre_carte_james.png" alt="titrejames"></div>
                             <div class="jamesimg"><img src="/assets/images/img_james.png" alt="james"></div>
                             <div class="textejamescard"><img src="/assets/images/texte_carte_james.png" alt="textejames"></div>
@@ -106,5 +81,14 @@
                 </div>
         </div>
 
+    </div>
+
+    <div class="questions">
+        <div>
+        <h2>test</h2>
+            {%for question in questions %}
+                <li>{{question.intitule}}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
