@@ -17,5 +17,3 @@ session_start();
         <?php endforeach ?>
     <?php endif ?>   
             </div>
-
-

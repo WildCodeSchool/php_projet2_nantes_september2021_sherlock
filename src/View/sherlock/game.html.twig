@@ -22,11 +22,54 @@
             <div class="indices">
                 <div class="texteindice">
                     <h3>Les indices</h3>
-                    {% for moriartyReponse in moriartyReponses %}
+                    <button id="btnPopup4" class="btnPopup">Mes indices sur Moriarty</button>
+                    <div id="overlay4" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur Moriarty
+                            <span id="btnClose4" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for moriartyReponse in moriartyReponses %}
                             <ul>
                                 <li>{{moriartyReponse.indice}}</li>
                             </ul>
-                    {% endfor %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <button id="btnPopup5" class="btnPopup">Mes indices sur Baker</button>
+                    <div id="overlay5" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur Baker
+                            <span id="btnClose5" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for bakerReponse in bakerReponses %}
+                            <ul>
+                                <li>{{bakerReponse.indice}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    <br/>
+                    
+                    <button id="btnPopup6" class="btnPopup">Mes indices sur James</button>
+                    <div id="overlay6" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur James
+                            <span id="btnClose6" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for jamesReponse in jamesReponses %}
+                            <ul>
+                                <li>{{jamesReponse.indice}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
