@@ -128,7 +128,6 @@
                             </ul>
                             {% endfor %}
                         </div>
-
                     </div>
             </div>
 
@@ -139,15 +138,19 @@
                         <div id="popup" class="popup">
                             <h2>Les questions
                             <span id="btnClose2" class="btnClose">&times;</span>
-                             </h2>
-                            {% for bakerReponse in bakerReponses %}
-                            <ul>
-                                <li><button>{{bakerReponse.intitule}}</button></li>
-                                <li>{{bakerReponse.reponse}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-                    </div>    
+                        </h2>
+                        {% for bakerReponse in bakerReponses %}
+                        <ul>
+                            <li><button>{{bakerReponse.intitule}}</button></li>
+                            <li>
+                                <div class="reponse">
+                                    {{bakerReponse.reponse}}
+                                </div>
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
 
             <div class="jamescard">
@@ -160,19 +163,29 @@
                             </h2>
                             {% for jamesReponse in jamesReponses %}
                             <ul>
-                                <li><button>{{jamesReponse.intitule}}</button></li>
-                                <li>{{jamesReponse.reponse}}</li>
+                                <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
+
+                                <li>
+                                    <div class="reponse" id="reponse">
+                                        {{jamesReponse.reponse}} <br>
+                                        <a href="" onclick="reanswer();">posser  question</a>
+                                    </div>
+                                </li>   
+
                             </ul>
                             {% endfor %}
                         </div>
-                    </div>   
-            </div>  
-            
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
-        {% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
-        
 
-        {% endblock %}
+
+{% block javascript %}
+<script src="/assets/js/script.js"></script>{% endblock %}
+{% endblock %}
+

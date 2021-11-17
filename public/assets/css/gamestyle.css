@@ -223,6 +223,7 @@ h2 {
     font-size: 35px;
 }
 
+<<<<<<< HEAD
 .button_valider{
     transition: all 500ms;
 }
@@ -234,3 +235,10 @@ h2 {
 
 
 
+=======
+
+
+.popup  li .reponse{
+    display: none;
+}
+>>>>>>> d08c725226fae50821a040fe52e9806b997757ae
