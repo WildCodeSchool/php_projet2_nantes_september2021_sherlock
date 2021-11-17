@@ -181,6 +181,21 @@ h2 {
     padding: 1em;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    z-index:1;
+    }
+
+#overlay1, #overlay2, #overlay3 {
+    display:none;
+}
+
+.popup{
+margin: 10% auto;
+width : 90%;
+background-color: rgba(13, 13, 13, 0.70);
+color:rgb(226, 219, 209);
+padding: 1em;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
 }
 
 .btnClose {
@@ -198,3 +213,23 @@ h2 {
     width: 201px;
     
 }
+    
+
+.popup button {
+    background-color:rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    font-size:18px;
+    margin:1%;
+}
+
+.popup li {
+    list-style: none;
+}
+
+.popup h2 {
+    font-size: 35px;
+}
+
+

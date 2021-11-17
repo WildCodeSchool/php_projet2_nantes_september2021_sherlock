@@ -55,6 +55,12 @@
         </div>
 
     </div>
+
+
+
+
+
+
     <!-- barre lateral droit -->
 
     <div class="aside-right">
@@ -65,15 +71,18 @@
 
             <div class="moriartycard">
                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
-                <button id="btnPopup 1" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay 1" class="overlay">
+                <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay1" class="overlay">
                     <div id="popup" class="popup">
                         <h2>Les questions
-                            <span id="btnClose 1" class="btnClose">&times;</span>
+                            <span id="btnClose1" class="btnClose">&times;</span>
                         </h2>
+
                         {% for moriartyReponse in moriartyReponses %}
-                        <li><button>{{moriartyReponse.intitule}}</button></li>
-                        <li>{{moriartyReponse.reponse}}</li>
+                        <ul>
+                            <li><button>{{moriartyReponse.intitule}}</button></li>
+                            <li>{{moriartyReponse.reponse}}</li>
+                        </ul>
                         {% endfor %}
                     </div>
                 </div>
@@ -81,15 +90,17 @@
 
             <div class="bakercard">
                 <img src="/assets/images/baker_carte.png" alt="baker">
-                <button id="btnPopup 2" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay 2" class="overlay">
+                <button id="btnPopup2" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay2" class="overlay">
                     <div id="popup" class="popup">
                         <h2>Les questions
-                            <span id="btnClose 2" class="btnClose">&times;</span>
+                            <span id="btnClose2" class="btnClose">&times;</span>
                         </h2>
                         {% for bakerReponse in bakerReponses %}
-                        <li>{{bakerReponse.intitule}}</li>
-                        <li>{{bakerReponse.reponse}}</li>
+                        <ul>
+                            <li><button>{{bakerReponse.intitule}}</button></li>
+                            <li>{{bakerReponse.reponse}}</li>
+                        </ul>
                         {% endfor %}
                     </div>
                 </div>
@@ -97,36 +108,33 @@
 
             <div class="jamescard">
                 <img src="/assets/images/james_carte.png" alt="james">
-                <button id="btnPopup 3" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay 3" class="overlay">
+                <button id="btnPopup3" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay3" class="overlay">
                     <div id="popup" class="popup">
                         <h2>Les questions
-                            <span id="btnClose 3" class="btnClose">&times;</span>
+                            <span id="btnClose3" class="btnClose">&times;</span>
                         </h2>
-                        {% for question in questions %}
-                        <li>{{moriartyReponse.intitule}}</li>
+                        {% for jamesReponse in jamesReponses %}
+                        <ul>
+                            <li><button>{{jamesReponse.intitule}}</button></li>
+                            <li>{{jamesReponse.reponse}}</li>
+                        </ul>
                         {% endfor %}
                     </div>
                 </div>
             </div>
+
+           
         </div>
     </div>
-
-
-
 </div>
 
-</div>
 
-<div class="listeQuestions">
-    <div>
-        <h2>test</h2>
-        {%for question in questions %}
-        <li>{{question.intitule}}
-            {% endfor %}
-    </div>
 
-    {% block javascript %}
-    <script src="/assets/js/script.js"></script>{% endblock %}
 
-    {% endblock %}
+
+ 
+        {% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
+        
+
+        {% endblock %}

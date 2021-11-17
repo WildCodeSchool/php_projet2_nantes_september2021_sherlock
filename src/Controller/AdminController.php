@@ -29,11 +29,11 @@ class AdminController extends AbstractController
 
     public function adminQuestions()
     {
-        $questions = $this->model->selectAllQuestions();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $intitule = trim($_POST['intitule']);
             $this->model->insertQuestion($intitule);
         }
+        $questions = $this->model->selectAllQuestions();
         return $this->twig->render('sherlock/adminQuestions.html.twig', ["questions"=>$questions]);
 
 
@@ -68,9 +68,19 @@ public function deleteQuestion()
 
     public function adminIndices()
     {
-        return $this->twig->render('sherlock/adminIndices.html.twig');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(isset($_POST['id'])) {
+                $delete = trim($_POST['id']);
+                $this->model->deleteIndiceById($delete);
+            }
+            elseif(isset($_POST['indice'])) {
+                $intitule = trim($_POST['indice']);
+                $this->model->insertIndice($indice);
+            } 
+        }
+        $indices = $this->model->selectAllIndices();
+        return $this->twig->render('sherlock/adminQuestions.html.twig', ["indices"=>$indices]);
     }
-
 
     public function adminListeEnigmes()
     {

@@ -42,7 +42,7 @@ class HomeController extends AbstractController
     }
 
     public function game(int $id/*, int $idReponseQuestion, string $intitule*/): string
-    {      
+    {
         $scenario = $this->model->selectOneById($id);
         $personnages = $this->model->selectAllPersonnage();
         $reponses = [];
@@ -84,5 +84,6 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/lose.html.twig');
     }
+
        
 }

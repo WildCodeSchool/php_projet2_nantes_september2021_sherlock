@@ -72,6 +72,7 @@ Insert into personne(firstname, lastname, description, role, lien_photo) values
 
 INSERT into question(intitule) values("Ou étiez-vous hier soir aux alentours de minuit ?"), ("Il y a t'il des témoins qui peuvent attester votre alibi ?"), ("Quels sont vos liens avec Madame Marie Mayer ?"),
  ("Est-ce que vous fumez ? Si oui, que fumez-vous ? J'aurai besoin d'un échantillon "), ("Que portiez-vous comme chaussures le soir du meurtre ? "),("Vous avez été aperçu par un témoin, la veille du meutre, près d'une ancienne usine de fabrication de pesticide, que faisiez-vous là-bas ?");
+
 INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
 (1, 1, 1,"J'ai dîné en compagnie des Lockwood dans leur manoir situé à l'angle de 9ème de Liverstreet", "Moriarty a été aperçu par le majordome du manoir des Lockwood : Augustus Bravehart : C'est vrai, monsieur l'inspecteur, j'ai aperçu monsieur Moriarty quittant la demeure de mes maîtres à 22h."),
 (1, 1, 2,"Bien entendu. Les Lockwood se feront une joie d'attester ma présence dans leur demeure hier soir. Il était plus de minuit lorsque je suis partie. Nous échangions avidement sur la reine Victoria", "Parti à plus de minuit ? ... Un élément à confirmer..."),
@@ -81,6 +82,14 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (1, 1, 6,"Je ne vois pas de quoi vous parlez inspecteur. Je me promenais dans les rues de Londres, peut être à côté de l'usine en effet. Je ne me souviens plus.", "Moriarty a été aperçu par madame Minerva Gloucestershire près de l'usine : Monsieur l'inspecteur, j'ai vu cet homme mystérieux, Moriarty rentrer dans l'usine désafectée. Il en est ressorti 10 minutes plus tard. Il avait quelque chose dans les mains mais j'étais trop loin pour apercevoir ce que c'était. Ca ressemblait à un grand récipient. Un baril peut être ?");
 
 INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
+(3, 1, 1,"Le Dr Grimesby Roylott et moi-même étions dans l'humble demeure de Sir Arthur Conan Doyle située au nord de Londres, à Clerkenwell. Il avait besoin de notre savoir scientifique pour étayer son dernier roman.", "Une photo des trois compères a été prise par un journaliste hier soir à 21h30 dans la demeure du célèbre écrivain."),
+(3, 1, 2,"Vous n'avez pas écouté ce que je viens de vous dire inspecteur ? Interrogez donc Dr Grimesby Roylott et Sir Arthur Conan Doyles.", " La demeure de l'écrivain se situe au nord de Londres, à plus de 5h à cheval de la maison de Marie Mayer."),
+(3, 1, 3,"Madame Marie Mayer était mon assistante. Mais si vous voulez mon avis, elle était plus doué pour préparer le thé plutôt que de m'aider dans mes recherches sur la radioactivité de l'uranium. Je suis un très grand scientifique, vous savez, et je batterai le scientifique Becquerel, un français de bas étage si vous voulez mon avis.", " Madame Marie Mayer et le professeur James ont eu une liaison qui a durée plus de deux ans. Mais l'égocentrisme du célèbre scientifique a eu raison de leur amour et madame Marie Mayer a mis fin à leur relation il y a 3 mois de cela. "),
+(3, 1, 4,"Oui, je fume la pipe. Du tabac brun. Vous posez d'étranges questions. J'ai quelques doutes sur vos compétences d'enquêteurs.", "C'est en effet du tabac brun contenu dans la pipe du professeur James."),
+(3, 1, 5,"Vous plaisantez Dr Watson ? N'avez vous pas remarqué que je marche difficilement ? Je me déplace en fauteuil roulant !", "En effet, on dirait que les chaussures du professeur James sont comme neuves!"),
+(3, 1, 6,"J'ai été récupéré des composants pour mes recherches sur la radioactivité de l'uranium. L'usine désafectée est remplie d'anciens composants chimiques.", "Après avoir fouillé la maison du chimiste, nous avons en effet retrouvé des composants de l'usine et ses cahiers de recherche sur l'uranium.");
+
+INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
 (2, 1, 1, "J'étais dans ma maison de campagne situé à Leatherhead dans le comté de Surrey", "Leatherhead est situé à une journée à cheval de la maison de madame Marie"),
 (2, 1, 2, "Je vous donne l'autorisation d'interroger ma femme. Elle vous confirmera ma présence.", "Oui inspecteur, nous étions bien dans notre maison de campagne à Leatherhead. Nous sommes parti de Londres le dimanche."),
 (2, 1, 3, "Madame Mayer est la cousine de ma femme. Nous ne la cotoyons que très peu.", "Un courrier de la banque a été retrouvé dans la maison de Madame Mayer. Marie Mayer aurait hérité lors du décès de son mari il y a plus de 5 ans d'une somme importante : plus 200 000 sterling ! Marie Mayer n'a pas de descendant. "),
@@ -88,5 +97,5 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (2, 1, 5, "Je ne comprends pas l'intérêt de votre demande, mais si vous insistez, voilà mes chaussures.", "De la boue. "),
 (2, 1, 6, "Je suis rentrée à Londres lundi pour voir ma soeur, Lady Chamberley. Et en effet, elle habite près de cette ancienne usine désafectée", "Mon frère Wilson Baker m'a rendu en effet visite lundi. Nous avons pris le thé. Pourquoi cette question, inspecteur ?");
 
-INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
 
+INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
