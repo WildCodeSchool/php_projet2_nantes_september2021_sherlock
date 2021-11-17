@@ -8,6 +8,7 @@ body {
 
 .bodypage {
     display: flex;
+    justify-content: space-around;
     box-sizing: border-box;
 }
 
@@ -140,7 +141,9 @@ h2 {
 .moriartycard img {
     border-radius: 2%;
 }
-
+.moriartycard img:hover{
+    width: 170px;
+}
 .bakercard {
     width: 150px;
     height: 270px;
@@ -149,6 +152,9 @@ h2 {
 
 .bakercard img {
     border-radius: 2%;
+}
+.bakercard img:hover{
+    width: 170px;
 }
 
 .jamescard {
@@ -159,4 +165,7 @@ h2 {
 
 .jamescard img {
     border-radius: 2%;
+}
+.jamescard img:hover{
+    width: 170px;
 }

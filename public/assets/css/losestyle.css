@@ -9,6 +9,17 @@ body {
 .card {
     display: flex;
     justify-content: center;
+    animation: showImg 1200ms linear;
+}
+
+
+@keyframes showImg{
+    from{
+        transform: translateY(-300%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .buton {

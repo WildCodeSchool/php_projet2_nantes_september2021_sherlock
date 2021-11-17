@@ -7,8 +7,9 @@ body {
 
 .bodypage {
     display: flex;
-    box-sizing: border-box; 
     justify-content: space-around;
+    box-sizing: border-box;
+    
 }
 
 .aside-left {
@@ -17,6 +18,7 @@ body {
     max-height: auto;
     box-sizing: border-box;
     margin-left: 2%;
+    margin-right: 150px;
 }
 
 .indicecarte {
@@ -64,14 +66,12 @@ body {
 }
 
 .histoire {
-    display: flex;
-    justify-content: center;
-    max-width: auto;
+    max-width: 500px;
     box-sizing: border-box;
     background-image: url("../images/parchemin.jpg");
     background-size: cover;
-    margin-right: 7%;
-    margin-left: 10%;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 2%;
     position: relative;
 }
@@ -93,8 +93,8 @@ h2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding:1%;
-    top:1%;
+    padding: 1%;
+    top: 1%;
     font-size: 15px;
     text-align: center;
     box-sizing: border-box;
@@ -105,7 +105,7 @@ h2 {
     flex-direction: column;
     color: rgb(226, 219, 209);
     max-width: 15%;
-    margin-left: 5%;
+    margin-left: 80px;
     color: white;
 }
 
@@ -144,49 +144,57 @@ h2 {
     border-radius: 2%;
 }
 
-
 .listeQuestions {
     display: none;
-} 
+}
 
-.btnPopup{
+.btnPopup {
     background-color: rgba(13, 13, 13, 0.70);
-    padding: 1% 2%; 
+    padding: 1% 2%;
     cursor: pointer;
     color: rgb(226, 219, 209);
     border-radius: 5%;
     font-family: charmonman, bold;
-    }
+}
 
-.btnPopup:hover{
+.btnPopup:hover {
     background-color: rgb(226, 219, 209);
-    color:black;
+    color: black;
 }
 
 .overlay {
     position: fixed;
     left: 0px;
-    top:0px;
-    background-color: rgba(0,0 ,0 , 0.5);
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    z-index:1;
-    display:none;
-    }
+    z-index: 1;
+    display: none;
+}
 
-.popup{
-margin: 10% auto;
-width : 90%;
-background-color: rgba(13, 13, 13, 0.70);
-color:rgb(226, 219, 209);
-padding: 1em;
-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-border-radius: 5px;
+.popup {
+    margin: 10% auto;
+    width: 90%;
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
 .btnClose {
     float: right;
-    font-size:16pt;
+    font-size: 16pt;
     cursor: pointer;
     color: rgb(226, 219, 209);
-    }
+}
+
+
+.button_valider{
+    transition: all 500ms;
+}
+.button_valider:hover {
+    width: 201px;
+    
+}

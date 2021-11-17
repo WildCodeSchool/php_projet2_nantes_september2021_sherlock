@@ -16,9 +16,9 @@ use App\Model\HomeModel;
 class AdminController extends AbstractController
 {
 
-    public function construct()
+    public function __construct()
     {
-        parent::construct();
+        parent::__construct();
         $this->model = new HomeModel();
     }
 
@@ -47,7 +47,7 @@ class AdminController extends AbstractController
             header('Location:/sherlock/adminQuestions');
         }
     }
-    public function deleteQuestion()
+public function deleteQuestion()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = trim($_POST['id']);
