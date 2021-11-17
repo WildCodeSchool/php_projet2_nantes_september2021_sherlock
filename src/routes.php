@@ -10,8 +10,7 @@
 return [
     '' => ['HomeController', 'index',],
     'sherlock/escenario' => ['Homecontroller', 'scenario'],
-    'sherlock/game' => ['Homecontroller', 'game', ['id']],
-    'sherlock/game' => ['Homecontroller', 'listeQuestions', ['id']],
+    'sherlock/game' => ['Homecontroller', 'game', ['id'/*, 'idReponseQuestion', 'intitule'*/]],
     'sherlock/police' => ['Homecontroller', 'police', ['id']],
     'sherlock/win' => ['Homecontroller', 'win'],
     'sherlock/home' => ['Homecontroller', 'index'],
@@ -21,9 +20,7 @@ return [
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
     'sherlock/lose' => ['Homecontroller', 'lose'], 
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
-    'sherlock/adminQuestions' => ['Admincontroller', 'adminListeQuestions'],
-    //'sherlock/adminQuestions' => ['Admincontroller', 'addQuestions'],
-
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminListeEnigmes'],
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
     'sherlock/questions' => ['Homecontroller', 'questions'],
