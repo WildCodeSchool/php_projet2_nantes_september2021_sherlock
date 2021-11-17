@@ -20,7 +20,7 @@ return [
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
     'sherlock/lose' => ['Homecontroller', 'lose'], 
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
-    'sherlock/adminQuestions' => ['Admincontroller', 'adminListeQuestions'],
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminListeEnigmes'],
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
 ];

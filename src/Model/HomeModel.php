@@ -29,6 +29,13 @@ class HomeModel extends AbstractManager
         return $statement->execute();
     }
 
+    public function selectAllPersonnage() {
+        {
+            $query = "SELECT * FROM personne";
+            return $this->pdo->query($query)->fetchAll();
+        }
+    }
+
     public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM question";
@@ -64,18 +71,17 @@ class HomeModel extends AbstractManager
     }
 
     //retourne un tableau de question/reponse/indice liés a la question et au personnage passé en parametre
-    public function reponseQuestionById(int $id, string $intitule)
+    public function reponseQuestionById(int $id)
     {
-        $statement = $this->pdo->prepare("SELECT * from reponse_question
+        $statement = $this->pdo->prepare("SELECT intitule, reponse, indice from reponse_question
         JOIN personne ON personne.id=personne_id
         JOIN question ON question.id=question_id
-        where personne.id=:id AND intitule =:intitule");
+        where personne.id=:id");
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
-        $statement->bindValue('intitule', $intitule, \PDO::PARAM_INT);
 
         $statement->execute();
 
-        return $statement->fetch();
+        return $statement->fetchAll();
     }
 
     public function selectAllPersonnage() {

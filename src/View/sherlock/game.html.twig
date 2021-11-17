@@ -63,20 +63,16 @@
                                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
                                 <button id="btnPopup 1" class="btnPopup">J'interroge le suspect</button>
                                 <div id="overlay 1" class="overlay">
-                                    <div id="popup 1" class="popup">
-                                                <h2>Les questions
-                                                <span id="btnClose 1" class="btnClose">&times;</span>
-                                                </h2>
-                                                {% for question in questions %}
-                                                    <li><button class="{{question.id}}" name="{{question.id}}">{{question.intitule}}</button></li>
-                                                    {% if %}
-                                                    {% for categorie in dossier.categorie %}
-                                                    <sous-menu>{{ categorie.libelle }}</sous-menu>
-                                                    {% endfor %}
-                                                    {% endif %}
-                                                {% endfor %}
+                                    <div id="popup" class="popup">
+                                        <h2>Les questions
+                                        <span id="btnClose 1" class="btnClose">&times;</span>
+                                        </h2>
+                                        {% for moriartyReponse in moriartyReponses %}
+                                            <li><button>{{moriartyReponse.intitule}}</button></li>
+                                            <li>{{moriartyReponse.reponse}}</li>
+                                        {% endfor %}
                                     </div>
-                                </div>      
+                                </div>
                         </div>
 
                         <div class="bakercard">

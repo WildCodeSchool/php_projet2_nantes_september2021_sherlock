@@ -44,16 +44,21 @@ class HomeController extends AbstractController
     public function game(int $id/*, int $idReponseQuestion, string $intitule*/): string
     {
         $scenario = $this->model->selectOneById($id);
-        $questions = $this->model->selectAllQuestions();
         $personnages = $this->model->selectAllPersonnage();
-        //     session_start();
-        //  if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $reponses = [];
+        //session_start();
+        // if($_SERVER['REQUEST_METHOD'] === 'POST') {
         //     $idQuestions = trim($_POST['id']);
-        //      $idPersonne = trim($_POST['id']);
-        //      $this->model->reponseQuestionById($idPersonne, $idQuestions);
+        //     //$idPersonne = trim($_POST['id']);
+        //     $reponses = $this->model->reponseQuestionById(1, $idQuestions);
         // }
-        $reponsequestion = $this->model->reponseQuestionById($idReponseQuestion, $intitule);
-      return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "questions"=>$questions, "reponsequestion"=>$reponsequestion]);
+        $moriartyReponses = $this->model->reponseQuestionById(1);
+        $bakerReponses = $this->model->reponseQuestionById(2);
+        $jamesReponses = $this->model->reponseQuestionById(3);
+        // $baker = $this->model->reponseQuestionById(2);
+        // $james = $this->model->reponseQuestionById(3);
+        //$reponsequestion = $this->model->reponseQuestionById($idReponseQuestion, $intitule);
+    return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses/*, "reponsequestion"=>$reponsequestion */]);
     }
 
     public function police(int $id): string
