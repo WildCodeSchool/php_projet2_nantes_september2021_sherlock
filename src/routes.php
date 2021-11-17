@@ -8,23 +8,19 @@
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
 
 return [
-    '' => ['HomeController', 'index', ],
+    '' => ['HomeController', 'index',],
     'sherlock/escenario' => ['Homecontroller', 'scenario'],
-    'sherlock/game' => ['Homecontroller', 'game', ],
-    'sherlock/game' => ['Homecontroller', 'listeQuestions', ['id']],
+    'sherlock/game' => ['Homecontroller', 'game', ['id']],
     'sherlock/police' => ['Homecontroller', 'police', ['id']],
     'sherlock/win' => ['Homecontroller', 'win'],
     'sherlock/home' => ['Homecontroller', 'index'],
-    'sherlock/aboutus' => ['Homecontroller', 'aboutus', ],
-    'sherlock/thanks' => ['Homecontroller', 'thanks', ],
+    'sherlock/aboutus' => ['Homecontroller', 'aboutus',],
+    'sherlock/thanks' => ['Homecontroller', 'thanks',],
     'sherlock/adminLogin' => ['Admincontroller', 'adminLogin'],
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
     'sherlock/lose' => ['Homecontroller', 'lose'], 
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
-    'sherlock/adminQuestions' => ['Admincontroller', 'adminListeQuestions'],
-    //'sherlock/adminQuestions' => ['Admincontroller', 'addQuestions'],
-
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminListeEnigmes'],
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
-    'sherlock/questions' => ['Homecontroller', 'questions'],
 ];

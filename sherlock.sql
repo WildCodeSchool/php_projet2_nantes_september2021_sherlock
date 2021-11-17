@@ -80,5 +80,13 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (1, 1, 5,"Mes chaussures ? Je ne sais pas ce que vous cherchez comme preuve, mais vous ne trouverez rien ! Je ne suis pas l'assassin!", "De la boue et des graviers... Intéressant."),
 (1, 1, 6,"Je ne vois pas de quoi vous parlez inspecteur. Je me promenais dans les rues de Londres, peut être à côté de l'usine en effet. Je ne me souviens plus.", "Moriarty a été aperçu par madame Minerva Gloucestershire près de l'usine : Monsieur l'inspecteur, j'ai vu cet homme mystérieux, Moriarty rentrer dans l'usine désafectée. Il en est ressorti 10 minutes plus tard. Il avait quelque chose dans les mains mais j'étais trop loin pour apercevoir ce que c'était. Ca ressemblait à un grand récipient. Un baril peut être ?");
 
+INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
+(2, 1, 1, "J'étais dans ma maison de campagne situé à Leatherhead dans le comté de Surrey", "Leatherhead est situé à une journée à cheval de la maison de madame Marie"),
+(2, 1, 2, "Je vous donne l'autorisation d'interroger ma femme. Elle vous confirmera ma présence.", "Oui inspecteur, nous étions bien dans notre maison de campagne à Leatherhead. Nous sommes parti de Londres le dimanche."),
+(2, 1, 3, "Madame Mayer est la cousine de ma femme. Nous ne la cotoyons que très peu.", "Un courrier de la banque a été retrouvé dans la maison de Madame Mayer. Marie Mayer aurait hérité lors du décès de son mari il y a plus de 5 ans d'une somme importante : plus 200 000 sterling ! Marie Mayer n'a pas de descendant. "),
+(2, 1, 4, "Oui, je fume des cigares, je ne prends jamais les mêmes.", "W.Baker a en sa possession deux cigares, un contenant du tabac indien, l'autre un tabac mexicain. Serais-ce un indice ?"),
+(2, 1, 5, "Je ne comprends pas l'intérêt de votre demande, mais si vous insistez, voilà mes chaussures.", "De la boue. "),
+(2, 1, 6, "Je suis rentrée à Londres lundi pour voir ma soeur, Lady Chamberley. Et en effet, elle habite près de cette ancienne usine désafectée", "Mon frère Wilson Baker m'a rendu en effet visite lundi. Nous avons pris le thé. Pourquoi cette question, inspecteur ?");
+
 INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
 

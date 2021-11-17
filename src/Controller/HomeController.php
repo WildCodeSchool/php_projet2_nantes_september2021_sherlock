@@ -41,22 +41,24 @@ class HomeController extends AbstractController
         return $this->twig->render('sherlock/escenario.html.twig', ["enigmes"=>$scenarios]);
     }
 
-    // public function game(int $id): string
-    // {      
-    //     $scenario = $this->model->selectOneById($id);
-    //     return $this->twig->render('sherlock/game.html.twig', ["enigmes"=>$scenario]);
-    // }
-
-    public function listeQuestions(): string
-    {
-        $questions = $this->model->selectAllQuestions();
-        return $this->twig->render('sherlock/game.html.twig', ["questions"=>$questions]);
-    }
-
-    public function reponseQuestion(int $id, string $intitule)
-    {
-        $reponsequestion = $this->model->selectAllQuestions();
-        return $this->twig->render('sherlock/game.html.twig', ["reponsequestion"=>$reponsequestion]);
+    public function game(int $id/*, int $idReponseQuestion, string $intitule*/): string
+    {      
+        $scenario = $this->model->selectOneById($id);
+        $personnages = $this->model->selectAllPersonnage();
+        $reponses = [];
+        //session_start();
+        // if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //     $idQuestions = trim($_POST['id']);
+        //     //$idPersonne = trim($_POST['id']);
+        //     $reponses = $this->model->reponseQuestionById(1, $idQuestions);
+        // }
+        $moriartyReponses = $this->model->reponseQuestionById(1);
+        $bakerReponses = $this->model->reponseQuestionById(2);
+        $jamesReponses = $this->model->reponseQuestionById(3);
+        // $baker = $this->model->reponseQuestionById(2);
+        // $james = $this->model->reponseQuestionById(3);
+        //$reponsequestion = $this->model->reponseQuestionById($idReponseQuestion, $intitule);
+    return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses/*, "reponsequestion"=>$reponsequestion */]);
     }
 
     public function police(int $id): string
