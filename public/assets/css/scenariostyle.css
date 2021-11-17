@@ -8,6 +8,7 @@ body {
 
 .bodypage {
     display: flex;
+    justify-content: space-around;
     box-sizing: border-box;
 }
 
@@ -17,6 +18,7 @@ body {
     max-height: auto;
     box-sizing: border-box;
     margin-left: 2%;
+    margin-right: 100px;
 }
 
 .indicecarte {
@@ -63,6 +65,13 @@ body {
 .button {
     margin-left: 13%;
 }
+.button_valider{
+    transition: all 500ms;
+}
+.button_valider:hover {
+    width: 201px;
+    
+}
 
 .enigme {
     max-width: auto;
@@ -106,9 +115,16 @@ h2 {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-self: auto;
     max-width: 20%;
     margin-left: 13%;
+    margin-top: 0px;
     color: white;
+    
+}
+
+.aside-right h2 {
+    margin-top: 0px;
 }
 
 .cartes img {
@@ -125,7 +141,9 @@ h2 {
 .moriartycard img {
     border-radius: 2%;
 }
-
+.moriartycard img:hover{
+    width: 170px;
+}
 .bakercard {
     width: 150px;
     height: 270px;
@@ -134,6 +152,9 @@ h2 {
 
 .bakercard img {
     border-radius: 2%;
+}
+.bakercard img:hover{
+    width: 170px;
 }
 
 .jamescard {
@@ -144,4 +165,7 @@ h2 {
 
 .jamescard img {
     border-radius: 2%;
+}
+.jamescard img:hover{
+    width: 170px;
 }

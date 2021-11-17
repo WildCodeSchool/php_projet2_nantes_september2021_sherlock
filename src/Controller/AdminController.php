@@ -26,7 +26,7 @@ class AdminController extends AbstractController
     {
         return $this->twig->render('sherlock/adminLogin.html.twig');
     }
-    
+
     public function adminQuestions()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,7 +36,7 @@ class AdminController extends AbstractController
         $questions = $this->model->selectAllQuestions();
         return $this->twig->render('sherlock/adminQuestions.html.twig', ["questions"=>$questions]);
 
-        
+
     }
 
     /*public function addQuestions()
@@ -47,8 +47,7 @@ class AdminController extends AbstractController
             header('Location:/sherlock/adminQuestions');
         }
     }
-
-    public function deleteQuestion()
+public function deleteQuestion()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = trim($_POST['id']);

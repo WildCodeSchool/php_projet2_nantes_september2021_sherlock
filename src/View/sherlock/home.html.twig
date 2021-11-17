@@ -1,9 +1,10 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/homestyle.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/homestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
 
 
@@ -11,11 +12,11 @@
 {% block header %}
 
 <nav class="banner">
-      
-   
+
+
     <img src="/assets/images/logohome.png" alt="">
-    
-  
+
+
 
 </nav>
 
@@ -30,10 +31,15 @@
 
 <!-- buton play -->
 
-<div class="buton">
-    <div class="play"></div>
-    <a href="/sherlock/escenario">Play</a>
-</div>
+
+
+<a href="/sherlock/escenario">
+    <div class="buton">
+        <div class="play"></div>
+        <p> Play</p>
+    </div>
+</a>
+
 
 
 
@@ -69,7 +75,7 @@
 
 
     <div class="contact">
-       <h3>Contact</h3>
+        <h3>Contact</h3>
         <div class="social">
             <div class="instagram">
                 <i class="fab fa-instagram"></i>
@@ -88,4 +94,3 @@
 
 </div>
 {% endblock %}
-

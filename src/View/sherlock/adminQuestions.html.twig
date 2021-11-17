@@ -1,6 +1,6 @@
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
 {% endblock %}
@@ -22,7 +22,7 @@
 {% set i=1 %}
 {% for question in questions %} 
     <form action="adminQuestions" method="post">
-        <div class="question1">
+        <div class="questions-edit">
             <label for="question1"> Question {{i}} : </label>
             <br/>
             <input type="text" id="question1" name="question1" value="{{question.intitule}}">

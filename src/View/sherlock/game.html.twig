@@ -1,56 +1,61 @@
-
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/gamestyle.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/gamestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
 
 
 {% block content %}
 
-    <!-- banner -->
+<!-- banner -->
 
 
-    <div class="bodypage" id="bodypage">
-        <!-- barre lateral gauche -->
-        <div class="aside-left">
-            <div class="indicecarte">
+
+<div class="bodypage">
+    <!-- barre lateral gauche -->
+    <div class="aside-left">
+        <div class="indicecarte">
             <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
-                <div class="indices">
-                    <div class="texteindice"><h3>Les indices</h3></div>
+            <div class="indices">
+                <div class="texteindice">
+                    <h3>Les indices</h3>
                 </div>
+            </div>
 
-                    <h2>Je veux parler à l’inspecteur</h2>
+            <h2>Je veux parler à l’inspecteur</h2>
             <!-- buton go -->
 
-                    <div class="button">
-                    <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
-                    </div>
-                </div>  
-            </div>    
+            <div class="button">
+                <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png"
+                        alt="boutton valider" width="180px"></a>
+            </div>
+        </div>
+    </div>
 
-            <!-- body pag 3 -->
-
-
-            <div class="center">
+    <!-- body pag 3 -->
 
 
-                <!-- histoire -->
-                <div class="histoire">
-                        <center>
-                            <div class="textehistoire"> 
-                                <h2>{{scenario.titre}}</h2>
-                                    <p> 
-                                        {{scenario.histoire}}
-                                    </p>
-                                </div>
-                        </center>
-                    <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
+    <div class="center">
+
+
+        <!-- histoire -->
+        <div class="histoire">
+            <center>
+                <div class="textehistoire">
+                    <h2>{{scenario.titre}}</h2>
+                    <p>
+                        {{scenario.histoire}}
+                    </p>
                 </div>
+            </center>
+            <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
+        </div>
 
-
+    </div>
+    
             <!-- barre lateral droit -->
 
             <div class="aside-right">
@@ -113,15 +118,10 @@
                                     </div>
                                 </div>   
                         </div>  
-
-                    </div>
-            </div>
-
+            
         </div>
-
-
     </div>
 
-{% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
-
-{% endblock %}
+    {% block javascript %}
+    <script src="/assets/js/script.js"></script>{% endblock %}
+    {% endblock %}
