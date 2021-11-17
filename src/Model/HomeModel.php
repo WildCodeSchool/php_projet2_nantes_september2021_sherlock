@@ -35,7 +35,7 @@ class HomeModel extends AbstractManager
             return $this->pdo->query($query)->fetchAll();
         }
     }
-
+// PARTIE QUESTIONS 
     public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM question";
@@ -84,11 +84,39 @@ class HomeModel extends AbstractManager
         return $statement->fetchAll();
     }
 
-    public function selectAllPersonnage() {
-        {
-            $query = "SELECT * FROM personne";
-            return $this->pdo->query($query)->fetchAll();
+    // PARTIE INDICES 
+    public function selectAllIndices(string $orderBy = '', string $direction = 'ASC')
+    {
+        $query = "SELECT * FROM reponse_question";
+        if ($orderBy) {
+            $query .= ' ORDER BY ' . $orderBy . ' ' . $direction;
         }
+
+        return $this->pdo->query($query)->fetchAll();
+    }
+
+    public function insertIndice(string $indice)
+    {
+        $statement = $this->pdo->prepare("INSERT INTO reponse_question (`indice`) VALUES (:indice)");
+        $statement->bindValue('indice', $indice, \PDO::PARAM_STR);
+
+        $statement->execute();
+    }
+
+    public function deleteIndiceById(int $id): void
+    {
+        $statement = $this->pdo->prepare("DELETE FROM reponse_question WHERE id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+    }
+
+    public function updateIndiceById(array $item): bool
+    {
+        $statement = $this->pdo->prepare("UPDATE reponse_question SET `indice` = :indice WHERE id=:id");
+        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
+        $statement->bindValue('indice', $item['indice'], \PDO::PARAM_STR);
+
+        return $statement->execute();
     }
 
 }
