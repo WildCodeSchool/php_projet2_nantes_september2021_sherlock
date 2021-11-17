@@ -7,7 +7,8 @@ body {
 
 .bodypage {
     display: flex;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    justify-content: space-around;
 }
 
 .aside-left {
@@ -63,6 +64,8 @@ body {
 }
 
 .histoire {
+    display: flex;
+    justify-content: center;
     max-width: auto;
     box-sizing: border-box;
     background-image: url("../images/parchemin.jpg");

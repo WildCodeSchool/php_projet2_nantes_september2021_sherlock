@@ -12,7 +12,9 @@ body {
     background-attachment: fixed;
     box-sizing: border-box;
 }
-
+ a{
+     text-decoration: none;
+ }
 .buton {
     display: flex;
     align-items: center;
@@ -29,12 +31,21 @@ body {
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    
+}
+ a .buton{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
 }
 
 .buton:hover {
     width: 346px;
     height: 168px;
     border: 10px solid #f7f4f4;
+    font-size: 90px;
+   
 }
 
 .play {
@@ -44,18 +55,17 @@ body {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     cursor: pointer;
+    
 }
 
-.buton a {
+.buton p{
     line-height: 133px;
     text-decoration: none;
     font-size: 70px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.buton a:hover {
-    font-size: 90px;
-}
+
 
 .regles {
     text-align: center;
