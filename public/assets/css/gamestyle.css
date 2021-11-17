@@ -187,3 +187,22 @@ border-radius: 5px;
     cursor: pointer;
     color: rgb(226, 219, 209);
     }
+
+.popup button {
+    background-color:rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    font-size:18px;
+    margin:1%;
+}
+
+.popup li {
+    list-style: none;
+}
+
+.popup h2 {
+    font-size: 35px;
+}
+
+

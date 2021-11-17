@@ -41,22 +41,19 @@ class HomeController extends AbstractController
         return $this->twig->render('sherlock/escenario.html.twig', ["enigmes"=>$scenarios]);
     }
 
-    public function game(int $id): string
-    {      
+    public function game(int $id/*, int $idReponseQuestion, string $intitule*/): string
+    {
         $scenario = $this->model->selectOneById($id);
-        return $this->twig->render('sherlock/game.html.twig', ["scenarios"=>$scenario]);
-    }
-
-    public function listeQuestions(): string
-    {
         $questions = $this->model->selectAllQuestions();
-        return $this->twig->render('sherlock/game.html.twig', ["questions"=>$questions]);
-    }
-
-    public function reponseQuestion(int $id, string $intitule)
-    {
-        $reponsequestion = $this->model->selectAllQuestions();
-        return $this->twig->render('sherlock/game.html.twig', ["reponsequestion"=>$reponsequestion]);
+        $personnages = $this->model->selectAllPersonnage();
+        //     session_start();
+        //  if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //     $idQuestions = trim($_POST['id']);
+        //      $idPersonne = trim($_POST['id']);
+        //      $this->model->reponseQuestionById($idPersonne, $idQuestions);
+        // }
+        $reponsequestion = $this->model->reponseQuestionById($idReponseQuestion, $intitule);
+      return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "questions"=>$questions, "reponsequestion"=>$reponsequestion]);
     }
 
     public function police(int $id): string
@@ -82,5 +79,6 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('sherlock/lose.html.twig');
     }
+
        
 }

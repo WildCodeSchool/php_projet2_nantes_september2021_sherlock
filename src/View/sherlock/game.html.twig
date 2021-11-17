@@ -41,7 +41,7 @@
                 <div class="histoire">
                         <center>
                             <div class="textehistoire"> 
-                                <h2>{{scenario.titre}} {{dump(scenario)}}</h2>
+                                <h2>{{scenario.titre}}</h2>
                                     <p> 
                                         {{scenario.histoire}}
                                     </p>
@@ -63,12 +63,17 @@
                                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
                                 <button id="btnPopup 1" class="btnPopup">J'interroge le suspect</button>
                                 <div id="overlay 1" class="overlay">
-                                    <div id="popup" class="popup">
+                                    <div id="popup 1" class="popup">
                                                 <h2>Les questions
                                                 <span id="btnClose 1" class="btnClose">&times;</span>
                                                 </h2>
                                                 {% for question in questions %}
-                                                    <li>{{question.intitule}}</li>
+                                                    <li><button class="{{question.id}}" name="{{question.id}}">{{question.intitule}}</button></li>
+                                                    {% if %}
+                                                    {% for categorie in dossier.categorie %}
+                                                    <sous-menu>{{ categorie.libelle }}</sous-menu>
+                                                    {% endfor %}
+                                                    {% endif %}
                                                 {% endfor %}
                                     </div>
                                 </div>      
@@ -83,7 +88,9 @@
                                                 <span id="btnClose 2" class="btnClose">&times;</span>
                                                 </h2>
                                                 {% for question in questions %}
-                                                    <li>{{question.intitule}}</li>
+                                                    <form action="" method="post">
+                                                    <li><button class="question.id" name="question.id">{{question.intitule}}</button></li>
+                                                    </form>
                                                 {% endfor %}
                                     </div>
                                 </div>     
@@ -98,7 +105,9 @@
                                                 <span id="btnClose 3" class="btnClose">&times;</span>
                                                 </h2>
                                                 {% for question in questions %}
-                                                    <li>{{question.intitule}}</li>
+                                                    <form action="" method="post">
+                                                    <li><button class="question.id" name="question.id">{{question.intitule}}</button></li>
+                                                    </form>
                                                 {% endfor %}
                                     </div>
                                 </div>   

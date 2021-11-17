@@ -78,4 +78,11 @@ class HomeModel extends AbstractManager
         return $statement->fetch();
     }
 
+    public function selectAllPersonnage() {
+        {
+            $query = "SELECT * FROM personne";
+            return $this->pdo->query($query)->fetchAll();
+        }
+    }
+
 }
