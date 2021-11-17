@@ -18,7 +18,7 @@ class AdminController extends AbstractController
 
     public function __construct()
     {
-        parent::__construct();
+        parent::__construct(;
         $this->model = new HomeModel();
     }
 

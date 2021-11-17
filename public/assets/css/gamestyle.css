@@ -219,3 +219,9 @@ h2 {
 .popup h2 {
     font-size: 35px;
 }
+
+
+
+.popup  li .reponse{
+    display: none;
+}

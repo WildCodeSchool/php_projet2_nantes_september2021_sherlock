@@ -37,3 +37,20 @@ btnClose2.addEventListener('click',e=>{
     overlay3.style.display='none';
 });
   
+
+
+
+
+
+//reponses
+
+
+
+
+function answer(){
+    document.getElementById('reponse').style.display = 'block';
+}
+
+function reanswer(){
+    document.getElementById('reponse').style.display = 'none';
+}

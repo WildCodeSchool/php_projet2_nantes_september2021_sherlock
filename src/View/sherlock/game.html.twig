@@ -81,7 +81,11 @@
                         {% for moriartyReponse in moriartyReponses %}
                         <ul>
                             <li><button>{{moriartyReponse.intitule}}</button></li>
-                            <li>{{moriartyReponse.reponse}}</li>
+                            <li>
+                                <div class="reponse">
+                                    {{moriartyReponse.reponse}}
+                                </div>
+                            </li>
                         </ul>
                         {% endfor %}
                     </div>
@@ -99,7 +103,11 @@
                         {% for bakerReponse in bakerReponses %}
                         <ul>
                             <li><button>{{bakerReponse.intitule}}</button></li>
-                            <li>{{bakerReponse.reponse}}</li>
+                            <li>
+                                <div class="reponse">
+                                    {{bakerReponse.reponse}}
+                                </div>
+                            </li>
                         </ul>
                         {% endfor %}
                     </div>
@@ -116,15 +124,22 @@
                         </h2>
                         {% for jamesReponse in jamesReponses %}
                         <ul>
-                            <li><button>{{jamesReponse.intitule}}</button></li>
-                            <li>{{jamesReponse.reponse}}</li>
+                            <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
+
+                            <li>
+                                <div class="reponse" id="reponse">
+                                    {{jamesReponse.reponse}} <br>
+                                    <a href="" onclick="reanswer();">posser  question</a>
+                                </div>
+                            </li>
+
                         </ul>
                         {% endfor %}
                     </div>
                 </div>
             </div>
 
-           
+
         </div>
     </div>
 </div>
@@ -133,8 +148,9 @@
 
 
 
- 
-        {% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
-        
 
-        {% endblock %}
+{% block javascript %}
+<script src="/assets/js/script.js"></script>{% endblock %}
+
+
+{% endblock %}
