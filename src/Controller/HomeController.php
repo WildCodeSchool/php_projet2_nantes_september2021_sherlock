@@ -43,14 +43,20 @@ class HomeController extends AbstractController
 
     public function game(int $id): string
     {      
-        $scenarios = $this->model->selectOneById($id);
-        return $this->twig->render('sherlock/game.html.twig', ["scenarios"=>$scenarios]);
+        $scenario = $this->model->selectOneById($id);
+        return $this->twig->render('sherlock/game.html.twig', ["scenarios"=>$scenario]);
     }
 
     public function listeQuestions(): string
     {
         $questions = $this->model->selectAllQuestions();
         return $this->twig->render('sherlock/game.html.twig', ["questions"=>$questions]);
+    }
+
+    public function reponseQuestion(int $id, string $intitule)
+    {
+        $reponsequestion = $this->model->selectAllQuestions();
+        return $this->twig->render('sherlock/game.html.twig', ["reponsequestion"=>$reponsequestion]);
     }
 
     public function police(int $id): string
