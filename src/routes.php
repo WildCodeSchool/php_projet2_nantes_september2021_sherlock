@@ -25,5 +25,3 @@ return [
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
 ];
 
-
-
