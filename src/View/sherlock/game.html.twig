@@ -22,6 +22,11 @@
             <div class="indices">
                 <div class="texteindice">
                     <h3>Les indices</h3>
+                    {% for moriartyReponse in moriartyReponses %}
+                            <ul>
+                                <li>{{moriartyReponse.indice}}</li>
+                            </ul>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -56,72 +61,75 @@
 
     </div>
     
-            <!-- barre lateral droit -->
+    <!-- barre lateral droit -->
 
-            <div class="aside-right">
-                    <h2>Les suspects</h2>
+    <div class="aside-right">
+        <h2>Les suspects</h2>
 
-            <!-- cards -->
-                    <div class="cartes">
+    <!-- cards -->
+        <div class="cartes">
 
-                        <div class="moriartycard">
-                                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
-                                <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay1" class="overlay">
-                                    <div id="popup" class="popup">
-                                        <h2>Les questions
-                                        <span id="btnClose1" class="btnClose">&times;</span>
-                                        </h2>
+            <div class="moriartycard">
+                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
+                <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
+                    <div id="overlay1" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
+                            <span id="btnClose1" class="btnClose">&times;</span>
+                            </h2>
     
-                                        {% for moriartyReponse in moriartyReponses %}
-                                        <ul>
-                                            <li><button>{{moriartyReponse.intitule}}</button></li>
-                                            <li>{{moriartyReponse.reponse}}</li>
-                                        </ul>
-                                        {% endfor %}
-                                    </div>
-                                </div>
+                            {% for moriartyReponse in moriartyReponses %}
+                            <ul>
+                                <li><button>{{moriartyReponse.intitule}}</button></li>
+                                <li>{{moriartyReponse.reponse}}</li>
+                            </ul>
+                            {% endfor %}
                         </div>
+                    </div>
+            </div>
 
-                        <div class="bakercard">
-                                <img src="/assets/images/baker_carte.png" alt="baker">
-                                <button id="btnPopup2" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay2" class="overlay">
-                                    <div id="popup" class="popup">
-                                                <h2>Les questions
-                                                <span id="btnClose2" class="btnClose">&times;</span>
-                                                </h2>
-                                                {% for bakerReponse in bakerReponses %}
-                                        <ul>
-                                            <li><button>{{bakerReponse.intitule}}</button></li>
-                                            <li>{{bakerReponse.reponse}}</li>
-                                        </ul>
-                                        {% endfor %}
-                                    </div>
-                                </div>     
+            <div class="bakercard">
+                <img src="/assets/images/baker_carte.png" alt="baker">
+                <button id="btnPopup2" class="btnPopup">J'interroge le suspect</button>
+                    <div id="overlay2" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
+                            <span id="btnClose2" class="btnClose">&times;</span>
+                             </h2>
+                            {% for bakerReponse in bakerReponses %}
+                            <ul>
+                                <li><button>{{bakerReponse.intitule}}</button></li>
+                                <li>{{bakerReponse.reponse}}</li>
+                            </ul>
+                            {% endfor %}
                         </div>
+                    </div>     
+            </div>
 
-                        <div class="jamescard">
-                            <img src="/assets/images/james_carte.png" alt="james">
-                            <button id="btnPopup3" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay3" class="overlay">
-                                    <div id="popup" class="popup">
-                                                <h2>Les questions
-                                                <span id="btnClose3" class="btnClose">&times;</span>
-                                                </h2>
-                                                {% for jamesReponse in jamesReponses %}
-                                        <ul>
-                                            <li><button>{{jamesReponse.intitule}}</button></li>
-                                            <li>{{jamesReponse.reponse}}</li>
-                                        </ul>
-                                        {% endfor %}
-                                    </div>
-                                </div>   
-                        </div>  
+            <div class="jamescard">
+                <img src="/assets/images/james_carte.png" alt="james">
+                <button id="btnPopup3" class="btnPopup">J'interroge le suspect</button>
+                    <div id="overlay3" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
+                            <span id="btnClose3" class="btnClose">&times;</span>
+                            </h2>
+                            {% for jamesReponse in jamesReponses %}
+                            <ul>
+                                <li><button>{{jamesReponse.intitule}}</button></li>
+                                <li>{{jamesReponse.reponse}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+                    </div>   
+            </div>  
             
         </div>
     </div>
+</div>
 
-    {% block javascript %}
-    <script src="/assets/js/script.js"></script>{% endblock %}
-    {% endblock %}
+{% block javascript %}
+<script src="/assets/js/script.js"></script>
+{% endblock %}
+    
+{% endblock %}

@@ -46,19 +46,12 @@ class HomeController extends AbstractController
         $scenario = $this->model->selectOneById($id);
         $personnages = $this->model->selectAllPersonnage();
         $reponses = [];
-        //session_start();
-        // if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        //     $idQuestions = trim($_POST['id']);
-        //     //$idPersonne = trim($_POST['id']);
-        //     $reponses = $this->model->reponseQuestionById(1, $idQuestions);
-        // }
+     
         $moriartyReponses = $this->model->reponseQuestionById(1);
         $bakerReponses = $this->model->reponseQuestionById(2);
         $jamesReponses = $this->model->reponseQuestionById(3);
-        // $baker = $this->model->reponseQuestionById(2);
-        // $james = $this->model->reponseQuestionById(3);
-        //$reponsequestion = $this->model->reponseQuestionById($idReponseQuestion, $intitule);
-    return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses/*, "reponsequestion"=>$reponsequestion */]);
+       
+    return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses]);
     }
 
     public function police(int $id): string
