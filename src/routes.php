@@ -6,11 +6,12 @@
 //          2. method name
 //          3. (optional) array of query string keys to send as parameter to the method
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
+
 return [
     '' => ['HomeController', 'index', ],
     'sherlock/escenario' => ['Homecontroller', 'scenario'],
     'sherlock/game' => ['Homecontroller', 'game', ],
-    //'sherlock/game' => ['Homecontroller', 'listeQuestions', ['id']],
+    'sherlock/game' => ['Homecontroller', 'listeQuestions', ['id']],
     'sherlock/police' => ['Homecontroller', 'police', ['id']],
     'sherlock/win' => ['Homecontroller', 'win'],
     'sherlock/home' => ['Homecontroller', 'index'],
@@ -18,7 +19,12 @@ return [
     'sherlock/thanks' => ['Homecontroller', 'thanks', ],
     'sherlock/adminLogin' => ['Admincontroller', 'adminLogin'],
     'sherlock/adminIndices' => ['Admincontroller', 'adminIndices'],
-    'sherlock/lose' => ['Homecontroller', 'lose'],
+    'sherlock/lose' => ['Homecontroller', 'lose'], 
     'sherlock/adminEnigmes' => ['Admincontroller', 'adminEnigmes'],
+    'sherlock/adminQuestions' => ['Admincontroller', 'adminListeQuestions'],
+    //'sherlock/adminQuestions' => ['Admincontroller', 'addQuestions'],
 
+    'sherlock/adminEnigmes' => ['Admincontroller', 'adminListeEnigmes'],
+    //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
+    'sherlock/questions' => ['Homecontroller', 'questions'],
 ];
