@@ -13,69 +13,45 @@
 
 <nav>
     <ul>
-    <li><a href="/sherlock/adminIndices">Indices</a></li>
-    <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
-    <li><a href="/sherlock/adminQuestions">Questions</a></li>
-    <li><a href="">Déconnexion</a></li>
+        <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
+        <li><a href="/sherlock/adminQuestions">Questions</a></li>
+        <li><a href="/sherlock/adminIndices">Indices</a></li>
     </ul>
 </nav>
 
-<div class="form">
-    <div class="form-left">
-        <form action="adminEnigmes" method="post">
-            {% set i=1 %}
-            {% for scenario in enigmes %}
-                <div class="enigme1">
-                    <label for="enigme1"> Enigme {{i}} : </label>
-                    <br/>
-                    <input type="text" id="enigme1" name="enigme1" value="{{scenario.titre}}">
-                    <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                    <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                    <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span> 
-                </div>
-                {% set i = i+1 %}
-            {% endfor %}
-            {# <div class="enigme2">
-                <label for="enigme2"> Enigme 2 : </label>
-                <br/>
-                <input type="text" id="enigme2" name="enigme2" >
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+{% set i=1 %}
+{% for enigme in enigmes %} 
+    <form action="adminEnigmes" method="post">
+        <div class="Enigme1">
+            <label for="Enigme1"> Enigme {{i}} : </label>
+            <br/>
+            <input type="text" id="titre" name="titre" value="{{enigme.titre}}">
+            <span  for="{{ enigme.id }}" id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>          
+            <input type="hidden" name="idModif" value="{{enigme.id}}"><button>Modifier</button>
+            </form>
+            <form action="adminEnigmes" method="post">
                 <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-                
-            </div>
-            
-            <div class="enigme3">
-                <label for="enigme3"> Enigme 3 : </label>
-                <br/>
-                <input type="text" id="enigme3" name="enigme3">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="enigme4">
-                <label for="enigme4"> Enigme 4 : </label>
-                <br/>
-                <input type="text" id="enigme4" name="enigme4">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="enigme5">
-                <label for="enigme5"> Enigme 5 : </label>
-                <br/>
-                <input type="text" id="enigme5" name="enigme5">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div> #}
-        </form>
-    </div>
-</div>
+                <input type="hidden" name="idSupp" value="{{enigme.id}}"><button>Effacer</button> 
+            </form>
+        </div>
+    </form>
+    {% set i = i+1 %}
+{% endfor %}
 
+<form action="" method="post">
+    <div class="enigme1">
+        <label for="enigme"> Ajouter une enigme : </label>
+        <br/>
+        <input type="text" id="titre" name="titre">
+    </div>
+    <input type="submit" value="Ajouter mon enigme">
+</form>
+
+
+<form action="" method="post">
 <div class="retourPageAccueil">
             <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>
+            <a href=""><input type="submit" name="deconnexion" value="deconnexion"></a>
 </div>
+</form>
 {% endblock %}

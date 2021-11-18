@@ -63,8 +63,13 @@ nav a:hover {
     color: 7EB5F6;
 }
 
+form{
+    display : inline
+}
+
+
 .form {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
     width: 100%;
 }

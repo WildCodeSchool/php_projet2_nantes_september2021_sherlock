@@ -12,115 +12,44 @@
 
 <nav>
     <ul>
-    <li><a href="/sherlock/adminIndices">Indices</a></li>
-    <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
-    <li><a href="/sherlock/adminQuestions">Questions</a></li>
-    <li><a href="">Déconnexion</a></li>
+        <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
+        <li><a href="/sherlock/adminQuestions">Questions</a></li>
+        <li><a href="/sherlock/adminIndices">Indices</a></li>
     </ul>
 </nav>
 
-<div class="form">
-    <div class="form-left">
-        <form action="adminIndices" method="post">
-            <div class="indice1">
-                <label for="indice1"> Indice 1 : </label>
-                <br/>
-                <input type="text" id="indice1" name="indice1">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span> 
-            </div>
-            
-            <div class="indice2">
-                <label for="indice2"> Indice 2 : </label>
-                <br/>
-                <input type="text" id="indice2" name="indice2" >
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
+{% set i=1 %}
+{% for indice in indices %} 
+    <form action="adminIndices" method="post">
+        <div class="Indice1">
+            <label for="Indice1"> Indice {{i}} : </label>
+            <br/>
+            <input type="text" id="indice" name="indice" value="{{indice.indice}}">
+            <span  for="{{ indice.id }}" id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>          
+            <input type="hidden" name="idModif" value="{{indice.id}}"><button>Modifier</button>
+            </form>
+            <form action="adminIndices" method="post">
                 <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-                
-            </div>
-            
-            <div class="indice3">
-                <label for="indice3"> Indice 3 : </label>
-                <br/>
-                <input type="text" id="indice3" name="indice3">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice4">
-                <label for="indice4"> Indice 4 : </label>
-                <br/>
-                <input type="text" id="indice4" name="indice4">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice5">
-                <label for="indice5"> Indice 5 : </label>
-                <br/>
-                <input type="text" id="indice5" name="indice5">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-        </form>
-    </div>
+                <input type="hidden" name="idSupp" value="{{indice.id}}"><button>Effacer</button> 
+            </form>
+        </div>
+    </form>
+    {% set i = i+1 %}
+{% endfor %}
 
-    <div class="form-right">
-        <form action="adminIndices" method="post">
-            <div class="indice6">
-                <label for="indice6"> Indice 6 : </label>
-                <br/>
-                <input type="text" id="indice6" name="indice6">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice7">
-                <label for="indice7"> Indice 7 : </label>
-                <br/>
-                <input type="text" id="indice7" name="indice7">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice8">
-                <label for="indice8"> Indice 8 : </label>
-                <br/>
-                <input type="text" id="indice8" name="indice8">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice9">
-                <label for="indice9"> Indice 9 : </label>
-                <br/>
-                <input type="text" id="indice9" name="indice9">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-            
-            <div class="indice10">
-                <label for="indice10"> Indice 10 : </label>
-                <br/>
-                <input type="text" id="indice10" name="indice10">
-                <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-            </div>
-        </form>
+<form action="" method="post">
+    <div class="indice1">
+        <label for="intitule"> Ajouter un indice : </label>
+        <br/>
+        <input type="text" id="indice" name="indice">
     </div>
-</div>
+    <input type="submit" value="Ajouter mon indice">
+</form>
 
+<form action="" method="post">
 <div class="retourPageAccueil">
-    <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>
+            <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>
+            <a href=""><input type="submit" name="deconnexion" value="deconnexion"></a>
 </div>
+</form>
 {% endblock %}
