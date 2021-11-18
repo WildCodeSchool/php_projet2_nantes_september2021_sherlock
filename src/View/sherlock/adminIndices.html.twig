@@ -25,12 +25,12 @@
             <label for="Indice1"> Indice {{i}} : </label>
             <br/>
             <input type="text" id="indice" name="indice" value="{{indice.indice}}">
-            <span  for="{{ indice.id }}" id="pencil" style=" color: #FFFFFF;"><i class="fas fa-pencil-alt"></i></span>          
-            <input type="hidden" name="idModif" value="{{indice.id}}"><button>Modifier</button>
+                      
+            <input type="hidden" name="idModif" value="{{indice.id}}"><button><span  for="{{ indice.id }}" id="pencil" style=" color: #070707;"><i class="fas fa-pencil-alt"></i></span></button>
             </form>
             <form action="adminIndices" method="post">
-                <span  id="pencil" style=" color: #FFFFFF;"><i class="fas fa-trash-alt"></i></span>
-                <input type="hidden" name="idSupp" value="{{indice.id}}"><button>Effacer</button> 
+                
+                <input type="hidden" name="idSupp" value="{{indice.id}}"><button><span  id="pencil" style=" color: #080808;"><i class="fas fa-trash-alt"></i></span></button> 
             </form>
         </div>
     </form>

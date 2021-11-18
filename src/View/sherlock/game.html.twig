@@ -165,12 +165,12 @@
                         <ul>
                             <li>
                                 {{jamesReponse.intitule}}<br>
-                                <input type="checkbox" name="check" id="check" value="1"
-                                    onchange="javascript:showContent()" />
+                                <input type="checkbox" name="check" id="check{{jamesReponse.id}}"  value="1"
+                                    onchange="javascript:showContent({{jamesReponse.id}})" />
                             </li>
 
                             <li>
-                                <div class="reponse" id="content">
+                                <div class="reponse" id="content{{jamesReponse.id}}">
                                     {{jamesReponse.reponse}} <br>
                                 </div>
                             </li>
