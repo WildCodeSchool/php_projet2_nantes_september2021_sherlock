@@ -22,9 +22,9 @@ class HomeModel extends AbstractManager
      */
     public function update(array $item): bool
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title` = :title WHERE id=:id");
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `titre` = :titre WHERE id=:id");
         $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-        $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
+        $statement->bindValue('titre', $item['titre'], \PDO::PARAM_STR);
 
         return $statement->execute();
     }
@@ -35,7 +35,24 @@ class HomeModel extends AbstractManager
             return $this->pdo->query($query)->fetchAll();
         }
     }
-// PARTIE QUESTIONS 
+
+    public function insertEnigme(string $titre)
+    {
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`titre`) VALUES (:titre)");
+        $statement->bindValue('titre', $titre, \PDO::PARAM_STR);
+
+        $statement->execute();
+    }
+
+    public function updateEnigmeById(array $item): bool
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `titre` = :titre WHERE id=:idModif");
+        $statement->bindValue('idModif', $item['idModif'], \PDO::PARAM_INT);
+        $statement->bindValue('titre', $item['titre'], \PDO::PARAM_STR);
+
+        return $statement->execute();
+    }
+
     public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM question";
@@ -63,28 +80,13 @@ class HomeModel extends AbstractManager
 
     public function updateQuestionById(array $item): bool
     {
-        $statement = $this->pdo->prepare("UPDATE question SET `intitule` = :intitule WHERE id=:id");
-        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-        $statement->bindValue('intitule', $item['intitule'], \PDO::PARAM_STR);
+        $statement = $this->pdo->prepare("UPDATE question SET `intitule` = :question WHERE id=:idModif");
+        $statement->bindValue('idModif', $item['idModif'], \PDO::PARAM_INT);
+        $statement->bindValue('question', $item['question'], \PDO::PARAM_STR);
 
         return $statement->execute();
     }
 
-    //retourne un tableau de question/reponse/indice liés a la question et au personnage passé en parametre
-    public function reponseQuestionById(int $id)
-    {
-        $statement = $this->pdo->prepare("SELECT intitule, reponse, indice from reponse_question
-        JOIN personne ON personne.id=personne_id
-        JOIN question ON question.id=question_id
-        where personne.id=:id");
-        $statement->bindValue('id', $id, \PDO::PARAM_INT);
-
-        $statement->execute();
-
-        return $statement->fetchAll();
-    }
-
-    // PARTIE INDICES 
     public function selectAllIndices(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM reponse_question";
@@ -112,11 +114,39 @@ class HomeModel extends AbstractManager
 
     public function updateIndiceById(array $item): bool
     {
-        $statement = $this->pdo->prepare("UPDATE reponse_question SET `indice` = :indice WHERE id=:id");
-        $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
+        $statement = $this->pdo->prepare("UPDATE reponse_question SET `indice` = :indice WHERE id=:idModif");
+        $statement->bindValue('idModif', $item['idModif'], \PDO::PARAM_INT);
         $statement->bindValue('indice', $item['indice'], \PDO::PARAM_STR);
 
         return $statement->execute();
+    }
+
+    //retourne un tableau de question/reponse/indice liés a la question et au personnage passé en parametre
+    public function reponseQuestionById(int $id)
+    {
+        $statement = $this->pdo->prepare("SELECT intitule, reponse, indice from reponse_question
+        JOIN personne ON personne.id=personne_id
+        JOIN question ON question.id=question_id
+        where personne.id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
+
+    public function exist(string $username, string $password): bool
+    {
+        $utilisateurValide = false;
+        $query = "SELECT * FROM utilisateur";
+        $utilisateurs = $this->pdo->query($query)->fetchAll();
+        foreach($utilisateurs as $utilisateur) {
+            if($username == $utilisateur["pseudo"] and $password == $utilisateur["password"])
+            {
+                $utilisateurValide = true;
+            }
+        }
+        return $utilisateurValide;
     }
 
 }

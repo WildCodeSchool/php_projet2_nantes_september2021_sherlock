@@ -12,28 +12,30 @@
     <br/>
     <img class="itemconnexion" src="/assets/images/connexion_admin.png" alt="connexionlogin">
 </center>
+<form method="POST">
+    <div class="form">
+        <form action="adminEnigmes" method="post">
+            <p>{{errors}}</p> {# affichage d'une erreur si l'utilisateur n'existe pas dans la bdd#}
+            <div class="name">
+                <label for="name"> Name : </label>
+                <br/>
+                <input type="text" id="name" name="user_name" placeholder="Sherlock" required>
+            </div>
 
-<div class="form">
-    <form action="AdminAccueil" method="post">
-        <div class="name">
-            <label for="name"> Name : </label>
-            <br/>
-            <input type="text" id="name" name="user_name" placeholder="Sherlock" required>
-        </div>
+            <div class="password">
+                <label for="password"> Password : </label>
+                <br/>
+                <input type="text" name="password" id="password" placeholder="123Pqz?" required>
+                <br/>
+            </div>
 
-        <div class="password">
-            <label for="password"> Password : </label>
-            <br/>
-            <input type="text" name="password" id="password" placeholder="123Pqz?" required>
-            <br/>
-        </div>
-
-    
-       <div class="connexion">
-            <a href="/sherlock/adminQuestions">
-                <input type="submit" value="Se connecter">
-            </a>
-        </div>
+        
+            <div class="connexion">
+                <a href="/sherlock/adminEnigmes">
+                    <input type="submit" value="Se connecter">
+                </a>
+            </div>
+        </form>
     </form>
 </div>
 

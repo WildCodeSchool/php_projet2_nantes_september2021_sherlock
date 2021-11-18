@@ -26,6 +26,7 @@ CREATE table question (
 );
 
 create table reponse_question (
+    id int primary key AUTO_INCREMENT,
     personne_id int,
     enigme_id int,
     question_id int,
@@ -97,5 +98,16 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (2, 1, 5, "Je ne comprends pas l'intérêt de votre demande, mais si vous insistez, voilà mes chaussures.", "De la boue. "),
 (2, 1, 6, "Je suis rentrée à Londres lundi pour voir ma soeur, Lady Chamberley. Et en effet, elle habite près de cette ancienne usine désafectée", "Mon frère Wilson Baker m'a rendu en effet visite lundi. Nous avons pris le thé. Pourquoi cette question, inspecteur ?");
 
+<<<<<<< HEAD
+=======
+INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
+(3, 1, 1,"Le Dr Grimesby Roylott et moi-même étions dans l'humble demeure de Sir Arthur Conan Doyle située au nord de Londres, à Clerkenwell. Il avait besoin de notre savoir scientifique pour étayer son dernier roman.", "Une photo des trois compères a été prise par un journaliste hier soir à 21h30 dans la demeure du célèbre écrivain."),
+(3, 1, 2,"Vous n'avez pas écouté ce que je viens de vous dire inspecteur ? Interrogez donc Dr Grimesby Roylott et Sir Arthur Conan Doyles.", " La demeure de l'écrivain se situe au nord de Londres, à plus de 5h à cheval de la maison de Marie Mayer."),
+(3, 1, 3,"Madame Marie Mayer était mon assistante. Mais si vous voulez mon avis, elle était plus doué pour préparer le thé plutôt que de m'aider dans mes recherches sur la radioactivité de l'uranium. Je suis un très grand scientifique, vous savez, et je batterai le scientifique Becquerel, un français de bas étage si vous voulez mon avis.", " Madame Marie Mayer et le professeur James ont eu une liaison qui a durée plus de deux ans. Mais l'égocentrisme du célèbre scientifique a eu raison de leur amour et madame Marie Mayer a mis fin à leur relation il y a 3 mois de cela. "),
+(3, 1, 4,"Oui, je fume la pipe. Du tabac brun. Vous posez d'étranges questions. J'ai quelques doutes sur vos compétences d'enquêteurs.", "C'est en effet du tabac brun contenu dans la pipe du professeur James."),
+(3, 1, 5,"Vous plaisantez Dr Watson ? N'avez vous pas remarqué que je marche difficilement ? Je me déplace en fauteuil roulant !", "En effet, on dirait que les chaussures du professeur James sont comme neuves!"),
+(3, 1, 6,"J'ai été récupéré des composants pour mes recherches sur la radioactivité de l'uranium. L'usine désafectée est remplie d'anciens composants chimiques.", "Après avoir fouillé la maison du chimiste, nous avons en effet retrouvé des composants de l'usine et ses cahiers de recherche sur l'uranium.");
+INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
+>>>>>>> b82f84bd961fc992eb983e4f6ee740c1a0fb560c
 
 INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
