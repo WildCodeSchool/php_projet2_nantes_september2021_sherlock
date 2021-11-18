@@ -38,7 +38,7 @@ var btnClose3 = document.getElementById('btnClose3');
     overlay3.style.display='none';
 });
 
-// Fenêtre pop-up carte moriarty affichant les indices dans texte indice sur la page Game
+// Fenêtre pop-up carte moriarty affichant les indices dans texte indice sur la page Police
 var btnPopup4 = document.getElementById('btnPopup4');
 var overlay4 = document.getElementById('overlay4');
 btnPopup4.addEventListener('click',e=>{
@@ -50,8 +50,7 @@ btnClose4.addEventListener('click',e=>{
     overlay4.style.display='none';
 });
 
-// Fenêtre pop-up carte Baker affichant les indices dans texte indice sur la page Game
-var btnPopup5 = document.getElementById('btnPopup5');
+// Fenêtre pop-up carte Baker affichant les indices dans texte indice sur la page Police
 var overlay5 = document.getElementById('overlay5');
 btnPopup5.addEventListener('click',e=>{
 overlay5.style.display='block';
@@ -62,7 +61,7 @@ btnClose5.addEventListener('click',e=>{
     overlay5.style.display='none';
 });
 
-// Fenêtre pop-up carte James affichant les indices dans texte indice sur la page Game 
+// Fenêtre pop-up carte James affichant les indices dans texte indice sur la page Police
 var btnPopup6 = document.getElementById('btnPopup6');
 var overlay6 = document.getElementById('overlay6');
 btnPopup6.addEventListener('click',e=>{
@@ -80,10 +79,8 @@ btnClose6.addEventListener('click',e=>{
 function showContent(index, name) {
     element = document.getElementById("content-" + name + index);
     check = document.getElementById("check-" + name + index);
-    indice = document.getElementById("indice-" + name + index);
     if (check.checked) {
         element.style.display = 'block';
-        indice.style.display = 'block';
     }
     else {
         element.style.display = 'none';

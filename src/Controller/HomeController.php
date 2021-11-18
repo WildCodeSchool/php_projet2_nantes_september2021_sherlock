@@ -56,8 +56,12 @@ class HomeController extends AbstractController
 
     public function police(int $id): string
     {
+        $moriartyReponses = $this->model->reponseQuestionById(1);
+        $bakerReponses = $this->model->reponseQuestionById(2);
+        $jamesReponses = $this->model->reponseQuestionById(3);
+        
         $scenario = $this->model->selectOneById($id);
-        return $this->twig->render('sherlock/police.html.twig');
+        return $this->twig->render('sherlock/police.html.twig', ["moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses]);
     }
 
     public function win()

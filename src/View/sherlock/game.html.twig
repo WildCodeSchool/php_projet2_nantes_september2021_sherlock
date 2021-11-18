@@ -18,63 +18,16 @@
     <!-- barre lateral gauche -->
     <div class="aside-left">
         <div class="indicecarte">
-            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+            <div>
+                <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+            </div>
             <div class="indices">
                 <div class="texteindice">
-                    <h3>Les indices</h3>
-                    <button id="btnPopup4" class="btnPopup">Mes indices sur Moriarty</button>
-                    <div id="overlay4" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur Moriarty
-                            <span id="btnClose4" class="btnClose">&times;</span>
-                            </h2>  
-                            {% for moriartyReponse in moriartyReponses %}
-                            <div class="indice" id="indice-moriarty{{loop.index}}">
-                            <ul>
-                                <li>{{moriartyReponse.indice}}</li>
-                            </ul>
-                            </div>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-
-                    <button id="btnPopup5" class="btnPopup">Mes indices sur Baker</button>
-                    <div id="overlay5" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur Baker
-                            <span id="btnClose5" class="btnClose">&times;</span>
-                            </h2>
-    
-                            {% for bakerReponse in bakerReponses %}
-                            <ul>
-                                <li>{{bakerReponse.indice}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-                    <br/>
-                    
-                    <button id="btnPopup6" class="btnPopup">Mes indices sur James</button>
-                    <div id="overlay6" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur James
-                            <span id="btnClose6" class="btnClose">&times;</span>
-                            </h2>
-    
-                            {% for jamesReponse in jamesReponses %}
-                            <ul>
-                                <li>{{jamesReponse.indice}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-
-                    </div>
+            
                 </div>
             </div>
 
-            <h2>Je veux parler à l’inspecteur</h2>
+            <h2 class="inspecteur_button">Je veux parler à l’inspecteur</h2>
             <!-- buton go -->
 
             <div class="button">
@@ -107,17 +60,15 @@
             </center>
             <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
         </div>
-
     </div>
 
     <!-- barre lateral droit -->
-
+²
     <div class="aside-right">
         <h2>Les suspects</h2>
 
     <!-- cards -->
         <div class="cartes">
-
             <div class="moriartycard">
                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
                 <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
@@ -135,7 +86,7 @@
                                     </li>
                                     <li>
                                         <div class="reponse" id="content-moriarty{{loop.index}}">
-                                            {{moriartyReponse.reponse}} <br>
+                                            <bold>REPONSE:</bold> {{moriartyReponse.reponse}} <br/> <bold>INDICE:</bold> {{moriartyReponse.indice}}
                                         </div>
                                     </li>
                                 </ul>
@@ -161,7 +112,7 @@
                                 </li>
                                 <li>
                                     <div class="reponse" id="content-baker{{loop.index}}">
-                                        {{bakerReponse.reponse}} <br>
+                                        <bold>REPONSE:</bold> {{bakerReponse.reponse}} <br/> <bold>INDICE:</bold> {{bakerReponse.indice}}
                                     </div>
                                 </li>
                             </ul>
@@ -187,7 +138,7 @@
                                     </li>
                                     <li>
                                         <div class="reponse" id="content-james{{loop.index}}">
-                                            {{jamesReponse.reponse}} <br>
+                                            <bold>REPONSE:</bold> {{jamesReponse.reponse}} <br/> <bold>INDICE:</bold> {{jamesReponse.indice}}
                                         </div>
                                     </li>
                                 </ul>
@@ -195,7 +146,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
