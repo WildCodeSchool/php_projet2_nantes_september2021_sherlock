@@ -122,14 +122,17 @@
                         <h2>Les questions
                             <span id="btnClose3" class="btnClose">&times;</span>
                         </h2>
-                        {% for jamesReponse in jamesReponses %}
+                       {% for jamesReponse in jamesReponses %}
                         <ul>
-                            <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
+                            <li>
+                                {{jamesReponse.intitule}}<br>
+                                <input type="checkbox" name="check" id="check" value="1"
+                                    onchange="javascript:showContent()" />
+                            </li>
 
                             <li>
-                                <div class="reponse" id="reponse">
+                                <div class="reponse" id="content">
                                     {{jamesReponse.reponse}} <br>
-                                    <a href="" onclick="reanswer();">posser  question</a>
                                 </div>
                             </li>
 
