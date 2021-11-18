@@ -1,128 +1,156 @@
-
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/gamestyle.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/gamestyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
 
 
 {% block content %}
 
-    <!-- banner -->
+<!-- banner -->
 
 
-    <div class="bodypage" id="bodypage">
-        <!-- barre lateral gauche -->
-        <div class="aside-left">
-            <div class="indicecarte">
+
+<div class="bodypage">
+    <!-- barre lateral gauche -->
+    <div class="aside-left">
+        <div class="indicecarte">
             <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
-                <div class="indices">
-                    <div class="texteindice"><h3>Les indices</h3></div>
+            <div class="indices">
+                <div class="texteindice">
+                    <h3>Les indices</h3>
                 </div>
-
-                    <h2>Je veux parler à l’inspecteur</h2>
-            <!-- buton go -->
-
-                    <div class="button">
-                    <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png" alt="boutton valider" width="180px"></a>
-                    </div>
-                </div>  
-            </div>    
-
-            <!-- body pag 3 -->
-
-
-            <div class="center">
-
-
-                <!-- histoire -->
-                <div class="histoire">
-                        <center>
-                            <div class="textehistoire"> 
-                                <h2>{{scenario.titre}}</h2>
-                                    <p> 
-                                        {{scenario.histoire}}
-                                    </p>
-                                </div>
-                        </center>
-                    <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
-                </div>
-
-
-            <!-- barre lateral droit -->
-
-            <div class="aside-right">
-                    <h2>Les suspects</h2>
-
-            <!-- cards -->
-                    <div class="cartes">
-
-                        <div class="moriartycard">
-                                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
-                                <button id="btnPopup 1" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay 1" class="overlay">
-                                    <div id="popup" class="popup">
-                                        <h2>Les questions
-                                        <span id="btnClose 1" class="btnClose">&times;</span>
-                                        </h2>
-                                        {% for moriartyReponse in moriartyReponses %}
-                                            <li><button>{{moriartyReponse.intitule}}</button></li>
-                                            <li>{{moriartyReponse.reponse}}</li>
-                                        {% endfor %}
-                                    </div>
-                                </div>      
-                        </div>
-
-                        <div class="bakercard">
-                                <img src="/assets/images/baker_carte.png" alt="baker">
-                                <button id="btnPopup 2" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay 2" class="overlay">
-                                    <div id="popup" class="popup">
-                                                <h2>Les questions
-                                                <span id="btnClose 2" class="btnClose">&times;</span>
-                                                </h2>
-                                                {% for bakerReponse in bakerReponses %}
-                                                    <li>{{bakerReponse.intitule}}</li>
-                                                    <li>{{bakerReponse.reponse}}</li>
-                                                {% endfor %}
-                                    </div>
-                                </div>     
-                        </div>
-
-                        <div class="jamescard">
-                            <img src="/assets/images/james_carte.png" alt="james">
-                            <button id="btnPopup 3" class="btnPopup">J'interroge le suspect</button>
-                                <div id="overlay 3" class="overlay">
-                                    <div id="popup" class="popup">
-                                                <h2>Les questions
-                                                <span id="btnClose 3" class="btnClose">&times;</span>
-                                                </h2>
-                                                {% for question in questions %}
-                                                    <li>{{moriartyReponse.intitule}}</li>
-                                                {% endfor %}
-                                    </div>
-                                </div>   
-                        </div>  
-
-                    </div>
             </div>
 
-        </div>
+            <h2>Je veux parler à l’inspecteur</h2>
+            <!-- buton go -->
 
-
-    </div>
-
-    <div class="listeQuestions">
-        <div>
-        <h2>test</h2>
-            {%for question in questions %}
-                <li>{{question.intitule}}
-            {% endfor %}
+            <div class="button">
+                <a href="/sherlock/police?id=1"><img class="button_valider" src="/assets/images/button_valider.png"
+                        alt="boutton valider" width="180px"></a>
+            </div>
         </div>
     </div>
 
-{% block javascript %}<script src="/assets/js/script.js"></script>{% endblock %}
+    <!-- body pag 3 -->
+
+
+    <div class="center">
+
+
+        <!-- histoire -->
+        <div class="histoire">
+            <center>
+                <div class="textehistoire">
+                    <h2>{{scenario.titre}}</h2>
+                    <p>
+                        {{scenario.histoire}}
+                    </p>
+                </div>
+            </center>
+            <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- barre lateral droit -->
+
+    <div class="aside-right">
+        <h2>Les suspects</h2>
+
+        <!-- cards -->
+        <div class="cartes">
+
+            <div class="moriartycard">
+                <img src="/assets/images/moriarty_carte.png" alt="moriarty">
+                <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay1" class="overlay">
+                    <div id="popup" class="popup">
+                        <h2>Les questions
+                            <span id="btnClose1" class="btnClose">&times;</span>
+                        </h2>
+
+                        {% for moriartyReponse in moriartyReponses %}
+                        <ul>
+                            <li><button>{{moriartyReponse.intitule}}</button></li>
+                            <li>
+                                <div class="reponse">
+                                    {{moriartyReponse.reponse}}
+                                </div>
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="bakercard">
+                <img src="/assets/images/baker_carte.png" alt="baker">
+                <button id="btnPopup2" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay2" class="overlay">
+                    <div id="popup" class="popup">
+                        <h2>Les questions
+                            <span id="btnClose2" class="btnClose">&times;</span>
+                        </h2>
+                        {% for bakerReponse in bakerReponses %}
+                        <ul>
+                            <li><button>{{bakerReponse.intitule}}</button></li>
+                            <li>
+                                <div class="reponse">
+                                    {{bakerReponse.reponse}}
+                                </div>
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="jamescard">
+                <img src="/assets/images/james_carte.png" alt="james">
+                <button id="btnPopup3" class="btnPopup">J'interroge le suspect</button>
+                <div id="overlay3" class="overlay">
+                    <div id="popup" class="popup">
+                        <h2>Les questions
+                            <span id="btnClose3" class="btnClose">&times;</span>
+                        </h2>
+                        {% for jamesReponse in jamesReponses %}
+                        <ul>
+                            <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
+
+                            <li>
+                                <div class="reponse" id="reponse">
+                                    {{jamesReponse.reponse}} <br>
+                                    <a href="" onclick="reanswer();">posser  question</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% block javascript %}
+<script src="/assets/js/script.js"></script>{% endblock %}
+
 
 {% endblock %}

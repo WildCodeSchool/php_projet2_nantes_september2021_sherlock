@@ -97,9 +97,12 @@ body {
     width: 150px;
     height: 270px;
 }
-
 .moriartycard img {
     border-radius: 2%;
+    transition: all 300ms;
+}
+.moriartycard img:hover{
+    width: 180px;
 }
 
 .bakercard {
@@ -111,6 +114,10 @@ body {
 
 .bakercard img {
     border-radius: 2%;
+    transition: all 300ms;
+}
+.bakercard img:hover{
+    width: 180px;
 }
 
 .jamescard {
@@ -122,8 +129,11 @@ body {
 
 .jamescard img {
     border-radius: 2%;
+    transition: all 300ms;
 }
-
+.jamescard img:hover{
+    width: 180px;
+}
 .button img {
     width: 300px;
 }

@@ -18,7 +18,9 @@ body {
     justify-content: center;
     margin-bottom: 5%;
 }
-
+input[type=text]{
+    width: 900px;
+}
 input[type=submit] {
     background-color: rgba(13, 13, 13, 0.70);
     font-family: charmonman, bold;
@@ -80,13 +82,45 @@ form{
     width: 100%;
 }
 
+.form-right input[type=text]{
+    width:400px;
+}
+
+
 .form-left form {
     flex-direction: column;
     text-align: start;
     width: 100%;
 }
+.form-left input[type=text]{
+    width:400px;
+}
 
 .retourPageAccueil {
     display: flex;
     justify-content: center;
+}
+.fa-eye-slash{
+    transition: all 400ms;
+
+}
+.fa-eye-slash:hover{
+   font-size: 30px;
+   color: red;
+}
+.fa-pencil-alt{
+    transition: all 400ms;
+
+}
+.fa-pencil-alt:hover{
+   font-size: 30px;
+   color: red;
+}
+.fa-trash-alt{
+    transition: all 400ms;
+
+}
+.fa-trash-alt:hover{
+   font-size: 30px;
+   color: red;
 }
