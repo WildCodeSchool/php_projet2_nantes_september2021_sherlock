@@ -65,6 +65,10 @@ body {
     position:relative;
 }
 
+.indice li {
+    display:none;
+}
+
 
 .button {
     margin-left: 13%;

@@ -80,8 +80,10 @@ btnClose6.addEventListener('click',e=>{
 function showContent(index, name) {
     element = document.getElementById("content-" + name + index);
     check = document.getElementById("check-" + name + index);
+    indice = document.getElementById("indice-" + name + index);
     if (check.checked) {
         element.style.display = 'block';
+        indice.style.display = 'block';
     }
     else {
         element.style.display = 'none';

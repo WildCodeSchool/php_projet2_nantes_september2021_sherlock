@@ -85,6 +85,10 @@ body {
     margin-bottom: 100px;
 }
 
+.enigme li {
+    font-size:17px;
+}
+
 .histoire {
     max-width: auto;
     box-sizing: border-box;
@@ -109,6 +113,10 @@ h2 {
     font-size: 12px;
     text-align: center;
     box-sizing: border-box;
+}
+
+.textehistoire p {
+    font-size: 17px;
 }
 
 .aside-right {
