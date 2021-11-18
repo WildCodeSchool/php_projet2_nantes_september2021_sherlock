@@ -28,8 +28,8 @@ body {
     position: absolute;
     width: 274.4px;
     height: 483.98px;
-    left: 75%;
-    top: 5%;
+    left: 40%;
+    top: 2%;
     transform: rotate(-23deg);
 }
 
@@ -46,7 +46,7 @@ body {
 
 .indices {
     max-width: auto;
-    height: 500px;
+    height: 700px;
     box-sizing: border-box;
     background-image: url("/assets/images/paper.jpg");
     background-size: cover;
@@ -59,12 +59,6 @@ body {
     font-size: 15px;
     box-sizing: border-box;
 }
-
-.texteindice button {
-    margin-bottom: 30%;
-    position:relative;
-}
-
 
 .button {
     margin-left: 13%;
@@ -167,11 +161,6 @@ h2 {
     color: black;
 }
 
-
-#overlay1, #overlay2, #overlay3 {
-    display:none;
-}
-
 .overlay {
     position: absolute;
     z-index: 3;
@@ -195,6 +184,9 @@ h2 {
     z-index: auto;
 }
 
+#overlay1, #overlay2, #overlay3 {
+    display: none;
+}
 
 .btnClose {
     float: right;
@@ -203,36 +195,30 @@ h2 {
     color: rgb(226, 219, 209);
 }
 
+.button_valider {
+    transition: all 500ms;
+}
 
+.button_valider:hover {
+    width: 201px;
+}
 
 .popup button {
     background-color: rgba(13, 13, 13, 0.70);
     color: rgb(226, 219, 209);
     border-radius: 5%;
     font-family: charmonman, bold;
-    font-size: 20px;
+    font-size: 18px;
     margin: 1%;
 }
 
 .popup li {
     list-style: none;
-    font-size: 20px;
 }
 
 .popup h2 {
     font-size: 35px;
 }
-
-.button_valider{
-    transition: all 500ms;
-}
-
-.button_valider:hover {
-    width: 201px;
-    
-}
-
-
 
 
 
