@@ -30,7 +30,7 @@ define('APP_DB_PASSWORD', 'your_db_password');
 6. Go to `localhost:8000` with your favorite browser or click on http://localhost:8000/sherlock/home
 
 
-**Pour la partie admin :**
+### Pour la partie admin :
 
 http://localhost:8000/sherlock/adminLogin
 utilisateur : Karl
