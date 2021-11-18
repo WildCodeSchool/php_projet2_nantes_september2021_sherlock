@@ -165,17 +165,15 @@
                             <ul>
                                 <li>
                                     {{jamesReponse.intitule}}<br>
-                                    <input type="checkbox" name="check" id="check" value="1"
-                                        onchange="javascript:showContent()" />
+                                    <input type="checkbox" name="check" id="check-james{{loop.index}}" value="1"
+                                        onchange="javascript:showContent({{loop.index}}, 'james')" />
                                 </li>
-
                                 <li>
-                                    <div class="reponse" id="content">
+                                    <div class="reponse" id="content-james{{loop.index}}">
                                         {{jamesReponse.reponse}} <br>
                                     </div>
                                 </li>
-
-                        </ul>
+                            </ul>
                         {% endfor %}
                     </div>
                 </div>

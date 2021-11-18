@@ -31,9 +31,9 @@ var overlay3 = document.getElementById('overlay3');
 btnPopup3.addEventListener('click', e => {
     overlay3.style.display = 'block';
 });
-<<<<<<< HEAD
+
   
-  var btnClose3 = document.getElementById('btnClose3');
+var btnClose3 = document.getElementById('btnClose3');
   btnClose3.addEventListener('click',e=>{
     overlay3.style.display='none';
 });
@@ -74,69 +74,22 @@ btnClose6.addEventListener('click',e=>{
     overlay6.style.display='none';
 });
 
-// Fenêtre pop-up carte moriarty affichant les indices dans texte indice sur la page Police
-var btnPopup7 = document.getElementById('btnPopup7');
-var overlay7 = document.getElementById('overlay7');
-btnPopup7.addEventListener('click',e=>{
-overlay7.style.display='block';
-});
-
-var btnClose7 = document.getElementById('btnClose7');
-btnClose7.addEventListener('click',e=>{
-    overlay7.style.display='none';
-});
-
-// Fenêtre pop-up carte Baker affichant les indices dans texte indice sur la page Police
-var btnPopup8 = document.getElementById('btnPopup8');
-var overlay8 = document.getElementById('overlay8');
-btnPopup8.addEventListener('click',e=>{
-overlay8.style.display='block';
-});
-
-var btnClose8 = document.getElementById('btnClose8');
-btnClose8.addEventListener('click',e=>{
-    overlay8.style.display='none';
-});
-
-// Fenêtre pop-up carte James affichant les indices dans texte indice sur la page Police
-var btnPopup9 = document.getElementById('btnPopup9');
-var overlay9 = document.getElementById('overlay9');
-btnPopup9.addEventListener('click',e=>{
-overlay9.style.display='block';
-=======
-
-var btnClose3 = document.getElementById('btnClose3');
-btnClose3.addEventListener('click', e => {
-    overlay3.style.display = 'none';
->>>>>>> d739e1afebebc94f9cc3d4791efa861e3f2f501f
-});
-
-var btnClose9 = document.getElementById('btnClose9');
-btnClose9.addEventListener('click',e=>{
-    overlay9.style.display='none';
-});
-
-
-
-
 
 
 //reponses
-function showContent() {
-    element = document.getElementById("content");
-    check = document.getElementById("check");
+function showContent(index, name) {
+    element = document.getElementById("content-" + name + index);
+    check = document.getElementById("check-" + name + index);
     if (check.checked) {
         element.style.display = 'block';
     }
     else {
         element.style.display = 'none';
     }
-}
-<<<<<<< HEAD
+} 
 
-function reanswer(){
-    document.getElementById('reponse').style.display = 'none';
-}
 
-=======
->>>>>>> d739e1afebebc94f9cc3d4791efa861e3f2f501f
+
+
+
+
