@@ -1,0 +1,101 @@
+{% extends 'layout.html.twig' %}
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/scenariostyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<!-- banner -->
+
+
+
+<div class="bodypage">
+    <!-- barre lateral gauche -->
+    <div class="aside-left">
+        <div class="indicecarte">
+            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+            <div class="indices">
+                <div class="texteindice">
+                    <h3>Les indices</h3>
+                </div>
+            </div>
+
+
+            <!-- buton play -->
+            <div class="buton">
+                <a href="/sherlock/game?id=1">
+                    <img class="button_valider" src="/assets/images/play.png" alt="boutton valider"
+                        width="180px"></a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- body pag 2 -->
+
+
+    <div class="center">
+
+        <center>
+            <!-- enigme -->
+            <div class="enigme">
+                <h2>Choississez votre énigme :</h2>
+
+                {% for scenario in enigmes %}
+                <li>
+                    {{scenario.titre}}
+                </li>
+                {% endfor %}
+
+            </div>
+
+            <div class="histoire">
+                <div class="textehistoire">
+                    <h2>Le meurtre de Rose-marie Mayer</h2>
+                    <p>Nous sommes le mardi 13 Novembre 1883. Vous incarnez le personnage du Dr Watson, célèbre assistant du  plus grand enquêteur du XIXème siècle, Sherlock Holmes. Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack Stapleton. Madame Rose-Marie Mayer a été retrouvée morte dans son salon à Londres. La fouille de la maison n'a révélé que très peu d'indices. Et aucunes traces de coups et blessures n'ont été retrouvé sur le corps.  Seule, une étrange odeur d'amande amère enbaume la maison de la victime. Etrange ? L'inspecteur de police met le Dr Watson sur l'affaire, Sherlock Holmes étant déjà occupé à résoudre une enquête sur la disparistion d'un célèbre chimiste. 
+
+                        Les suspects ont été interpellés et arrêtés dès le lendemain du meurtre.<br/> <br/>
+
+                        La liste de preuves relevés sur la scène de crime :<br/>
+
+                        - des cendres provenant d'un cigare composé de tabac indien<br/>
+                        - quelques graviers retrouvés sur le paillasson d'entrée de madame Rose-marie Mayer<br/>
+                        - Les scientifiques sont en pleine recherche sur l'odeur d'amande dans la maison, une odeur volatile, mais d'où peut-elle venir ?<br/>
+                    </p>
+
+                </div>
+            </div>
+        </center>
+    </div>
+    <!-- barre lateral droit -->
+
+    <div class="aside-right">
+        <h2>Les suspects</h2>
+
+        <!-- cards -->
+        <div class="cartes">
+            <div class="moriartycard">
+                    <img src="/assets/images/moriarty_carte.png" alt="moriarty">                        
+            </div>
+
+            <div class="bakercard">
+                    <img src="/assets/images/baker_carte.png" alt="baker">  
+            </div>
+
+            <div class="jamescard">
+                   <img src="/assets/images/james_carte.png" alt="james">
+            </div>        
+            
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

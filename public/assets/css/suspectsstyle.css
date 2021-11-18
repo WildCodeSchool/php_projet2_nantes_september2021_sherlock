@@ -1,0 +1,229 @@
+body {
+    background-image: url("../images/background_paper.png");
+    background-size: cover;
+    font-family: charmonman, bold;
+    max-width: auto;
+}
+
+.bodypage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.aside-left {
+    position: relative;
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-sizing: border-box;
+    width: 18%;
+}
+
+.indicecarte {
+    position: relative;
+    width: 100%;
+}
+
+.indicecarte img.loupe {
+    position: absolute;
+    width: 274.4px;
+    height: 483.98px;
+    left: 75%;
+    top: 5%;
+    transform: rotate(-23deg);
+}
+
+.aside-left h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.indices {
+    max-width: auto;
+    height: 700px;
+    box-sizing: border-box;
+    background-image: url("/assets/images/paper.jpg");
+    background-size: cover;
+    border-radius: 2%;
+    margin-left: 5%;
+}
+
+.texteindice {
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.texteindice button {
+    margin-bottom: 30%;
+    position:relative;
+}
+
+.assassinh1 {
+    color: rgb(226, 219, 209);
+    margin-right: 15%;
+    font-size: 25px;
+}
+
+.center {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.policeEtBadge {
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+}
+
+.badge {
+    width: 200px;
+    height: 200px;
+}
+
+.carte_police {
+    border-radius: 2%;
+}
+
+.cartes {
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.moriartycard {
+    padding: 5%;
+    width: 150px;
+    height: 270px;
+}
+.moriartycard img {
+    border-radius: 2%;
+    transition: all 300ms;
+}
+.moriartycard img:hover{
+    width: 180px;
+}
+
+.bakercard {
+    padding: 5%;
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.bakercard img {
+    border-radius: 2%;
+    transition: all 300ms;
+}
+.bakercard img:hover{
+    width: 180px;
+}
+
+.jamescard {
+    padding: 5%;
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.jamescard img {
+    border-radius: 2%;
+    transition: all 300ms;
+}
+.jamescard img:hover{
+    width: 180px;
+}
+.button img {
+    width: 300px;
+}
+
+.button {
+    margin-right: 15%;
+}
+
+.btnPopup {
+    background-color: rgba(13, 13, 13, 0.70);
+    padding: 1% 2%;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+}
+
+.btnPopup:hover {
+    background-color: rgb(226, 219, 209);
+    color: black;
+}
+
+#overlay4, #overlay5, #overlay6 {
+    display: none; 
+}
+
+.overlay {
+    position: absolute;
+    z-index: 3;
+    left: 1em;
+    top: -25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px; 
+    display: none;   
+}
+
+.popup {
+    margin: 10% auto;
+    height: 1000px;
+    width: 1200px;
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: auto;
+}
+
+
+.btnClose {
+    float: right;
+    font-size: 16pt;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+}
+
+
+
+.popup button {
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    font-size: 20px;
+    margin: 1%;
+}
+
+.popup li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.popup h2 {
+    font-size: 35px;
+}
+
+.button_valider{
+    transition: all 500ms;
+}
+
+.button_valider:hover {
+    width: 201px;  
+}
+
+.popup  li .reponse{
+    display: none;
+}

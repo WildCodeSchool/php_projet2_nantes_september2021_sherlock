@@ -1,0 +1,179 @@
+body {
+    background-image: url("../images/background.jpeg");
+    background-size: cover;
+    font-family: charmonman, bold;
+    color: black;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bodypage {
+    display:inline-flex;
+    
+    box-sizing: border-box;
+}
+
+.aside-left {
+    position: relative;
+    max-width: auto;
+    max-height: auto;
+    box-sizing: border-box;
+    margin-left: 2%;
+    margin-right: 100px;
+}
+
+.indicecarte {
+    position: relative;
+}
+
+.indicecarte img.loupe {
+    position: absolute;
+    width: 274.4px;
+    height: 483.98px;
+    left: 40%;
+    top: 2%;
+    transform: rotate(-23deg);
+}
+
+.aside-left h2 {
+    color: rgb(226, 219, 209);
+    text-align: center;
+    margin-left: 1%;
+}
+
+.aside-left h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.indices {
+    width: 200px;
+    height: 500px;
+    box-sizing: border-box;
+    background-image: url("/assets/images/paper.jpg");
+    background-size: cover;
+    border-radius: 2%;
+    margin-left: 5%;
+    margin-bottom: 100px;
+}
+
+.texteindice {
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.button {
+    margin-left: 13%;
+}
+.button_valider{
+    transition: all 500ms;
+}
+.button_valider:hover {
+    width: 201px;
+    
+}
+
+.enigme {
+    max-width: auto;
+    box-sizing: border-box;
+    background-image: url("../images/parchemin.jpg");
+    background-size: cover;
+    margin-right: 7%;
+    margin-left: 10%;
+    border-radius: 2%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.enigme li {
+    font-size:17px;
+}
+
+.histoire {
+    max-width: auto;
+    box-sizing: border-box;
+    background-image: url("../images/parchemin.jpg");
+    background-size: cover;
+    margin-right: 7%;
+    margin-left: 10%;
+    border-radius: 2%;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+.textehistoire {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1%;
+    top: 1%;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.textehistoire p {
+    font-size: 17px;
+}
+
+.aside-right {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    max-width: 20%;
+    margin-left: 100px;
+    margin-top: 0px;
+    color: white;
+    
+}
+
+.aside-right h2 {
+    margin-top: 0px;
+}
+
+.cartes img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.moriartycard {
+    width: 150px;
+    height: 270px;
+}
+
+.moriartycard img {
+    border-radius: 2%;
+}
+.moriartycard img:hover{
+    width: 170px;
+}
+.bakercard {
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.bakercard img {
+    border-radius: 2%;
+}
+.bakercard img:hover{
+    width: 170px;
+}
+
+.jamescard {
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.jamescard img {
+    border-radius: 2%;
+}
+.jamescard img:hover{
+    width: 170px;
+}

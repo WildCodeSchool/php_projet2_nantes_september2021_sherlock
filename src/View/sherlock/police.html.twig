@@ -1,0 +1,104 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/suspectsstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+{% endblock %}
+
+{% block content %}
+    
+   <!-- banner -->
+
+
+<div class="bodypage">   
+    <div class="aside-left">
+            <div class="indicecarte">
+                <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+                <div class="indices">
+                    <div class="texteindice">
+                        <h3>Les indices</h3>
+                        <button id="btnPopup4" class="btnPopup">Mes indices sur Moriarty</button>
+                        <div id="overlay4" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur Moriarty
+                                <span id="btnClose4" class="btnClose">&times;</span>
+                                </h2>
+                                {% for moriartyReponse in moriartyReponses %}
+                                <ul>
+                                    <li>{{moriartyReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <button id="btnPopup5" class="btnPopup">Mes indices sur Baker</button>
+                        <div id="overlay5" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur Baker
+                                <span id="btnClose5" class="btnClose">&times;</span>
+                                </h2>       
+                                {% for bakerReponse in bakerReponses %}
+                                <ul>
+                                    <li>{{bakerReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <br/>
+                        <button id="btnPopup6" class="btnPopup">Mes indices sur James</button>
+                        <div id="overlay6" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur James
+                                <span id="btnClose6" class="btnClose">&times;</span>
+                                </h2>
+                                {% for jamesReponse in jamesReponses %}
+                                <ul>
+                                    <li>{{jamesReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="policeEtBadge">
+       
+        <!-- card chef police -->
+            <div class="cardpolice">
+                <img class="carte_police" src="/assets/images/police_carte.png" alt="inspecteur de police">
+            </div>
+
+             <!-- plaque police -->
+            <img class="badge" src="/assets/images/badge_police.png" alt="plaque de police">
+        </div>
+
+        <div class="assassinh1">
+            <h1>Qui est l’assassin ? </h1>
+        </div>
+
+        
+    <!-- cards suspects-->
+        <div class="cartes">
+            <div class="moriartycard">
+                <a href="/sherlock/win"><img src="/assets/images/moriarty_carte.png" alt="titremoriarty"></a>                      
+            </div>
+
+            <div class="bakercard">
+                <a href="/sherlock/lose"><img src="/assets/images/baker_carte.png" alt="baker"></a>
+            </div>
+
+            <div class="jamescard">
+                <a href="/sherlock/lose"><img src="/assets/images/james_carte.png" alt="james"></a>
+            </div>
+        </div>
+  
+    </div>
+</div>
+
+{% block javascript %}<script src="/assets/js/indice.js"></script>{% endblock %}
+{% endblock %}
+

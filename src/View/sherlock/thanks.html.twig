@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/thanksstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet"> 
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="thanks">
+    <h1>Thanks everyone.</h1>
+    <p>
+        Toute l'équipe de Sherlock Holmes remercie Miguel Regodon Harkness, pour l'illustration des personnages.
+        Son portforlio est visible <a href="https://www.artstation.com/artwork/rBGg6">ici.</a> N'hésitez pas à jeter un coup d'oeil!
+        Nous sommes également reconnaissant de l'implication de notre formateur, Karl Morisset, qui nous a aidé à réaliser ce projet.
+    </p>
+</div>
+
+
+<!-- footer -->
+
+<div class="footer">
+
+
+    <div class="about">
+        <a href="/sherlock/aboutus">About us</a>
+    </div>
+
+
+    <div class="thank">
+        <a href="/sherlock/thanks">thanks</a>
+    </div>
+
+
+    <div class="contact">
+       <h3>Contact</h3>
+        <div class="social">
+            <div class="instagram">
+                <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="facebook">
+                <i class="fab fa-facebook"></i>
+            </div>
+
+            <div class="twitter">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

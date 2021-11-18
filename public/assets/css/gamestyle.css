@@ -1,0 +1,248 @@
+body {
+    background-image: url("../images/background.jpeg");
+    background-size: cover;
+    font-family: charmonman, bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bodypage {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.aside-left {
+    max-width: auto;
+    max-height: auto;
+    box-sizing: border-box;
+    margin-left: 2%;
+    margin-right: 150px;
+}
+
+.indicecarte {
+    justify-content: column;
+}
+
+.indicecarte img.loupe {
+    width: 274.4px;
+    height: 483.98px;
+    left: 75%;
+    top: 15%;
+    transform: rotate(-23deg);
+}
+
+.aside-left h2 {
+    color: rgb(226, 219, 209);
+    text-align: center;
+    margin-left: 1%;
+}
+
+.aside-left h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.indices {
+    max-width: auto;
+    height: 500px;
+    box-sizing: border-box;
+    background-image: url("/assets/images/paper.jpg");
+    background-size: cover;
+    border-radius: 2%;
+    margin-left: 5%;
+}
+
+.texteindice {
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.texteindice button {
+    margin-bottom: 30%;
+    position: relative;
+}
+
+.indice li {
+    display: none;
+}
+
+
+.button {
+    margin-left: 13%;
+}
+
+.inspecteur_button {
+    margin-top:100px;
+}
+
+.histoire {
+    max-width: 500px;
+    box-sizing: border-box;
+    background-image: url("../images/parchemin.jpg");
+    background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2%;
+    position: relative;
+}
+
+.histoire img.pen {
+    position: absolute;
+    width: 166.66px;
+    height: 350px;
+    left: 95%;
+    top: 25%;
+    transform: rotate(-7deg);
+}
+
+h2 {
+    text-align: center;
+}
+
+.textehistoire {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1%;
+    top: 1%;
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.aside-right {
+    display: flex;
+    flex-direction: column;
+    color: rgb(226, 219, 209);
+    max-width: 15%;
+    margin-left: 80px;
+    color: white;
+}
+
+.cartes img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.moriartycard {
+    width: 150px;
+    height: 270px;
+}
+
+.moriartycard img {
+    border-radius: 2%;
+}
+
+.bakercard {
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.bakercard img {
+    border-radius: 2%;
+}
+
+.jamescard {
+    width: 150px;
+    height: 270px;
+    border-radius: 2%;
+}
+
+.jamescard img {
+    border-radius: 2%;
+}
+
+.listeQuestions {
+    display: none;
+}
+
+.btnPopup {
+    background-color: rgba(13, 13, 13, 0.70);
+    padding: 1% 2%;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+}
+
+.btnPopup:hover {
+    background-color: rgb(226, 219, 209);
+    color: black;
+}
+
+
+#overlay1, #overlay2, #overlay3 {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 3;
+    left: 1em;
+    top: -25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.popup {
+    margin: 10% auto;
+    height: 1000px;
+    width: 1200px;
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: auto;
+}
+
+
+.btnClose {
+    float: right;
+    font-size: 16pt;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+}
+
+
+
+.popup button {
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    font-size: 20px;
+    margin: 1%;
+}
+
+.popup li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.popup h2 {
+    font-size: 35px;
+}
+
+.button_valider{
+    transition: all 500ms;
+}
+
+.button_valider:hover {
+    width: 201px;
+    
+}
+
+.popup  li .reponse{
+    display: none;
+}
+
+.indices {
+    display: none;
+}
+

@@ -1,0 +1,57 @@
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+<center>
+    <img class="logo" src="/assets/images/icon.png" alt="logo">
+    <br/>
+</center>
+
+<nav>
+    <ul>
+        <li><a href="/sherlock/adminEnigmes">Enigmes</a></li>
+        <li><a href="/sherlock/adminQuestions">Questions</a></li>
+        <li><a href="/sherlock/adminIndices">Indices</a></li>
+    </ul>
+</nav>
+
+{% set i=1 %}
+{% for enigme in enigmes %} 
+    <form action="adminEnigmes" method="post">
+        <div class="Enigme1">
+            <label for="Enigme1"> Enigme {{i}} : </label>
+            <br/>
+            <input type="text" id="titre" name="titre" value="{{enigme.titre}}">
+                    
+            <input type="hidden" name="idModif" value="{{enigme.id}}"><button><span  for="{{ enigme.id }}" id="pencil" style=" color: #030303;"><i class="fas fa-pencil-alt"></i></span>  </button>
+            </form>
+            <form action="adminEnigmes" method="post">
+                
+                <input type="hidden" name="idSupp" value="{{enigme.id}}"><button><span  id="pencil" style=" color: #030303;"><i class="fas fa-trash-alt"></i></span></button> 
+            </form>
+        </div>
+    </form>
+    {% set i = i+1 %}
+{% endfor %}
+
+<form action="" method="post">
+    <div class="enigme1">
+        <label for="enigme"> Ajouter une enigme : </label>
+        <br/>
+        <input type="text" id="titre" name="titre">
+    </div>
+    <input type="submit" value="Ajouter mon enigme">
+</form>
+
+
+<form action="" method="post">
+<div class="retourPageAccueil">
+            <a href="/sherlock/home"><input type="submit" value="Retour sur la page d'accueil"></a>
+            <a href=""><input type="submit" name="deconnexion" value="deconnexion"></a>
+</div>
+</form>
+{% endblock %}

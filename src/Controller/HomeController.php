@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\HomeModel;
+
 class HomeController extends AbstractController
 {
     /**
@@ -19,8 +21,66 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+
+    private $model;
+
+    public function __construct()
     {
-        return $this->twig->render('Home/index.html.twig');
+        parent::__construct();
+        $this->model = new HomeModel();
     }
+
+    public function index()
+    {    
+        return $this->twig->render('sherlock/home.html.twig');
+    }
+
+    public function scenario()
+    {
+        $scenarios = $this->model->selectAll();
+        return $this->twig->render('sherlock/escenario.html.twig', ["enigmes"=>$scenarios]);
+    }
+
+    public function game(int $id/*, int $idReponseQuestion, string $intitule*/): string
+    {
+        $scenario = $this->model->selectOneById($id);
+        $personnages = $this->model->selectAllPersonnage();
+        $reponses = [];
+     
+        $moriartyReponses = $this->model->reponseQuestionById(1);
+        $bakerReponses = $this->model->reponseQuestionById(2);
+        $jamesReponses = $this->model->reponseQuestionById(3);
+       
+    return $this->twig->render('sherlock/game.html.twig', ["scenario"=>$scenario, "personnages"=>$personnages, "moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses]);
+    }
+
+    public function police(int $id): string
+    {
+        $moriartyReponses = $this->model->reponseQuestionById(1);
+        $bakerReponses = $this->model->reponseQuestionById(2);
+        $jamesReponses = $this->model->reponseQuestionById(3);
+        
+        $scenario = $this->model->selectOneById($id);
+        return $this->twig->render('sherlock/police.html.twig', ["moriartyReponses"=>$moriartyReponses, "bakerReponses"=>$bakerReponses, "jamesReponses"=>$jamesReponses]);
+    }
+
+    public function win()
+    {
+        return $this->twig->render('sherlock/win.html.twig');
+    }
+    
+     public function aboutus()
+    {
+        return $this->twig->render('sherlock/aboutus.html.twig');
+    }
+    public function thanks()
+    {
+        return $this->twig->render('sherlock/thanks.html.twig');
+    }
+    public function lose()
+    {
+        return $this->twig->render('sherlock/lose.html.twig');
+    }
+
+       
 }
