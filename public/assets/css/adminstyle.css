@@ -18,9 +18,11 @@ body {
     justify-content: center;
     margin-bottom: 5%;
 }
-input[type=text]{
+
+input[type=text] {
     width: 900px;
 }
+
 input[type=submit] {
     background-color: rgba(13, 13, 13, 0.70);
     font-family: charmonman, bold;
@@ -65,8 +67,8 @@ nav a:hover {
     color: 7EB5F6;
 }
 
-form{
-    display : inline
+form {
+    display: inline
 }
 
 
@@ -82,8 +84,8 @@ form{
     width: 100%;
 }
 
-.form-right input[type=text]{
-    width:400px;
+.form-right input[type=text] {
+    width: 400px;
 }
 
 
@@ -92,35 +94,69 @@ form{
     text-align: start;
     width: 100%;
 }
-.form-left input[type=text]{
-    width:400px;
+
+.form-left input[type=text] {
+    width: 400px;
 }
 
 .retourPageAccueil {
     display: flex;
     justify-content: center;
 }
-.fa-eye-slash{
+
+.fa-eye-slash {
     transition: all 400ms;
 
 }
-.fa-eye-slash:hover{
-   font-size: 30px;
-   color: red;
+
+.fa-eye-slash:hover {
+    font-size: 30px;
+    color: red;
 }
-.fa-pencil-alt{
+
+.fa-pencil-alt {
     transition: all 400ms;
 
 }
-.fa-pencil-alt:hover{
-   font-size: 30px;
-   color: red;
+
+.fa-pencil-alt:hover {
+    font-size: 30px;
+    color: red;
 }
-.fa-trash-alt{
+
+.fa-trash-alt {
     transition: all 400ms;
 
 }
-.fa-trash-alt:hover{
-   font-size: 30px;
-   color: red;
+
+.fa-trash-alt:hover {
+    font-size: 30px;
+    color: red;
+}
+
+#password {
+    width: 300px;
+    
+   
+}
+
+#name {
+    width: 300px;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    
+}
+.form_login{
+display: flex;
+justify-content: center;
+}
+.connexion{
+    margin-top:60px;
+}
+
+#titre{
+    width: 600px;
 }

@@ -32,6 +32,7 @@ btnPopup3.addEventListener('click', e => {
     overlay3.style.display = 'block';
 });
 
+<<<<<<< HEAD
   
 var btnClose3 = document.getElementById('btnClose3');
   btnClose3.addEventListener('click',e=>{
@@ -72,6 +73,20 @@ var btnClose6 = document.getElementById('btnClose6');
 btnClose6.addEventListener('click',e=>{
     overlay6.style.display='none';
 });
+=======
+var btnClose3 = document.getElementById('btnClose3');
+btnClose3.addEventListener('click', e => {
+    overlay3.style.display = 'none';
+});
+
+var btnClose9 = document.getElementById('btnClose9');
+btnClose9.addEventListener('click',e=>{
+    overlay9.style.display='none';
+});
+
+
+
+>>>>>>> b1f9cd4d1a16a8b146c708e59d6acd0f010ac4f3
 
 
 
@@ -85,6 +100,7 @@ function showContent(index, name) {
     else {
         element.style.display = 'none';
     }
+<<<<<<< HEAD
 } 
 
 
@@ -92,3 +108,6 @@ function showContent(index, name) {
 
 
 
+=======
+}
+>>>>>>> b1f9cd4d1a16a8b146c708e59d6acd0f010ac4f3

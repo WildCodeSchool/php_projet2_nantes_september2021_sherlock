@@ -55,6 +55,7 @@ class HomeModel extends AbstractManager
     }
 
     //partie questions
+
     public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM question";

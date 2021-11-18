@@ -81,7 +81,7 @@ class AdminController extends AbstractController
             $errors = "Il faut être connecté pour accéder à cette page";
             return $this->twig->render('sherlock/adminLogin.html.twig', ["errors"=>$errors]);
             header('Location: adminLogin');
-        }
+        } 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(isset($_POST['idModif'])) {
                 $question = array_map('trim', $_POST);  

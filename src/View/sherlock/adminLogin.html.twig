@@ -1,42 +1,50 @@
-
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/adminstyle.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script> 
+<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block content %}
 <center>
     <img class="logo" src="/assets/images/icon.png" alt="logo">
-    <br/>
+    <br />
     <img class="itemconnexion" src="/assets/images/connexion_admin.png" alt="connexionlogin">
 </center>
-<form method="POST">
-    <div class="form">
-        <form action="adminEnigmes" method="post">
-            <p>{{errors}}</p> {# affichage d'une erreur si l'utilisateur n'existe pas dans la bdd#}
-            <div class="name">
-                <label for="name"> Name : </label>
-                <br/>
-                <input type="text" id="name" name="user_name" placeholder="Sherlock" required>
-            </div>
+<div class="form_login">
+        <form method="POST"">
+            <div class=" form" id="login">
+                <form action="adminEnigmes" method="post">
+                    <p>{{errors}}</p> {# affichage d'une erreur si l'utilisateur n'existe pas dans la bdd#}
+                    <div class="name">
+                        <label for="name"> Name : </label>
+                        <br>
+                        <input type="text" id="name" name="user_name" placeholder="Sherlock" required><br><br>
+                    </div>
+                    
+                    <div class="password">
 
-            <div class="password">
-                <label for="password"> Password : </label>
-                <br/>
-                <input type="text" name="password" id="password" placeholder="123Pqz?" required>
-                <br/>
-            </div>
+                        <label for="password"> Password : </label>
+                        <br>
+                        <input type="text" name="password" id="password" placeholder="123Pqz?" required>
+                        
+                    </div>
+                    
+                
+                    <div class="connexion">
 
-        
-            <div class="connexion">
-                <a href="/sherlock/adminEnigmes">
-                    <input type="submit" value="Se connecter">
-                </a>
-            </div>
+                        <a href="/sherlock/adminEnigmes">
+                            <input type="submit" value="Se connecter">
+                        </a>
+                
+                    </div>
+                </form>
+            </div>   
         </form>
-    </form>
 </div>
+
+
+
 
 {% endblock %}

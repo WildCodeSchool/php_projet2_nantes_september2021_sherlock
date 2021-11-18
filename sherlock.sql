@@ -99,5 +99,4 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (2, 1, 6, "Je suis rentrée à Londres lundi pour voir ma soeur, Lady Chamberley. Et en effet, elle habite près de cette ancienne usine désafectée", "Mon frère Wilson Baker m'a rendu en effet visite lundi. Nous avons pris le thé. Pourquoi cette question, inspecteur ?");
 
 
-
 INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
