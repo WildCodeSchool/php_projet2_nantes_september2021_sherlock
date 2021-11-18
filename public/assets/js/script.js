@@ -37,6 +37,10 @@ btnClose3.addEventListener('click', e => {
     overlay3.style.display = 'none';
 });
 
+var btnClose9 = document.getElementById('btnClose9');
+btnClose9.addEventListener('click',e=>{
+    overlay9.style.display='none';
+});
 
 
 

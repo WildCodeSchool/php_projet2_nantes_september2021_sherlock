@@ -29,8 +29,8 @@ body {
     position: absolute;
     width: 274.4px;
     height: 483.98px;
-    left: 40%;
-    top: 2%;
+    left: 75%;
+    top: 5%;
     transform: rotate(-23deg);
 }
 
@@ -53,6 +53,11 @@ body {
     text-align: center;
     font-size: 15px;
     box-sizing: border-box;
+}
+
+.texteindice button {
+    margin-bottom: 30%;
+    position:relative;
 }
 
 .assassinh1 {
@@ -140,4 +145,87 @@ body {
 
 .button {
     margin-right: 15%;
+}
+
+.btnPopup {
+    background-color: rgba(13, 13, 13, 0.70);
+    padding: 1% 2%;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+}
+
+.btnPopup:hover {
+    background-color: rgb(226, 219, 209);
+    color: black;
+}
+
+
+#overlay1, #overlay2, #overlay3 {
+    display:none;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 3;
+    left: 1em;
+    top: -25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.popup {
+    margin: 10% auto;
+    height: 1000px;
+    width: 1200px;
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    padding: 1em;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: auto;
+}
+
+
+.btnClose {
+    float: right;
+    font-size: 16pt;
+    cursor: pointer;
+    color: rgb(226, 219, 209);
+}
+
+
+
+.popup button {
+    background-color: rgba(13, 13, 13, 0.70);
+    color: rgb(226, 219, 209);
+    border-radius: 5%;
+    font-family: charmonman, bold;
+    font-size: 20px;
+    margin: 1%;
+}
+
+.popup li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.popup h2 {
+    font-size: 35px;
+}
+
+.button_valider{
+    transition: all 500ms;
+}
+
+.button_valider:hover {
+    width: 201px;
+    
+}
+
+.popup  li .reponse{
+    display: none;
 }
