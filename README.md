@@ -1,11 +1,11 @@
-**Sherlock Holmes the card game**
+# Sherlock Holmes the card game
 
 Salut les Joueurs ! 
 Bienvenue sur notre super jeu de carte interactif qui permet d'incarner un personnage de la célèbre fiction Sherlock Holmes.
 A toi délucider ta première enquète et de trouver le coupable parmis 3 suspects.
 Devient l'un des premiers joueurs de Sherlock Holmes the card game bientot mondialement connu !
 
-# Simple MVC
+## Simple MVC
 
 ## Description
 
