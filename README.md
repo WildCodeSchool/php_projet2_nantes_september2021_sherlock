@@ -33,5 +33,5 @@ define('APP_DB_PASSWORD', 'your_db_password');
 ### Pour la partie admin :
 
 http://localhost:8000/sherlock/adminLogin
-utilisateur : Karl
-mdp : 1234
+utilisateur : Karl.
+mdp : 1234.
