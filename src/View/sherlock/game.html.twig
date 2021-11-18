@@ -22,6 +22,54 @@
             <div class="indices">
                 <div class="texteindice">
                     <h3>Les indices</h3>
+                    <button id="btnPopup4" class="btnPopup">Mes indices sur Moriarty</button>
+                    <div id="overlay4" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur Moriarty
+                            <span id="btnClose4" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for moriartyReponse in moriartyReponses %}
+                            <ul>
+                                <li>{{moriartyReponse.indice}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <button id="btnPopup5" class="btnPopup">Mes indices sur Baker</button>
+                    <div id="overlay5" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur Baker
+                            <span id="btnClose5" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for bakerReponse in bakerReponses %}
+                            <ul>
+                                <li>{{bakerReponse.indice}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    <br/>
+                    
+                    <button id="btnPopup6" class="btnPopup">Mes indices sur James</button>
+                    <div id="overlay6" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Mes indices sur James
+                            <span id="btnClose6" class="btnClose">&times;</span>
+                            </h2>
+    
+                            {% for jamesReponse in jamesReponses %}
+                            <ul>
+                                <li>{{jamesReponse.indice}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -56,48 +104,39 @@
 
     </div>
 
-
-
-
-
-
     <!-- barre lateral droit -->
 
     <div class="aside-right">
         <h2>Les suspects</h2>
 
-        <!-- cards -->
+    <!-- cards -->
         <div class="cartes">
 
             <div class="moriartycard">
                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
                 <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay1" class="overlay">
-                    <div id="popup" class="popup">
-                        <h2>Les questions
+                    <div id="overlay1" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
                             <span id="btnClose1" class="btnClose">&times;</span>
-                        </h2>
-
-                        {% for moriartyReponse in moriartyReponses %}
-                        <ul>
-                            <li><button>{{moriartyReponse.intitule}}</button></li>
-                            <li>
-                                <div class="reponse">
-                                    {{moriartyReponse.reponse}}
-                                </div>
-                            </li>
-                        </ul>
-                        {% endfor %}
+                            </h2>
+    
+                            {% for moriartyReponse in moriartyReponses %}
+                            <ul>
+                                <li><button>{{moriartyReponse.intitule}}</button></li>
+                                <li>{{moriartyReponse.reponse}}</li>
+                            </ul>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
             </div>
 
             <div class="bakercard">
                 <img src="/assets/images/baker_carte.png" alt="baker">
                 <button id="btnPopup2" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay2" class="overlay">
-                    <div id="popup" class="popup">
-                        <h2>Les questions
+                    <div id="overlay2" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
                             <span id="btnClose2" class="btnClose">&times;</span>
                         </h2>
                         {% for bakerReponse in bakerReponses %}
@@ -117,28 +156,28 @@
             <div class="jamescard">
                 <img src="/assets/images/james_carte.png" alt="james">
                 <button id="btnPopup3" class="btnPopup">J'interroge le suspect</button>
-                <div id="overlay3" class="overlay">
-                    <div id="popup" class="popup">
-                        <h2>Les questions
+                    <div id="overlay3" class="overlay">
+                        <div id="popup" class="popup">
+                            <h2>Les questions
                             <span id="btnClose3" class="btnClose">&times;</span>
-                        </h2>
-                        {% for jamesReponse in jamesReponses %}
-                        <ul>
-                            <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
+                            </h2>
+                            {% for jamesReponse in jamesReponses %}
+                            <ul>
+                                <li><button type="button" onclick="answer();">{{jamesReponse.intitule}}</button></li>
 
-                            <li>
-                                <div class="reponse" id="reponse">
-                                    {{jamesReponse.reponse}} <br>
-                                    <a href="" onclick="reanswer();">posser  question</a>
-                                </div>
-                            </li>
+                                <li>
+                                    <div class="reponse" id="reponse">
+                                        {{jamesReponse.reponse}} <br>
+                                        <a href="" onclick="reanswer();">posser  question</a>
+                                    </div>
+                                </li>   
 
-                        </ul>
-                        {% endfor %}
+                            </ul>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
-
 
         </div>
     </div>
@@ -146,11 +185,7 @@
 
 
 
-
-
-
 {% block javascript %}
 <script src="/assets/js/script.js"></script>{% endblock %}
-
-
 {% endblock %}
+

@@ -12,16 +12,65 @@
    <!-- banner -->
 
 
-<div class="bodypage">
+<div class="bodypage">   
     <div class="aside-left">
             <div class="indicecarte">
-            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+                <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
                 <div class="indices">
-                    <div class="texteindice"><h3>Les indices</h3></div>
-                </div>
-            </div>  
-    </div>    
+                    <div class="texteindice">
+                        <h3>Les indices</h3>
+                        <button id="btnPopup7" class="btnPopup">Mes indices sur Moriarty</button>
+                        <div id="overlay7" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur Moriarty
+                                <span id="btnClose7" class="btnClose">&times;</span>
+                                </h2>
+        
+                                {% for moriartyReponse in moriartyReponses %}
+                                <ul>
+                                    <li>{{moriartyReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
 
+                        </div>
+
+                        <button id="btnPopup8" class="btnPopup">Mes indices sur Baker</button>
+                        <div id="overlay8" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur Baker
+                                <span id="btnClose8" class="btnClose">&times;</span>
+                                </h2>
+        
+                                {% for bakerReponse in bakerReponses %}
+                                <ul>
+                                    <li>{{bakerReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                        <br/>
+                        
+                        <button id="btnPopup9" class="btnPopup">Mes indices sur James</button>
+                        <div id="overlay9" class="overlay">
+                            <div id="popup" class="popup">
+                                <h2>Mes indices sur James
+                                <span id="btnClose9" class="btnClose">&times;</span>
+                                </h2>
+        
+                                {% for jamesReponse in jamesReponses %}
+                                <ul>
+                                    <li>{{jamesReponse.indice}}</li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 
     <div class="center">
         <div class="policeEtBadge">
@@ -58,4 +107,7 @@
     </div>
 </div>
 
+{% block javascript %}
+<script src="/assets/js/script.js"></script>{% endblock %}
 {% endblock %}
+

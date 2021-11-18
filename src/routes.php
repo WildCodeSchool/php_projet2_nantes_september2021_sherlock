@@ -23,3 +23,4 @@ return [
     'sherlock/adminQuestions' => ['Admincontroller', 'adminQuestions'],
     //'sherlock/adminEnigmes' => ['Admincontroller', 'adminDeleteEnigmes'],
 ];
+
