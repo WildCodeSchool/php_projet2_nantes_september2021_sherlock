@@ -1,4 +1,11 @@
-# Simple MVC
+# Sherlock Holmes the card game
+
+Salut les Joueurs ! 
+Bienvenue sur notre super jeu de carte interactif qui permet d'incarner un personnage de la célèbre fiction Sherlock Holmes.
+A toi délucider ta première enquète et de trouver le coupable parmis 3 suspects.
+Devient l'un des premiers joueurs de Sherlock Holmes the card game bientot mondialement connu !
+
+## Simple MVC
 
 ## Description
 
@@ -20,41 +27,13 @@ define('APP_DB_PASSWORD', 'your_db_password');
 ```
 4. Import *database.sql* in your SQL server, you can do it manually or use the *migration.php* script which will import a *database.sql* file.
 5. Run the internal PHP webserver with `php -S localhost:8000 -t public/`. The option `-t` with `public` as parameter means your localhost will target the `/public` folder.
-6. Go to `localhost:8000` with your favorite browser.
-7. From this starter kit, create your own web application.
-
-### Windows Users
-
-If you develop on Windows, you should edit you git configuration to change your end of line rules with this command :
-
-`git config --global core.autocrlf true`
-
-## Example 
-
-An example (a basic list of items) is provided (you can load the *simple-mvc.sql* file in a test database). The accessible URLs are :
-
-* Home page at [localhost:8000/](localhost:8000/)
-* Items list at [localhost:8000/items](localhost:8000/items)
-* Item details [localhost:8000/items/show?id=:id](localhost:8000/item/show?id=2)
-* Item edit [localhost:8000/items/edit?id=:id](localhost:8000/items/edit?id=2)
-* Item add [localhost:8000/items/add](localhost:8000/items/add)
-* Item deletion [localhost:8000/items/delete?id=:id](localhost:8000/items/delete?id=2)
-
-You can find all these routes declared in the file `src/routes.php`. This is the very same file where you'll add your own new routes to the application.
-
-## How does URL routing work ?
-
-![simple_MVC.png](.tours/simple_MVC.png)
+6. Go to `localhost:8000` with your favorite browser or click on http://localhost:8000/sherlock/home
 
 
-## Ask for a tour !
+### Pour la partie admin :
 
-<img src="https://pixabay.com/get/g0331c2b48fc494e8b7e78620f44e084095ee6d103f77538ce22e091e5bdb76bc9348ac4d544173c0ca92dbedb7937e50c941345acb2136df97dbc21ef5f652bab708e28c6edca9fb697d3cf931d1532e_640.jpg" alt="Guided tour" width="150"/>
+http://localhost:8000/sherlock/adminLogin
 
-We prepare a little guided tour to start with the simple-MVC.
+utilisateur : "Karl"
 
-To take it, you need to install the `Code Tour` extension for Visual Studio Code : [Code Tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
-
-It will give access to a new menu on your IDE where you'll find the different tours about the simple-MVC. Click on play to start one : 
-
-![menu](.tours/code_tour_menu.jpg)
+mdp : "1234"
