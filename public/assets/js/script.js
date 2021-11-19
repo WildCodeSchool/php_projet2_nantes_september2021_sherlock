@@ -32,25 +32,16 @@ btnPopup3.addEventListener('click', e => {
     overlay3.style.display = 'block';
 });
 
+  
 var btnClose3 = document.getElementById('btnClose3');
-btnClose3.addEventListener('click', e => {
-    overlay3.style.display = 'none';
+  btnClose3.addEventListener('click',e=>{
+    overlay3.style.display='none';
 });
-
-var btnClose9 = document.getElementById('btnClose9');
-btnClose9.addEventListener('click',e=>{
-    overlay9.style.display='none';
-});
-
-
-
-
-
 
 //reponses
-function showContent() {
-    element = document.getElementById("content");
-    check = document.getElementById("check");
+function showContent(index, name) {
+    element = document.getElementById("content-" + name + index);
+    check = document.getElementById("check-" + name + index);
     if (check.checked) {
         element.style.display = 'block';
     }

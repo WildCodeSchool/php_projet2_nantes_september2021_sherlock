@@ -36,6 +36,7 @@ class HomeModel extends AbstractManager
         }
     }
 
+    //partie enigmes
     public function insertEnigme(string $titre)
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`titre`) VALUES (:titre)");
@@ -52,6 +53,8 @@ class HomeModel extends AbstractManager
 
         return $statement->execute();
     }
+
+    //partie questions
 
     public function selectAllQuestions(string $orderBy = '', string $direction = 'ASC')
     {
@@ -87,6 +90,7 @@ class HomeModel extends AbstractManager
         return $statement->execute();
     }
 
+    //partie indices
     public function selectAllIndices(string $orderBy = '', string $direction = 'ASC')
     {
         $query = "SELECT * FROM reponse_question";
@@ -148,5 +152,4 @@ class HomeModel extends AbstractManager
         }
         return $utilisateurValide;
     }
-
 }

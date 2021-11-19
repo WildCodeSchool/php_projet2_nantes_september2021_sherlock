@@ -161,9 +161,8 @@ body {
     color: black;
 }
 
-
-#overlay1, #overlay2, #overlay3 {
-    display:none;
+#overlay4, #overlay5, #overlay6 {
+    display: none; 
 }
 
 .overlay {
@@ -173,8 +172,8 @@ body {
     top: -25px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100px;
-    height: 100px;
-    display: none;
+    height: 100px; 
+    display: none;   
 }
 
 .popup {
@@ -222,8 +221,7 @@ body {
 }
 
 .button_valider:hover {
-    width: 201px;
-    
+    width: 201px;  
 }
 
 .popup  li .reponse{

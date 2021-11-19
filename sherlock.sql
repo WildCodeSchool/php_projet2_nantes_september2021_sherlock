@@ -46,14 +46,14 @@ create table utilisateur (
 INSERT into enigme (titre, resume, histoire) values ("Le meurtre de Rose-Marie Mayer", "Nous sommes le mardi 13 Novembre 1883. 
 
 Vous incarnez le personnage du Dr Watson, célèbre assistant du plus grand enquêteur du XIXème siècle, Sherlock Holmes. Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack Stapleton.",
- "Nous sommes le mardi 13 Novembre 1883. 
+"Nous sommes le mardi 13 Novembre 1883. 
 
 Vous incarnez le personnage du Dr Watson, célèbre assistant du plus grand enquêteur du XIXème siècle, Sherlock Holmes. Très tôt ce matin, Sherlock Holmes a reçu un télégramme de l'inspecteur de police Jack Stapleton  :
 
-> *Nous avons retrouvé le corps d'une jeune femme à 6h ce matin. Madame Rose-Marie Mayer. Elle a été retrouvée morte dans son salon, à l'angle de la 13ème de BakerStreet à Londres. D'après l'estimation de notre légiste, son meurtre a été commis aux alentours de minuit. Nous n'avons pas trouvé de traces de coups et de blessures sur le corps. La fouille de la maison n'a révélé que très peu d'indices. Cependant une étrange odeur embaumait la maison, une odeur d'amande amère. J'ai besoin de vous, Sherlock Holmes, pour résoudre cette enquête. Je sais que vous êtes déjà sur une autre enquête, sur la disparition du chimiste, le professeur Clay Millington. Mais peut-être que votre coéquipier, le dr Watson peut vous aider à résoudre cette enquête ? J'attends votre réponse dans les plus brefs délais. Signé l'inspecteur Jack Stapleton.*
-> 
+Nous avons retrouvé le corps d'une jeune femme à 6h ce matin. Madame Rose-Marie Mayer. Elle a été retrouvée morte dans son salon, à l'angle de la 13ème de BakerStreet à Londres. D'après l'estimation de notre légiste, son meurtre a été commis aux alentours de minuit. Nous n'avons pas trouvé de traces de coups et de blessures sur le corps. La fouille de la maison n'a révélé que très peu d'indices. Cependant une étrange odeur embaumait la maison, une odeur d'amande amère. J'ai besoin de vous, Sherlock Holmes, pour résoudre cette enquête. Je sais que vous êtes déjà sur une autre enquête, sur la disparition du chimiste, le professeur Clay Millington. Mais peut-être que votre coéquipier, le dr Watson peut vous aider à résoudre cette enquête ? J'attends votre réponse dans les plus brefs délais. Signé l'inspecteur Jack Stapleton."
 
-Sherlock Holmes s'est déjà penché sur l'enquête. Il a identifié trois suspects. Il vous demande à vous, Dr Watson de les interroger. D'après une liste de 6 questions que vous a préparé Sherlock Holmes, vous devez n'en choisir que trois à poser pour chaque suspect. Mais sont-elle toutes pertinentes ? 
+
+"Sherlock Holmes s'est déjà penché sur l'enquête. Il a identifié trois suspects. Il vous demande à vous, Dr Watson de les interroger. D'après une liste de 6 questions que vous a préparé Sherlock Holmes, vous devez n'en choisir que trois à poser pour chaque suspect. Mais sont-elle toutes pertinentes ? 
 
 Les réponses des suspects se présenteront sous forme de carte de trois types : des indices, des preuves ou des témoignages. Attention, les suspects peuvent vous emmener vers de fausses pistes ! 
 
@@ -98,16 +98,5 @@ INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indic
 (2, 1, 5, "Je ne comprends pas l'intérêt de votre demande, mais si vous insistez, voilà mes chaussures.", "De la boue. "),
 (2, 1, 6, "Je suis rentrée à Londres lundi pour voir ma soeur, Lady Chamberley. Et en effet, elle habite près de cette ancienne usine désafectée", "Mon frère Wilson Baker m'a rendu en effet visite lundi. Nous avons pris le thé. Pourquoi cette question, inspecteur ?");
 
-<<<<<<< HEAD
-=======
-INSERT INTO reponse_question(personne_id, enigme_id, question_id, reponse, indice) values
-(3, 1, 1,"Le Dr Grimesby Roylott et moi-même étions dans l'humble demeure de Sir Arthur Conan Doyle située au nord de Londres, à Clerkenwell. Il avait besoin de notre savoir scientifique pour étayer son dernier roman.", "Une photo des trois compères a été prise par un journaliste hier soir à 21h30 dans la demeure du célèbre écrivain."),
-(3, 1, 2,"Vous n'avez pas écouté ce que je viens de vous dire inspecteur ? Interrogez donc Dr Grimesby Roylott et Sir Arthur Conan Doyles.", " La demeure de l'écrivain se situe au nord de Londres, à plus de 5h à cheval de la maison de Marie Mayer."),
-(3, 1, 3,"Madame Marie Mayer était mon assistante. Mais si vous voulez mon avis, elle était plus doué pour préparer le thé plutôt que de m'aider dans mes recherches sur la radioactivité de l'uranium. Je suis un très grand scientifique, vous savez, et je batterai le scientifique Becquerel, un français de bas étage si vous voulez mon avis.", " Madame Marie Mayer et le professeur James ont eu une liaison qui a durée plus de deux ans. Mais l'égocentrisme du célèbre scientifique a eu raison de leur amour et madame Marie Mayer a mis fin à leur relation il y a 3 mois de cela. "),
-(3, 1, 4,"Oui, je fume la pipe. Du tabac brun. Vous posez d'étranges questions. J'ai quelques doutes sur vos compétences d'enquêteurs.", "C'est en effet du tabac brun contenu dans la pipe du professeur James."),
-(3, 1, 5,"Vous plaisantez Dr Watson ? N'avez vous pas remarqué que je marche difficilement ? Je me déplace en fauteuil roulant !", "En effet, on dirait que les chaussures du professeur James sont comme neuves!"),
-(3, 1, 6,"J'ai été récupéré des composants pour mes recherches sur la radioactivité de l'uranium. L'usine désafectée est remplie d'anciens composants chimiques.", "Après avoir fouillé la maison du chimiste, nous avons en effet retrouvé des composants de l'usine et ses cahiers de recherche sur l'uranium.");
-INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");
->>>>>>> b82f84bd961fc992eb983e4f6ee740c1a0fb560c
 
 INSERT INTO utilisateur(pseudo, password) values ("Karl", "1234");

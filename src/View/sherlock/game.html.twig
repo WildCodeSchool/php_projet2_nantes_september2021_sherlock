@@ -18,62 +18,16 @@
     <!-- barre lateral gauche -->
     <div class="aside-left">
         <div class="indicecarte">
-            <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+            <div>
+                <img class="loupe" src="/assets/images/loupe_2.png" alt="" height="300px">
+            </div>
             <div class="indices">
                 <div class="texteindice">
-                    <h3>Les indices</h3>
-                    <button id="btnPopup4" class="btnPopup">Mes indices sur Moriarty</button>
-                    <div id="overlay4" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur Moriarty
-                            <span id="btnClose4" class="btnClose">&times;</span>
-                            </h2>
-    
-                            {% for moriartyReponse in moriartyReponses %}
-                            <ul>
-                                <li>{{moriartyReponse.indice}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-
-                    <button id="btnPopup5" class="btnPopup">Mes indices sur Baker</button>
-                    <div id="overlay5" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur Baker
-                            <span id="btnClose5" class="btnClose">&times;</span>
-                            </h2>
-    
-                            {% for bakerReponse in bakerReponses %}
-                            <ul>
-                                <li>{{bakerReponse.indice}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-
-                    </div>
-                    <br/>
-                    
-                    <button id="btnPopup6" class="btnPopup">Mes indices sur James</button>
-                    <div id="overlay6" class="overlay">
-                        <div id="popup" class="popup">
-                            <h2>Mes indices sur James
-                            <span id="btnClose6" class="btnClose">&times;</span>
-                            </h2>
-    
-                            {% for jamesReponse in jamesReponses %}
-                            <ul>
-                                <li>{{jamesReponse.indice}}</li>
-                            </ul>
-                            {% endfor %}
-                        </div>
-
-                    </div>
+            
                 </div>
             </div>
 
-            <h2>Je veux parler à l’inspecteur</h2>
+            <h2 class="inspecteur_button">Je veux parler à l’inspecteur</h2>
             <!-- buton go -->
 
             <div class="button">
@@ -95,23 +49,26 @@
                 <div class="textehistoire">
                     <h2>{{scenario.titre}}</h2>
                     <p>
-                        {{scenario.histoire}}
+                        {{scenario.histoire}} <br/> <br/>
+                        La liste de preuves relevés sur la scène de crime :<br/>
+
+                        - des cendres provenant d'un cigare composé de tabac indien<br/>
+                        - quelques graviers retrouvés sur le paillasson d'entrée de madame Rose-marie Mayer<br/>
+                        - Les scientifiques sont en pleine recherche sur l'odeur d'amande dans la maison, une odeur volatile, mais d'où peut-elle venir ?<br/>
                     </p>
                 </div>
             </center>
             <img class="pen" src="/assets/images/inkpen.png" alt="stylo">
         </div>
-
     </div>
 
     <!-- barre lateral droit -->
-
+²
     <div class="aside-right">
         <h2>Les suspects</h2>
 
     <!-- cards -->
         <div class="cartes">
-
             <div class="moriartycard">
                 <img src="/assets/images/moriarty_carte.png" alt="moriarty">
                 <button id="btnPopup1" class="btnPopup">J'interroge le suspect</button>
@@ -120,12 +77,19 @@
                             <h2>Les questions
                             <span id="btnClose1" class="btnClose">&times;</span>
                             </h2>
-    
                             {% for moriartyReponse in moriartyReponses %}
-                            <ul>
-                                <li><button>{{moriartyReponse.intitule}}</button></li>
-                                <li>{{moriartyReponse.reponse}}</li>
-                            </ul>
+                                <ul>
+                                    <li>
+                                        {{moriartyReponse.intitule}}<br>
+                                        <input type="checkbox" name="check" id="check-moriarty{{loop.index}}" value="1"
+                                            onchange="javascript:showContent({{loop.index}}, 'moriarty')" />
+                                    </li>
+                                    <li>
+                                        <div class="reponse" id="content-moriarty{{loop.index}}">
+                                            <bold>REPONSE:</bold> {{moriartyReponse.reponse}} <br/> <bold>INDICE:</bold> {{moriartyReponse.indice}}
+                                        </div>
+                                    </li>
+                                </ul>
                             {% endfor %}
                         </div>
                     </div>
@@ -140,14 +104,18 @@
                             <span id="btnClose2" class="btnClose">&times;</span>
                         </h2>
                         {% for bakerReponse in bakerReponses %}
-                        <ul>
-                            <li><button>{{bakerReponse.intitule}}</button></li>
-                            <li>
-                                <div class="reponse">
-                                    {{bakerReponse.reponse}}
-                                </div>
-                            </li>
-                        </ul>
+                            <ul>
+                                <li>
+                                    {{bakerReponse.intitule}}<br>
+                                    <input type="checkbox" name="check" id="check-baker{{loop.index}}" value="1"
+                                        onchange="javascript:showContent({{loop.index}}, 'baker')" />
+                                </li>
+                                <li>
+                                    <div class="reponse" id="content-baker{{loop.index}}">
+                                        <bold>REPONSE:</bold> {{bakerReponse.reponse}} <br/> <bold>INDICE:</bold> {{bakerReponse.indice}}
+                                    </div>
+                                </li>
+                            </ul>
                         {% endfor %}
                     </div>
                 </div>
@@ -160,27 +128,24 @@
                         <div id="popup" class="popup">
                             <h2>Les questions
                             <span id="btnClose3" class="btnClose">&times;</span>
-                        </h2>
-                       {% for jamesReponse in jamesReponses %}
-                        <ul>
-                            <li>
-                                {{jamesReponse.intitule}}<br>
-                                <input type="checkbox" name="check" id="check{{jamesReponse.id}}"  value="1"
-                                    onchange="javascript:showContent({{jamesReponse.id}})" />
-                            </li>
-
-                            <li>
-                                <div class="reponse" id="content{{jamesReponse.id}}">
-                                    {{jamesReponse.reponse}} <br>
-                                </div>
-                            </li>
-
-                        </ul>
-                        {% endfor %}
+                            </h2>
+                            {% for jamesReponse in jamesReponses %}
+                                <ul>
+                                    <li>
+                                        {{jamesReponse.intitule}}<br>
+                                        <input type="checkbox" name="check" id="check-james{{loop.index}}" value="1"
+                                            onchange="javascript:showContent({{loop.index}}, 'james')" />
+                                    </li>
+                                    <li>
+                                        <div class="reponse" id="content-james{{loop.index}}">
+                                            <bold>REPONSE:</bold> {{jamesReponse.reponse}} <br/> <bold>INDICE:</bold> {{jamesReponse.indice}}
+                                        </div>
+                                    </li>
+                                </ul>
+                            {% endfor %}
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

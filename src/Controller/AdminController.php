@@ -25,7 +25,6 @@ class AdminController extends AbstractController
     public function adminLogin()
     {
         session_start();
-        var_dump($_SESSION);
         $errors = "";
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_name'] = $_POST['user_name'];
@@ -50,7 +49,6 @@ class AdminController extends AbstractController
             return $this->twig->render('sherlock/adminLogin.html.twig', ["errors"=>$errors]);
             header('Location: adminLogin');
         }
-        var_dump($_SESSION);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             if(isset($_POST['idModif'])) {
@@ -83,8 +81,7 @@ class AdminController extends AbstractController
             $errors = "Il faut être connecté pour accéder à cette page";
             return $this->twig->render('sherlock/adminLogin.html.twig', ["errors"=>$errors]);
             header('Location: adminLogin');
-        }
-        var_dump($_SESSION);
+        } 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(isset($_POST['idModif'])) {
                 $question = array_map('trim', $_POST);  
@@ -118,13 +115,12 @@ class AdminController extends AbstractController
             return $this->twig->render('sherlock/adminLogin.html.twig', ["errors"=>$errors]);
             header('Location: adminLogin');
         }
-        var_dump($_SESSION);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if(isset($_POST['idModif'])) {
                 $indice = array_map('trim', $_POST);  
                 $indice = $this->model->updateIndiceById($indice);
             }
-            elseif(isset($_POST['idSupp'])) {
+            elseif(isset($_POST['idSupp'])) { 
                 $delete = trim($_POST['idSupp']);
                 $this->model->deleteIndiceById($delete);
             }       

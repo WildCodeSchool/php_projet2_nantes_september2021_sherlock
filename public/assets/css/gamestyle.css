@@ -12,7 +12,6 @@ body {
 }
 
 .aside-left {
-    position: relative;
     max-width: auto;
     max-height: auto;
     box-sizing: border-box;
@@ -21,15 +20,14 @@ body {
 }
 
 .indicecarte {
-    position: relative;
+    justify-content: column;
 }
 
 .indicecarte img.loupe {
-    position: absolute;
     width: 274.4px;
     height: 483.98px;
-    left: 40%;
-    top: 2%;
+    left: 75%;
+    top: 15%;
     transform: rotate(-23deg);
 }
 
@@ -60,8 +58,22 @@ body {
     box-sizing: border-box;
 }
 
+.texteindice button {
+    margin-bottom: 30%;
+    position: relative;
+}
+
+.indice li {
+    display: none;
+}
+
+
 .button {
     margin-left: 13%;
+}
+
+.inspecteur_button {
+    margin-top:100px;
 }
 
 .histoire {
@@ -161,6 +173,11 @@ h2 {
     color: black;
 }
 
+
+#overlay1, #overlay2, #overlay3 {
+    display: none;
+}
+
 .overlay {
     position: absolute;
     z-index: 3;
@@ -225,3 +242,20 @@ h2 {
 .popup  li .reponse{
     display: none;
 }
+.button_valider{
+    transition: all 500ms;
+}
+
+.button_valider:hover {
+    width: 201px;
+    
+}
+
+.popup  li .reponse{
+    display: none;
+}
+
+.indices {
+    display: none;
+}
+
