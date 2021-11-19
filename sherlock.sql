@@ -63,8 +63,6 @@ A vous de jouer !
 
 Les suspects ont été interpellés et arrêtés dès le lendemain du meurtre.");
 
-Insert into enigme(titre) values ("enigme 2"), ("enigme 3");
-
 Insert into personne(firstname, lastname, description, role, lien_photo) values 
 ("James", "Moriarty", "le professeur James Moriarty est un génie mathématicien et est titulaire de la chaire de mathématiques dans une université de Londres. C'est aussi un brillant scientifique. Tout donnait à croire qu'il allait faire une carrière brillante. Cependant, le professeur est dôté d'un côté sombre, des méfaits sont mêlés à ce personnage. Il n'a jamais été inculpé mais son nom est cité dans de nombreuses enquêtes.", "coupable", "public/assets/images/moriarty_carte.png"),
 ("Wilson", "Baker", "Wilson Baker est un marchand d'art. C'est un homme opportuniste. Il a épousé sa femme Annabel Longdam, riche famille d'armurier, afin d'hériter de sa dotte. C'est un homme sournois, agissant dans l'ombre. Il est impliqué dans plusieurs affaires de trafiques d'art.", "suspect", "public/assets/images/baker_carte.png"),
