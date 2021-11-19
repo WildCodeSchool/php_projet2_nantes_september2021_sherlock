@@ -1,43 +1,16 @@
-* {
-    margin: 0px;
-    padding: 0px;
+body {
     font-family: 'Charmonman', cursive;
     font-family: 'Special Elite', cursive;
-    color: white;
-}
-
-.thanks {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.thanks h1 {
-    font-size: 75px;
-    line-height: 285px;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-}
-
-.thanks p {
-    text-align: left;
-    width: 35%;
-    font-size: 30px;
-    line-height: 43px;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    margin-left: 15px;
-    margin-bottom: 70px;
-}
-
-body {
     background-image: url("../images/about.jpeg");
     background-repeat: repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    gap:40px;
 }
 
 .footer {
@@ -63,10 +36,12 @@ body {
 
 .about:hover {
     font-size: 50px;
+    color: #FFFFFF;
 }
 
 .about a {
     text-decoration: none;
+    color: #FFFFFF;
 }
 
 .thank {
@@ -75,10 +50,12 @@ body {
 
 .thank:hover {
     font-size: 50px;
+    color: #FFFFFF;
 }
 
 .thank a {
     text-decoration: none;
+    color: #FFFFFF;
 }
 
 .contact {
