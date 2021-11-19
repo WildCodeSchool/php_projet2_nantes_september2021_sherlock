@@ -83,28 +83,28 @@ class HomeController extends AbstractController
 
      public function contact()
     {
-        // $data = array_map('trim', $_POST);
-        // $errors = [];
-        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        //     if($_data['firstname'] == ""){
-        //         $errors['firstname'] = "Ce champ est obligatoire";
-        //     }
+        $data = array_map('trim', $_POST);
+        $errors = [];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if($data['firstname'] == ""){
+                $errors['firstname'] = "Ce champ est obligatoire";
+            }
         
-        //     if($data['name'] == ""){
-        //         $errors['name'] = "Ce champ est obligatoire";
-        //     }
+            if($data['name'] == ""){
+                $errors['name'] = "Ce champ est obligatoire";
+            }
             
-        //     if(!filter_var($data['courriel'], FILTER_VALIDATE_EMAIL)){
-        //         $errors['courriel'] = "L'email n'est pas au bon format";
-        //     }
+            if(!filter_var($data['courriel'], FILTER_VALIDATE_EMAIL)){
+                $errors['courriel'] = "L'email n'est pas au bon format";
+            }
         
-        //     if($data['courriel'] == ""){
-        //         $errors['courriel'] = "Ce champ est obligatoire";
-        //     } 
-        //     if($data['message'] == ""){
-        //         $errors['message'] = "Ce champ est obligatoire";
-        //     }     
-        // }
+            if($data['courriel'] == ""){
+                $errors['courriel'] = "Ce champ est obligatoire";
+            } 
+            if($data['message'] == ""){
+                $errors['message'] = "Ce champ est obligatoire";
+            }     
+        }
     return $this->twig->render('sherlock/contact.html.twig');
     }
 
