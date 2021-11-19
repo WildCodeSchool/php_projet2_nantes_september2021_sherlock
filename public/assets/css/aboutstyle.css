@@ -1,7 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: charmonman, bold;
+    font-family: 'Charmonman', cursive;
+    font-family: 'Special Elite', cursive;
     color: white;
 }
 
@@ -78,4 +79,18 @@ body {
 
 .thanks a {
     text-decoration: none;
+}
+
+.contact {
+    transition: all 300ms;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.contact:hover {
+    font-size: 50px;
+    color: #FFFFFF;
 }

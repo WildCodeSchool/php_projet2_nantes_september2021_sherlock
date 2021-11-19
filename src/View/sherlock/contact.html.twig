@@ -1,0 +1,101 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}<link rel="stylesheet" href="/assets/css/contactstyle.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Special+Elite&display=swap" rel="stylesheet"> 
+{% endblock %}
+
+{% block content %}
+    <div class="texteContact">
+    <p> Vous souhaitez prendre contact avec l'équipe Sherlock ? Avoir des renseignements sur le jeu ?<br/>
+    Ou bien signaler une erreur ? Alors n'hésitez pas à nous contacter!</p>
+    </div>
+    <div class="form">
+        <form  action="contact"  method="post" onsubmit="clicked(event)">
+        <div>
+        <label  for="name">Nom :</label><br/>
+        <input  type="text"  id="name"  name="name" placeholder="Sherlock" required>
+        </div>
+        <br/>
+
+        <div>
+        <label  for="firstname">Prénom :</label><br/>
+        <input  type="text"  id="firstname"  name="firstname" placeholder="Holmes" required>
+        </div>
+        <br/>
+
+        <div>
+        <label  for="courriel">Courriel :</label><br/>
+            <input  type="email"  id="courriel"  name="courriel" placeholder="inspecteur@gmail.com" required>
+        </div>
+        <br/>
+
+        <div>
+        <label for="telephone">Téléphone:</label><br/>
+        <input type="number" id="telephone" name="telephone" placeholder="02.00.00.00.00" required>
+        </div>
+        <br/>
+
+        <label for="objet">Objet du message</label><br/>
+        <SELECT name="objet" size="1">
+    
+    <option>Je souhaite signaler une erreur
+    <option>Je souhaite avoir des renseignements sur le projet
+    <option>Je souhaite avoir des renseignements sur l'équipe
+    <option>Je souhaite proposer une fonctionnalité du jeu
+    <option>Autre
+    </SELECT>
+
+        <br/>
+        <div>
+        <label  for="message">Message :</label><br/>
+        <textarea  id="message"  name="message" required></textarea>
+        </div>
+        
+        <br/>
+        <div  class="button">
+        <button  type="submit">Envoyer votre message</button>
+        </div>
+    </form>
+  </div>
+
+  <!-- footer -->
+
+<div class="footer">
+
+
+    <div class="about">
+        <a href="/sherlock/aboutus">About us</a>
+    </div>
+
+
+    <div class="thank">
+        <a href="/sherlock/thanks">thanks</a>
+    </div>
+
+
+    <div class="contact">
+        <a href="/sherlock/contact">Contact</a>
+        <div class="social">
+            <div class="instagram">
+                <i class="fab fa-instagram"></i>
+            </div>
+
+            <div class="facebook">
+                <i class="fab fa-facebook"></i>
+            </div>
+
+            <div class="twitter">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% block javascript %}<script src="/assets/js/contact.js"></script>{% endblock %}
+
+
+{% endblock %}

@@ -1,5 +1,5 @@
 {% block stylesheet %}<link rel="stylesheet" href="/assets/css/adminstyle.css">
-<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
@@ -25,9 +25,7 @@
             <label for="question1"> Question {{i}} : </label>
             <br/>
             <input type="text" id="question" name="question" value="{{question.intitule}}">
-            {# <span  id="eyeslash" style=" color: #FFFFFF;"><i class="fas fa-eye-slash"></i></span> #}
-                     
-            {# <input type="submit" name="{{question.id}}" class="{{question.id}}" value="Modifier"> #}
+            
             <input type="hidden" name="idModif" value="{{question.id}}"><button> <span  for="{{ question.id }}" id="pencil" style=" color: #0c0c0c;"><i class="fas fa-pencil-alt"></i></span></button>
             </form>
             <form action="adminQuestions" method="post">
@@ -54,4 +52,5 @@
             <a href=""><input type="submit" name="deconnexion" value="deconnexion"></a>
 </div>
 </form>
+</center>
 {% endblock %}

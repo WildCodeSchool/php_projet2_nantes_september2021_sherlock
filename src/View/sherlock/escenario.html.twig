@@ -4,6 +4,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -43,8 +47,8 @@
         <center>
             <!-- enigme -->
             <div class="enigme">
-                <h2>Choississez votre énigme :</h2>
-
+                <h2>Les différentes énigmes :</h2>
+                <p> (une seule énigme est pour l'instant disponible) </p>
                 {% for scenario in enigmes %}
                 <li>
                     {{scenario.titre}}
