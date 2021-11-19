@@ -101,6 +101,7 @@ h2 {
 }
 
 .textehistoire {
+    font-family: 'Special Elite', cursive;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -109,6 +110,8 @@ h2 {
     font-size: 15px;
     text-align: center;
     box-sizing: border-box;
+    text-shadow: none;
+    font-size: 20px;
 }
 
 .aside-right {
@@ -231,11 +234,15 @@ h2 {
 
 .popup li {
     list-style: none;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
 }
 
 .popup h2 {
+    font-family: 'Special Elite', cursive;
     font-size: 35px;
 }
+
 
 
 
@@ -252,6 +259,8 @@ h2 {
 }
 
 .popup  li .reponse{
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
     display: none;
 }
 
