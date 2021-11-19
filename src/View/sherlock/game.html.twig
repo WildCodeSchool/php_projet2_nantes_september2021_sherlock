@@ -5,6 +5,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 {% endblock %}
 
 
@@ -80,13 +84,15 @@
                             {% for moriartyReponse in moriartyReponses %}
                                 <ul>
                                     <li>
+                                        
                                         {{moriartyReponse.intitule}}<br>
                                         <input type="checkbox" name="check" id="check-moriarty{{loop.index}}" value="1"
                                             onchange="javascript:showContent({{loop.index}}, 'moriarty')" />
-                                    </li>
+                                        
+                                 </li>
                                     <li>
                                         <div class="reponse" id="content-moriarty{{loop.index}}">
-                                            <bold>REPONSE:</bold> {{moriartyReponse.reponse}} <br/> <bold>INDICE:</bold> {{moriartyReponse.indice}}
+                                            <bold>REPONSE:</bold> {{moriartyReponse.reponse}} <br/><br/> <bold>INDICE:</bold> {{moriartyReponse.indice}}
                                         </div>
                                     </li>
                                 </ul>
@@ -106,13 +112,15 @@
                         {% for bakerReponse in bakerReponses %}
                             <ul>
                                 <li>
+                                   
                                     {{bakerReponse.intitule}}<br>
                                     <input type="checkbox" name="check" id="check-baker{{loop.index}}" value="1"
-                                        onchange="javascript:showContent({{loop.index}}, 'baker')" />
+                                        onchange="javascript:showContent({{loop.index}}, 'baker')" /
+                                   
                                 </li>
                                 <li>
                                     <div class="reponse" id="content-baker{{loop.index}}">
-                                        <bold>REPONSE:</bold> {{bakerReponse.reponse}} <br/> <bold>INDICE:</bold> {{bakerReponse.indice}}
+                                        <bold>REPONSE:</bold> {{bakerReponse.reponse}} <br/><br/> <bold>INDICE:</bold> {{bakerReponse.indice}}
                                     </div>
                                 </li>
                             </ul>
@@ -132,13 +140,15 @@
                             {% for jamesReponse in jamesReponses %}
                                 <ul>
                                     <li>
+
                                         {{jamesReponse.intitule}}<br>
                                         <input type="checkbox" name="check" id="check-james{{loop.index}}" value="1"
                                             onchange="javascript:showContent({{loop.index}}, 'james')" />
+                                      
                                     </li>
                                     <li>
                                         <div class="reponse" id="content-james{{loop.index}}">
-                                            <bold>REPONSE:</bold> {{jamesReponse.reponse}} <br/> <bold>INDICE:</bold> {{jamesReponse.indice}}
+                                            <bold>REPONSE:</bold> {{jamesReponse.reponse}} <br/><br/>  <bold>INDICE:</bold> {{jamesReponse.indice}}
                                         </div>
                                     </li>
                                 </ul>

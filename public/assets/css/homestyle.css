@@ -68,6 +68,10 @@ body {
 
 
 .regles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -84,14 +88,16 @@ body {
 }
 
 .regles p {
-    text-align: left;
+    
+    font-family: 'Special Elite', cursive;
+    text-align: center;
     width: 35%;
     font-size: 30px;
     line-height: 43px;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    margin-left: 15px;
-    margin-bottom: 70px;
+    color: #f5f1f1;
+    text-shadow: 0px 4px 4px rgba(250, 247, 247, 0.5);
+    margin-left: auto;
+    margin-bottom: auto;
 }
 
 .footer {
